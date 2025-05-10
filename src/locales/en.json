@@ -29,6 +29,15 @@
     "default": "Genre"
   },
 
+  "sort": "Sort by",
+  "language": "Language",
+  "titleaz": "Title A-Z",
+  "titleza": "Title Z-A",
+  "pricelower": "Lower at higher price",
+  "pricehigher": "Higher at lower price",
+  "english": "English",
+  "spanish": "Spanish",
+  "delete": "Delete selection",
   "phrase": "Discover the joy of reading in a vibrant literary community.",
   "navigation": "Navegation",
   "home": "Home",

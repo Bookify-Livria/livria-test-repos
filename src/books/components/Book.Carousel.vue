@@ -3,7 +3,11 @@ import { BookApiService } from '../service/book-api.service.js'
 
 export default {
   name: 'BookCarousel',
-  components: {
+  props: {
+    genre: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {
@@ -18,7 +22,7 @@ export default {
   mounted() {
     const service = new BookApiService()
     service.getBooks().then(data => {
-      this.books = data
+      this.books = data.filter(book => book.genre?.toLowerCase() === this.genre.toLowerCase())
     })
   }
 }

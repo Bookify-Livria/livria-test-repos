@@ -31,7 +31,7 @@ export default {
           <router-link to="" class="carousels__section-link go--orange">{{ $t('literature') }}</router-link>
         </div>
         <div class="carousel__section-fullwidth">
-          <bookCarousel/>
+          <bookCarousel genre="literatura" />
         </div>
       </div>
       <div class="carousels__section-container">
@@ -39,7 +39,7 @@ export default {
           <router-link to="" class="carousels__section-link go--yellow">{{ $t('non-fiction') }}</router-link>
         </div>
         <div class="carousel__section-fullwidth">
-          <bookCarousel/>
+          <bookCarousel genre="noficcion" />
         </div>
       </div>
       <div class="carousels__section-container">
@@ -47,7 +47,7 @@ export default {
           <router-link to="" class="carousels__section-link go--blue">{{ $t('fiction') }}</router-link>
         </div>
         <div class="carousel__section-fullwidth">
-          <bookCarousel/>
+          <bookCarousel genre="ficcion" />
         </div>
       </div>
       <div class="carousels__section-container">
@@ -55,7 +55,7 @@ export default {
           <router-link to="" class="carousels__section-link go--orange">{{ $t('mangas and comics') }}</router-link>
         </div>
         <div class="carousel__section-fullwidth">
-          <bookCarousel/>
+          <bookCarousel genre="mangasycomics" />
         </div>
       </div>
       <div class="carousels__section-container">
@@ -63,7 +63,7 @@ export default {
           <router-link to="" class="carousels__section-link go--yellow">{{ $t('juvenile') }}</router-link>
         </div>
         <div class="carousel__section-fullwidth">
-          <bookCarousel/>
+          <bookCarousel genre="juvenil" />
         </div>
       </div>
       <div class="carousels__section-container">
@@ -71,7 +71,7 @@ export default {
           <router-link to="" class="carousels__section-link go--blue">{{ $t('children') }}</router-link>
         </div>
         <div class="carousel__section-fullwidth">
-          <bookCarousel/>
+          <bookCarousel genre="infantil" />
         </div>
       </div>
       <div class="carousels__section-container">
@@ -79,7 +79,7 @@ export default {
           <router-link to="" class="carousels__section-link go--orange">{{ $t('ebooks and audiobooks') }}</router-link>
         </div>
         <div class="carousel__section-fullwidth">
-          <bookCarousel/>
+          <bookCarousel genre="ebooks" />
         </div>
       </div>
     </section>

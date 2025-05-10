@@ -100,33 +100,33 @@ export default {
       <Card>
         <template #title>
           <div class="filter-title">
-            <span class="ordenar-label">ORDENAR POR</span>
+            <span class="ordenar-label">{{ $t('sort') }}</span>
             <i class="pi pi-sliders-h filter-icon"></i>
           </div>
 
           <div class="filter-section">
             <div class="filter-options">
-              <span @click="sortOption = 'titleAsc'" :class="{ active: sortOption === 'titleAsc' }">Título A - Z</span>
-              <span @click="sortOption = 'titleDesc'" :class="{ active: sortOption === 'titleDesc' }">Título Z - A</span>
-              <span @click="sortOption = 'priceAsc'" :class="{ active: sortOption === 'priceAsc' }">Menor a mayor precio</span>
-              <span @click="sortOption = 'priceDesc'" :class="{ active: sortOption === 'priceDesc' }">Mayor a menor precio</span>
+              <span @click="sortOption = 'titleAsc'" :class="{ active: sortOption === 'titleAsc' }">{{ $t('titleaz') }}</span>
+              <span @click="sortOption = 'titleDesc'" :class="{ active: sortOption === 'titleDesc' }">{{ $t('titleza') }}</span>
+              <span @click="sortOption = 'priceAsc'" :class="{ active: sortOption === 'priceAsc' }">{{ $t('pricelower') }}</span>
+              <span @click="sortOption = 'priceDesc'" :class="{ active: sortOption === 'priceDesc' }">{{ $t('pricehigher') }}</span>
             </div>
 
             <div class="subsection">
-              <h4>IDIOMA</h4>
+              <h4>{{ $t('language') }}</h4>
               <span
                   class="language-option"
                   :class="{ selected: selectedLanguages.includes('en') }"
                   @click="toggleLanguage('en')"
-              >Inglés</span>
+              >{{ $t('english') }}</span>
               <span
                   class="language-option"
                   :class="{ selected: selectedLanguages.includes('es') }"
                   @click="toggleLanguage('es')"
-              >Español</span>
+              >{{ $t('spanish') }}</span>
             </div>
 
-            <button @click="resetFilters" class="reset-button">BORRAR SELECCIÓN</button>
+            <button @click="resetFilters" class="reset-button">{{ $t('delete') }}</button>
           </div>
         </template>
 

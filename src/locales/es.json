@@ -27,7 +27,15 @@
     "ebooks": "eBooks",
     "default": "Género"
   },
-
+  "sort": "Ordenar por",
+  "language": "Idioma",
+  "titleaz": "Título A-Z",
+  "titleza": "Título Z-A",
+  "pricelower": "Menor a mayor precio",
+  "pricehigher": "Mayor a menor precio",
+  "english": "Inglés",
+  "spanish": "Español",
+  "delete": "Borrar selección",
   "phrase": "Descubre el placer de leer en una vibrante comunidad literaria.",
   "navigation": "Navegación",
   "home": "Inicio",
