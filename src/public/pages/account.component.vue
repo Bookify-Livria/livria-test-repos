@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     InvocaAPI() {
-      axios.get('http://localhost:3000/users')
+      axios.get('http://localhost:3001/users')
           .then(response => {
             this.info = response.data;
             console.log(this.info);

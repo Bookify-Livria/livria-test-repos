@@ -80,13 +80,13 @@ export default {
 
     <div class="header">
       <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--orange">{{ $t('recommendations') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--orange">{{ $t('literature') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--orange">{{ $t('non-fiction') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--yellow">{{ $t('fiction') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--yellow">{{ $t('mangas-comics') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--yellow">{{ $t('juvenile') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--blue">{{ $t('children') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--blue">{{ $t('ebooks-audiobooks') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/bookl" class="header__nav-link go--orange">{{ $t('literature') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/booknf" class="header__nav-link go--orange">{{ $t('non-fiction') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/bookf" class="header__nav-link go--yellow">{{ $t('fiction') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/bookmc" class="header__nav-link go--yellow">{{ $t('mangas-comics') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/bookj" class="header__nav-link go--yellow">{{ $t('juvenile') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/bookc" class="header__nav-link go--blue">{{ $t('children') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/bookea" class="header__nav-link go--blue">{{ $t('ebooks-audiobooks') }}</router-link></div>
       <div class="header__nav-subitem"><router-link to="/communities" class="header__nav-link go--blue"><crownIcon class="nav-icon"/>{{ $t('communities') }}</router-link></div>
     </div>
 
