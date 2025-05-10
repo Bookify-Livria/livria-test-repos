@@ -15,6 +15,22 @@ export default {
       type: String,
       required: true
     }
+  },
+  computed: {
+    genreTitle() {
+      const genreKeys = [
+        "literatura",
+        "ficcion",
+        "noficcion",
+        "mangasycomics",
+        "juvenil",
+        "infantil",
+        "ebooks"
+      ]
+      return genreKeys.includes(this.genre)
+          ? this.$t(`genres.${this.genre}`)
+          : this.$t("genres.default")
+    }
   }
 }
 </script>
@@ -25,8 +41,9 @@ export default {
   <div class="literature-container">
     <div class="literature__fullwidth">
       <div class="title__container">
-        <h1 class="h1__title">{{ $t(genre) }}</h1>
+        <h1 class="h1__title">{{ genreTitle }}</h1>
       </div>
+
     </div>
 
     <div class="cards__container">

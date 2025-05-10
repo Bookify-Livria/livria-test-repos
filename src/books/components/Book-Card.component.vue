@@ -68,12 +68,15 @@ export default {
 
 <template>
   <div class="book-view-container">
+
     <div class="book-grid">
+
       <div
           v-for="book in filteredBooks"
           :key="book.id"
           class="custom-card-wrapper"
       >
+
         <Card>
           <template #header>
             <div class="cover-container">

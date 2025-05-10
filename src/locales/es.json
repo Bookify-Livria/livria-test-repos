@@ -16,6 +16,17 @@
   "ebooks-audiobooks": "Ebooks Y Audiobooks",
   "recommendations": "Recomendaciones",
   "communities": "Comunidades",
+  "genre": "Genero",
+  "genres": {
+    "literatura": "Literatura",
+    "ficcion": "Ficción",
+    "noficcion": "No Ficción",
+    "mangasycomics": "Mangas y Cómics",
+    "juvenil": "Juvenil",
+    "infantil": "Infantil",
+    "ebooks": "eBooks",
+    "default": "Género"
+  },
 
   "phrase": "Descubre el placer de leer en una vibrante comunidad literaria.",
   "navigation": "Navegación",
