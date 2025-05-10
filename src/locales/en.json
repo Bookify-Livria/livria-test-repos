@@ -1,0 +1,66 @@
+{
+  "toolbar": {
+    "search": "Search",
+    "kart": "Kart",
+    "notifications": "Notifications",
+    "account": "Account"
+  },
+  "shop": "Shop",
+  "literature": "Literature",
+  "non-fiction": "Non-Fiction",
+  "fiction": "Fiction",
+  "mangas-comics": "Mangas And Comics",
+  "juvenile": "Juvenile",
+  "children": "children",
+  "ebooks-audiobooks": "Ebooks and Audiobooks",
+  "recommendations": "Recommendations",
+  "communities": "Communities",
+
+  "phrase": "Discover the joy of reading in a vibrant literary community.",
+  "navigation": "Navegation",
+  "home": "Home",
+  "legal": "Legal",
+  "terms-conditions": "Terms And Conditions",
+  "privacy-policy": "Privacy Policy",
+  "cookies-policy": "Cookies Policy",
+  "complaints-book": "Complaints Book",
+  "support": "Support",
+  "help": "Help",
+  "frequent-questions": "Frequent Questions",
+  "contact-us": "Contact Us",
+  "copyrights":"© 2025 Bookify - Livria. All rights reserved.",
+
+
+  "profile": "Profile",
+  "recent-orders": "My Recent Orders",
+  "delivered": "Delivered",
+  "pending": "Pending",
+  "settings": "Settings",
+  "account": "Account",
+  "setting": {
+    "allow-not": "Allow notifications",
+    "not-status": "Allow notifications for order status",
+    "not-email": "Allow email notifications",
+    "visibility": "Profile visibility",
+    "current-password": "Current password",
+    "new-password": "New password"
+  },
+  "yes": "Yes",
+  "no": "No",
+  "public": "Public",
+  "private": "Private",
+  "change": "Change",
+  "save": "Save",
+
+
+  "communities-intro": "Connect with readers with similar interests by joining Livria communities. You can also create your own!",
+  "create-community": "Create Community",
+  "form": {
+    "name": "Name",
+    "description": "Description",
+    "category": "Category",
+    "image": "Image URL"
+  },
+  "see-more": "See More +"
+
+}

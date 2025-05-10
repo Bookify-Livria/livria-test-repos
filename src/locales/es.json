@@ -1,0 +1,67 @@
+{
+
+  "toolbar": {
+    "search": "Buscar",
+    "kart": "Carrito",
+    "notifications": "Notificaciones",
+    "account": "Cuenta"
+  },
+  "shop": "Tienda",
+  "literature": "Literatura",
+  "non-fiction": "No Ficción",
+  "fiction": "Ficción",
+  "mangas-comics": "Mangas Y Cómics",
+  "juvenile": "Juvenil",
+  "children": "Infantil",
+  "ebooks-audiobooks": "Ebooks Y Audiobooks",
+  "recommendations": "Recomendaciones",
+  "communities": "Comunidades",
+
+  "phrase": "Descubre el placer de leer en una vibrante comunidad literaria.",
+  "navigation": "Navegación",
+  "home": "Inicio",
+  "legal": "Legal",
+  "terms-conditions": "Términos Y Condiciones",
+  "privacy-policy": "Política de Privacidad",
+  "cookies-policy": "Política de Cookies",
+  "complaints-book": "Libros de Reclamaciones",
+  "support": "Soporte",
+  "help": "Ayuda",
+  "frequent-questions": "Preguntas Frecuentes",
+  "contact-us": "Contáctanos",
+  "copyrights": "© 2025 Bookify - Livria. Todos los derechos reservados.",
+
+
+  "profile": "Perfil",
+  "recent-orders": "Mis Últimos Pedidos",
+  "delivered": "Entregado",
+  "pending": "Pendiente",
+  "settings": "Configuración",
+  "account": "Cuenta",
+  "setting": {
+    "allow-not": "Permitir recibir notificaciones",
+    "not-status": "Notificaciones de estado de pedido",
+    "not-email": "Notificaciones por correo",
+    "visibility": "Visibilidad del perfil",
+    "current-password": "Contraseña actual",
+    "new-password": "Nueva contraseña"
+  },
+  "yes": "Sí",
+  "no": "No",
+  "public": "Público",
+  "private": "Privado",
+  "change": "Cambiar",
+  "save": "Guardar",
+
+
+  "communities-intro": "Conecta con lectores con gustos similares a los tuyos al unirte a las comunidades de Livria. ¡También puedes crear una propia!",
+  "create-community": "Crear Comunidad",
+  "form": {
+    "name": "Nombre",
+    "description": "Descripción",
+    "category": "Categoría",
+    "image": "URL de la imagen"
+  },
+  "see-more": "Ver Más +"
+
+}

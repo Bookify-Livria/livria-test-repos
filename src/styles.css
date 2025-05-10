@@ -1,0 +1,154 @@
+:root {
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+p {
+  color: var(--color-text);
+  text-align: justify;
+}
+
+.h1__title {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--color-blue);
+  margin: 0;
+}
+
+.title__container {
+  width: 100%;
+  text-align: left;
+  padding: 2rem;
+}
+
+/* Color Bar */
+.color-bar {
+  display: flex;
+  height: 6px;
+  width: 100%;
+}
+
+.color-bar__section {
+  flex-grow: 1;
+}
+
+.color-bar__section--orange {
+  background-color: var(--color-accent-orange);
+}
+
+.color-bar__section--yellow {
+  background-color: var(--color-accent-yellow);
+}
+
+.color-bar__section--light-yellow {
+  background-color: var(--color-accent-light-yellow);
+}
+
+.color-bar__section--dark-blue {
+  background-color: #0a2463;
+}
+
+.color-bar__section--light {
+  background-color: var(--color-light);
+}
+
+.color-bar__section--teal {
+  background-color: var(--color-secondary);
+}
+
+.color-bar__section--blue {
+  background-color: var(--color-primary);
+}
+
+/* Changing specific title color */
+.go--orange {
+  color: var(--color-accent-orange);
+}
+
+.go--yellow {
+  color: var(--color-accent-yellow);
+}
+
+.go--blue {
+  color: var(--color-blue);
+}
+
+
+/*
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}*/
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

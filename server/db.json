@@ -1,0 +1,314 @@
+{
+  "communities": [
+    {
+      "id": 1,
+      "name": "Jojofans",
+      "description": "Aquí amamos a Joseph sobre todas las cosas",
+      "type": "anime",
+      "image": "https://i.imgur.com/K9hEj0v.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Lectores Nocturnos",
+      "description": "Una comunidad para quienes leen hasta la madrugada",
+      "type": "libros",
+      "image": "https://i.imgur.com/YXfBLjz.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Backend Bros",
+      "description": "Discute sobre APIs, servidores y bases de datos",
+      "type": "programación",
+      "image": "https://i.imgur.com/h9Z3XHz.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Frontend Lovers",
+      "description": "Para quienes aman CSS aunque a veces lo odien",
+      "type": "programación",
+      "image": "https://i.imgur.com/mUSMZoe.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Otakus sin remedio",
+      "description": "Debates intensos sobre el mejor shonen",
+      "type": "anime",
+      "image": "https://i.imgur.com/BAvAxTI.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Café y Escritura",
+      "description": "Inspiración, relatos y buena compañía con café",
+      "type": "escritura",
+      "image": "https://i.imgur.com/VkM3zhN.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Pixel Art Masters",
+      "description": "Donde cada pixel cuenta",
+      "type": "arte",
+      "image": "https://i.imgur.com/0TPeJhz.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Marvelianos",
+      "description": "¡Excelsior! Todo sobre Marvel, de cómics a pelis",
+      "type": "cómics",
+      "image": "https://i.imgur.com/zojWqPz.jpg"
+    },
+    {
+      "id": 9,
+      "name": "DC Fandom",
+      "description": "Gotham, Metrópolis y más. Fans de DC reunidos",
+      "type": "cómics",
+      "image": "https://i.imgur.com/8Kz3Jcb.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Indie Devs",
+      "description": "Programadores de videojuegos independientes",
+      "type": "desarrollo",
+      "image": "https://i.imgur.com/kWbz3z1.jpg"
+    },
+    {
+      "id": 11,
+      "name": "K-Pop World",
+      "description": "Lo mejor del K-pop en un solo lugar",
+      "type": "música",
+      "image": "https://i.imgur.com/1lAbMJ1.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Historias Paranormales",
+      "description": "¿Has visto algo raro? Cuéntanos aquí",
+      "type": "misterio",
+      "image": "https://i.imgur.com/8UexYqL.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Linux Lovers",
+      "description": "Distribuciones, terminal y libertad",
+      "type": "tecnología",
+      "image": "https://i.imgur.com/7kfs5Cp.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Historietistas Unidos",
+      "description": "Creación y difusión de cómics originales",
+      "type": "arte",
+      "image": "https://i.imgur.com/XwlA5EN.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Viajeros Solitarios",
+      "description": "Historias de viajes, mochilas y mapas",
+      "type": "viajes",
+      "image": "https://i.imgur.com/r1rG55F.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Cocinillas en Acción",
+      "description": "Comparte recetas, fallos y éxitos culinarios",
+      "type": "cocina",
+      "image": "https://i.imgur.com/5vC2SPO.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Jazz & Blues",
+      "description": "Un rincón para los que sienten la música en el alma",
+      "type": "música",
+      "image": "https://i.imgur.com/tSHKRHY.jpg"
+    },
+    {
+      "id": 1746762373714,
+      "name": "soyese",
+      "description": "somos esos ",
+      "type": "anime",
+      "image": "https://i.imgur.com/K9hEj0v.jpg"
+    }
+  ],
+
+  "books": [
+    {
+      "id": 1,
+      "title": "Orgullo y Prejuicio",
+      "description": "Una historia clásica de amor y orgullo.",
+      "author": "Jane Austen",
+      "price": 10,
+      "cover": "https://i.imgur.com/joWwgZv.jpg"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "description": "Una distopía sobre vigilancia y libertad.",
+      "author": "George Orwell",
+      "price": 12,
+      "cover": "https://i.imgur.com/s5lcvQV.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Cien Años de Soledad",
+      "description": "La epopeya mágica de la familia Buendía.",
+      "author": "Gabriel García Márquez",
+      "price": 14,
+      "cover": "https://i.imgur.com/doGpUH7.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Rayuela",
+      "description": "Una novela experimental sobre el amor y el caos.",
+      "author": "Julio Cortázar",
+      "price": 11,
+      "cover": "https://i.imgur.com/sY1GplN.jpg"
+    },
+    {
+      "id": 5,
+      "title": "To Kill a Mockingbird",
+      "description": "Un retrato del racismo y la inocencia.",
+      "author": "Harper Lee",
+      "price": 13,
+      "cover": "https://i.imgur.com/ofmtrK3.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Crimen y Castigo",
+      "description": "Una lucha moral entre el bien y el mal.",
+      "author": "Fiódor Dostoievski",
+      "price": 15,
+      "cover": "https://i.imgur.com/C0t9SGx.jpg"
+    },
+    {
+      "id": 7,
+      "title": "La Metamorfosis",
+      "description": "El clásico de Kafka sobre la alienación.",
+      "author": "Franz Kafka",
+      "price": 9,
+      "cover": "https://i.imgur.com/suuUzD7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "La Edad de la Inocencia",
+      "description": "Un amor imposible en la alta sociedad de Nueva York.",
+      "author": "Edith Wharton",
+      "price": 10,
+      "cover": "https://i.imgur.com/LwfbN9D.jpg"
+    },
+    {
+      "id": 9,
+      "title": "El Principito",
+      "description": "Un viaje poético por el universo y el corazón humano.",
+      "author": "Antoine de Saint-Exupéry",
+      "price": 8,
+      "cover": "https://i.imgur.com/UOsqHeS.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Fahrenheit 451",
+      "description": "Un mundo donde los libros están prohibidos.",
+      "author": "Ray Bradbury",
+      "price": 12,
+      "cover": "https://i.imgur.com/uNIcn2G.jpg"
+    },
+    {
+      "id": 11,
+      "title": "El Perfume",
+      "description": "Una historia sobre obsesión y fragancia.",
+      "author": "Patrick Süskind",
+      "price": 10,
+      "cover": "https://i.imgur.com/6zlSEVZ.jpg"
+    },
+    {
+      "id": 12,
+      "title": "El Retrato de Dorian Gray",
+      "description": "La belleza y la decadencia del alma humana.",
+      "author": "Oscar Wilde",
+      "price": 11,
+      "cover": "https://i.imgur.com/IaFLBtv.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Los Miserables",
+      "description": "Una lucha épica por la redención.",
+      "author": "Victor Hugo",
+      "price": 16,
+      "cover": "https://i.imgur.com/IaFLBtv.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Don Quijote de la Mancha",
+      "description": "Las aventuras del caballero de la triste figura.",
+      "author": "Miguel de Cervantes",
+      "price": 18,
+      "cover": "https://i.imgur.com/BmJkobs.jpg"
+    },
+    {
+      "id": 15,
+      "title": "La Sombra del Viento",
+      "description": "Una historia de libros y misterios en Barcelona.",
+      "author": "Carlos Ruiz Zafón",
+      "price": 13,
+      "cover": "https://i.imgur.com/LUxmaom.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Matar a un ruiseñor",
+      "description": "La justicia desde los ojos de una niña.",
+      "author": "Harper Lee",
+      "price": 12,
+      "cover": "https://i.imgur.com/5HN16UT.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Jane Eyre",
+      "description": "Una mujer que desafía las normas.",
+      "author": "Charlotte Brontë",
+      "price": 10,
+      "cover": "https://i.imgur.com/P0UNfrS.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Frankenstein",
+      "description": "El monstruo que quería amor.",
+      "author": "Mary Shelley",
+      "price": 10,
+      "cover": "https://i.imgur.com/tiNpzvS.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Drácula",
+      "description": "El clásico de vampiros que lo empezó todo.",
+      "author": "Bram Stoker",
+      "price": 10,
+      "cover": "https://i.imgur.com/12bSDYQ.jpg"
+    },
+    {
+      "id": 20,
+      "title": "El Alquimista",
+      "description": "Un viaje hacia los sueños personales.",
+      "author": "Paulo Coelho",
+      "price": 11,
+      "cover": "https://i.imgur.com/ny87KKt.jpg"
+    }
+  ],
+
+  "users": [
+    {
+      "id": "1",
+      "display": "King Turkey",
+      "user": "@kingturkey",
+      "email": "kingturkey@gmail.com",
+      "icon": "https://img.freepik.com/premium-photo/turkey-is-depicted-wearing-luxurious-red-white-cape-adorned-with-jeweled-crown_1115583-48702.jpg",
+      "password": "reypavobnd4",
+      "phrase": "¡¡Soy el rey pavo!!"
+    },
+    {
+      "id": "2",
+      "display": "Dr. Salad",
+      "user": "@doctorsalad",
+      "email": "salad@gmail.com",
+      "icon": "https://fengfitfoods.com/cdn/shop/products/Dr-Fengs-Signature-Salad.jpg?v=1449160732",
+      "password": "ensaladadoctorada1",
+      "phrase": "¡¡Soy el doctor ensalada!!"
+    }
+  ]
+}
