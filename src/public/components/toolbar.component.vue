@@ -24,12 +24,18 @@ export default {
   },
   data() {
     return {
-      value1: ""
+      value1: "",
+      isCartActive: false
     }
   },
   methods: {
     openCart() {
+      this.isCartActive = true
       this.$refs.cartDrawerRef.toggleDrawer()
+    },
+    updateCartVisibility(val) {
+      console.log('Drawer visible?', val)
+      this.isCartActive = val
     }
   }
 }
@@ -56,17 +62,17 @@ export default {
         <nav class="header__nav" aria-label="Main Navigation">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <pv-button @click="openCart" class="header__nav-link"><cartIcon class="nav-icon" />{{ $t('toolbar.cart') }}</pv-button>
-              <CartDrawer ref="cartDrawerRef" />
+              <pv-button @click="openCart" :class="['header__nav-link', { active: isCartActive }]"><cartIcon class="nav-icon" />{{ $t('toolbar.cart') }}</pv-button>
+              <CartDrawer ref="cartDrawerRef" @visibility-change="updateCartVisibility" />
             </li>
             <li class="header__nav-item">
-              <router-link to="" class="header__nav-link"><locationIcon class="nav-icon"/>{{ $t('shop') }}</router-link>
+              <router-link to="/nofuncatodav" class="header__nav-link" exact exact-active-class="active"><locationIcon class="nav-icon"/>{{ $t('shop') }}</router-link>
             </li>
             <li class="header__nav-item">
-              <router-link to="" class="header__nav-link"><bellIcon class="nav-icon"/>{{ $t('toolbar.notifications') }}</router-link>
+              <router-link to="/nofuncatodav" class="header__nav-link" exact exact-active-class="active"><bellIcon class="nav-icon"/>{{ $t('toolbar.notifications') }}</router-link>
             </li>
             <li class="header__nav-item">
-              <router-link to="/account" class="header__nav-link"><userIcon class="nav-icon"/>{{ $t('toolbar.account') }}</router-link>
+              <router-link to="/account" class="header__nav-link" exact exact-active-class="active"><userIcon class="nav-icon"/>{{ $t('toolbar.account') }}</router-link>
             </li>
             <li class="header__nav-item">
               <language-switcher/>

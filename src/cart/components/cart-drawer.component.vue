@@ -36,6 +36,11 @@ export default {
       this.cartItems = this.cartItems.filter(item => item.book.id !== bookId)
     }
   },
+  watch: {
+    visibleRight(val) {
+      this.$emit('visibility-change', val)
+    }
+  },
   mounted() {
     this.loadCart()
   }
@@ -44,7 +49,7 @@ export default {
 
 <template>
 
-  <pv-drawer v-model:visible="visibleRight" header="Right Drawer" position="right">
+  <pv-drawer v-model:visible="visibleRight" position="right">
     <div v-for="item in cartItems" :key="item.book.id" class="cart-item">
       <img :src="item.book.cover" alt="portada" width="60" />
       <div class="info">
