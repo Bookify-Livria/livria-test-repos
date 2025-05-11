@@ -1,66 +1,17 @@
 <script>
-import axios from 'axios';
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
+import Profile from "../../users/components/Profile.component.vue";
 
 export default {
-  name: "account.component",
+  name: "home.component",
   components: {
     toolbarComponent,
     footerComponent,
-  },
-  data() {
-    return {
-      value1: 'Yes',
-      value2: 'Yes',
-      value3: 'Yes',
-      value4: 'Public',
-      options1: [
-        { name: 'Yes', value: 1 },
-        { name: 'No', value: 0 }
-      ],
-      options2: [
-        { name: 'Yes', value: 1 },
-        { name: 'No', value: 0 }
-      ],
-      options3: [
-        { name: 'Yes', value: 1 },
-        { name: 'No', value: 0 }
-      ],
-      options4: [
-        { name: 'Public', value: 1 },
-        { name: 'Private', value: 0 }
-      ],
-      info: null,
-      kingTurkey: {
-        id: '',
-        display: 'Loading...',
-        user: '@loading',
-        email: 'loading@example.com',
-        icon: 'https://via.placeholder.com/150',
-        password: '',
-        phrase: ''
-      }
-    };
-  },
-  methods: {
-    InvocaAPI() {
-      axios.get('http://localhost:3001/users')
-          .then(response => {
-            this.info = response.data;
-            console.log(this.info);
-            this.kingTurkey = this.info.find(user => user.id === "1");
-            console.log(this.kingTurkey);
-          })
-          .catch(error => {
-            console.error("Error fetching data.", error);
-          });
-    }
-  },
-  mounted() {
-    this.InvocaAPI();
+    Profile,
   }
 }
+
 </script>
 
 
@@ -68,101 +19,21 @@ export default {
   <!-- Header -->
   <toolbarComponent/>
 
-  <div class="account-container">
     <!-- Title -->
     <div class="title__container">
       <h1 class="h1__title">{{$t('account')}}</h1>
     </div>
 
-    <div class="account__profile">
 
-    <!-- Left Panel -->
-      <div class="account__profile-details">
-        <div>
-          <pv-image :src="kingTurkey.icon" alt="Foto de perfil" width="200" height="200" class="pfp"></pv-image>
-          <div>
-            <p class="account__profile-display-name">{{ kingTurkey.display }}</p>
-            <p class="account__profile-username">{{ kingTurkey.user }}</p>
-            <p class="account__profile-email">{{ kingTurkey.email }}</p>
-          </div>
-        </div>
+    <!-- Profile -->
+      <div class="profile__container">
+        <Profile/>
       </div>
-
-      <!-- Middle Panel -->
-      <div class="account__profile-info">
-        <div class="account__profile-info-half">
-          <pv-card>
-            <template #title>{{ $t('profile') }}</template>
-            <template #content>
-              <p>{{ kingTurkey.phrase }}</p>
-            </template>
-          </pv-card>
-        </div>
-        <div class="account__profile-info-half">
-          <pv-card>
-            <template #title>{{ $t('recent-orders') }}</template>
-            <template #content>
-              <div class="same-line">
-                <p>Order #123112</p>
-                <div>
-                  <!--<pv-message class="flex flex-wrap gap-4 justify-center align-center" severity="warn">{{ $t('pending') }}</pv-message>-->
-                  <pv-message class="flex flex-wrap gap-4 justify-center align-center" severity="success">{{ $t('delivered') }}</pv-message>
-                </div>
-              </div>
-            </template>
-          </pv-card>
-        </div>
-
-      </div>
-
-      <!-- Right Panel -->
-      <div class="account__profile-config">
-        <pv-card>
-          <template #title>{{ $t('settings') }}</template>
-          <template #content>
-            <div class="same-line">
-              <p>{{ $t('setting.allow-not')}}</p>
-              <pv-select-button v-model="value1" model-value="1" :options="options1" optionLabel="name"/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.not-status')}}</p>
-              <pv-select-button v-model="value2" model-value="1" :options="options2" optionLabel="name"/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.not-email')}}</p>
-              <pv-select-button v-model="value3" model-value="1" :options="options3" optionLabel="name"/>
-            </div>
-
-            <div class="same-line">
-              <p>{{ $t('setting.visibility')}}</p>
-              <pv-select-button v-model="value4" model-value="1" :options="options4" optionLabel="name"/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.current-password')}}</p>
-              <p>*********</p>
-              <pv-button severity="warn">{{ $t('change')}}</pv-button>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.new-password')}}</p>
-              <pv-password :feedback="false"/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.new-password')}}</p>
-              <pv-password :feedback="false"/>
-            </div>
-            <div class="change-password">
-              <pv-button severity="success">{{ $t('save')}}</pv-button>
-            </div>
-          </template>
-        </pv-card>
-      </div>
-    </div>
 
     <!-- Footer -->
     <div class="footer__container-fullwidth">
       <footerComponent/>
     </div>
-  </div>
 
 </template>
 

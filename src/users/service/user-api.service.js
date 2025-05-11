@@ -1,0 +1,22 @@
+import axios from 'axios';
+import { UserAssembler } from './user.assembler.js';
+
+export class UserApiService {
+    getUsers() {
+        return axios.get('http://localhost:3001/users')
+            .then(response => UserAssembler.toEntitiesFromResponse(response))
+            .catch(error => {
+                console.error('Error fetching users:', error);
+                throw error;
+            });
+    }
+    createUser(user) {
+        return fetch('http://localhost:3001/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        }).then(res => res.json())
+    }
+}

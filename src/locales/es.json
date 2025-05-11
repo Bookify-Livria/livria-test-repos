@@ -76,12 +76,6 @@
     "current-password": "Contraseña actual",
     "new-password": "Nueva contraseña"
   },
-  "yes": "Sí",
-  "no": "No",
-  "public": "Público",
-  "private": "Privado",
-  "change": "Cambiar",
-  "save": "Guardar",
 
 
   "communities-intro": "Conecta con lectores con gustos similares a los tuyos al unirte a las comunidades de Livria. ¡También puedes crear una propia!",
@@ -92,6 +86,31 @@
     "category": "Categoría",
     "image": "URL de la imagen"
   },
-  "see-more": "Ver Más +"
+  "see-more": "Ver Más +",
+
+  "yes": "Sí",
+  "no": "No",
+  "order": "Orden",
+
+  "public": "Público",
+  "private": "Privado",
+
+  "save": "Guardar",
+  "change": "Cambiar",
+  "delete1": "Borrar cuenta",
+
+  "login": "Iniciar sesión",
+  "userinput": "Usuario",
+  "passinput": "Contraseña",
+  "passforg": "¿Olvidaste tu contraseña?",
+  "login-google":"Iniciar sesión con Google",
+  "login-apple":"Iniciar sesión con Apple",
+  "logout": "Cerrar sesión",
+  "confpass": "Confirmar contraseña",
+  "emailinput": "Correo electrónico",
+  "register": "Registrarse",
+  "emailerror": "Ingrese un correo electrónico válido",
+
+  "or": "O"
 
 }
