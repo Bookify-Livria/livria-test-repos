@@ -34,7 +34,6 @@ export default {
       this.$refs.cartDrawerRef.toggleDrawer()
     },
     updateCartVisibility(val) {
-      console.log('Drawer visible?', val)
       this.isCartActive = val
     }
   }

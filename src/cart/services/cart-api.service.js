@@ -19,12 +19,25 @@ export class CartApiService {
             });
     }
 
-    removeFromCart(bookId) {
-        return axios.delete(`http://localhost:3001/cart/${bookId}`)
+    removeFromCart(Id) {
+        return axios.delete(`http://localhost:3001/cart/${Id}`)
+            .then(response => {
+                console.log('User deleted successfully:', response.data);
+            })
+            .catch(error => {
+                console.error('Error deleting user:', error);
+                throw error;
+            });
     }
 
     clearCart() {
-        return axios.delete('http://localhost:3001/cart')
+        return axios.get('http://localhost:3001/cart')
+            .then(response => {
+                const items = response.data;
+                return Promise.all(items.map(item =>
+                    axios.delete(`http://localhost:3001/cart/${item.id}`)
+                ));
+            })
             .catch(error => {
                 console.error('Error clearing cart:', error);
                 throw error;

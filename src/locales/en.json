@@ -1,7 +1,7 @@
 {
   "toolbar": {
     "search": "Search",
-    "cart": "Kart",
+    "cart": "Cart",
     "notifications": "Notifications",
     "account": "Account"
   },
@@ -25,6 +25,7 @@
     "en": "English"
   },
   "add-to-cart": "Add to cart",
+  "buy-cart": "Complete my purchase",
 
   "genres": {
     "literatura": "Literature",

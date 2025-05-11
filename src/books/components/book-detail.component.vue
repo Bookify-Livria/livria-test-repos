@@ -1,5 +1,6 @@
 <script>
-import { BookApiService } from '../service/book-api.service.js'
+import { BookApiService } from '../services/book-api.service.js'
+import { CartApiService} from "../../cart/services/cart-api.service.js";
 
 export default {
   name: 'BookDetail',
@@ -11,21 +12,48 @@ export default {
   },
   data() {
     return {
-      book: null
+      book: null,
+      quantity: 1
+    }
+  },
+  methods: {
+    loadBook() {
+      const service = new BookApiService()
+      const bookTitle = this.$route.params.title
+
+      service.getBooks().then(data => {
+        this.book = data.find(b => b.title.toString().toLowerCase() === bookTitle.toLowerCase())
+        if (this.book) {
+          this.$emit('book-loaded', this.book.title)
+        }
+      }).catch(error => {
+        console.error('Error loading book:', error)
+      })
+    },
+    async addToCart(book, quantity) {
+      try {
+        const service = new CartApiService();
+        const currentCart = await service.getCart();
+
+        const newId = String(
+            currentCart.length > 0
+                ? Math.max(...currentCart.map(item => parseInt(item.id))) + 1
+                : 1
+        );
+
+        const cartItem = {
+          id: newId,
+          book,
+          quantity: parseInt(quantity)
+        };
+        await service.addToCart(cartItem);
+      } catch (error) {
+        console.error("Error adding item:", error)
+      }
     }
   },
   mounted() {
-    const service = new BookApiService()
-    const bookTitle = this.$route.params.title
-
-    service.getBooks().then(data => {
-      this.book = data.find(b => b.title.toString().toLowerCase() === bookTitle.toLowerCase())
-      if (this.book) {
-        this.$emit('book-loaded', this.book.title)
-      }
-    }).catch(error => {
-      console.error('Error loading book:', error)
-    })
+    this.loadBook()
   }
 }
 </script>
@@ -45,18 +73,18 @@ export default {
 
     <div class="book-detail__right-section">
       <div class="book-detail__details-container">
-        <h3 class="h3__title">de {{ book.author }}</h3>
+        <h3 class="h3__title">{{ book.author }}</h3>
         <p class="language">{{ $t('languages.' + book.language) }}</p>
         <p class="price">S/ {{ book.price.toFixed(2) }}</p>
       </div>
 
       <div class="book-detail__actions">
-        <select class="quantity">
+        <select v-model="quantity" class="quantity">
           <option>1</option>
           <option>2</option>
           <option>3</option>
         </select>
-        <button class="add-to-cart">{{ $t('add-to-cart') }}</button>
+        <button @click="addToCart(book, quantity)">{{ $t('add-to-cart') }}</button>
         <button>Interes</button>
         <button>No Interes</button>
       </div>

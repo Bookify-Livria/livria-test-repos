@@ -1,7 +1,8 @@
 import {Book} from "../../books/model/book.entity.js";
 
 export class CartItem {
-    constructor(book, quantity = 1) {
+    constructor(id, book, quantity = 1) {
+        this.id = id;
         this.book = book;
         this.quantity = quantity;
     }

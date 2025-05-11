@@ -153,7 +153,7 @@
       "title": "Cien años de soledad",
       "description": "La épica historia de la familia Buendía en Macondo.",
       "author": "Gabriel García Márquez",
-      "price": 45.90,
+      "price": 45.9,
       "cover": "https://i.imgur.com/book1.jpg",
       "genre": "literatura",
       "language": "es"
@@ -163,7 +163,7 @@
       "title": "Orgullo y prejuicio",
       "description": "Un clásico sobre el amor y las clases sociales en la Inglaterra del siglo XIX.",
       "author": "Jane Austen",
-      "price": 35.50,
+      "price": 35.5,
       "cover": "https://i.imgur.com/book2.jpg",
       "genre": "literatura",
       "language": "es"
@@ -183,7 +183,7 @@
       "title": "Harry Potter y la piedra filosofal",
       "description": "El inicio de la mágica aventura de un joven mago.",
       "author": "J.K. Rowling",
-      "price": 52.20,
+      "price": 52.2,
       "cover": "https://i.imgur.com/book4.jpg",
       "genre": "juvenil",
       "language": "es"
@@ -203,7 +203,7 @@
       "title": "El Señor de los Anillos: La Comunidad del Anillo",
       "description": "El comienzo de una épica aventura de fantasía.",
       "author": "J.R.R. Tolkien",
-      "price": 75.00,
+      "price": 75,
       "cover": "https://i.imgur.com/book6.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -213,7 +213,7 @@
       "title": "Matilda",
       "description": "Una niña prodigio con poderes telequinéticos.",
       "author": "Roald Dahl",
-      "price": 31.40,
+      "price": 31.4,
       "cover": "https://i.imgur.com/book7.jpg",
       "genre": "infantil",
       "language": "es"
@@ -233,7 +233,7 @@
       "title": "Pride and Prejudice",
       "description": "A classic novel about love and social class in 19th-century England.",
       "author": "Jane Austen",
-      "price": 40.20,
+      "price": 40.2,
       "cover": "https://i.imgur.com/book9.jpg",
       "genre": "literatura",
       "language": "en"
@@ -243,7 +243,7 @@
       "title": "The Little Prince",
       "description": "A timeless fable about friendship, love, and loss.",
       "author": "Antoine de Saint-Exupéry",
-      "price": 32.90,
+      "price": 32.9,
       "cover": "https://i.imgur.com/book10.jpg",
       "genre": "literatura",
       "language": "en"
@@ -253,7 +253,7 @@
       "title": "Harry Potter and the Sorcerer's Stone",
       "description": "The beginning of a young wizard's magical adventure.",
       "author": "J.K. Rowling",
-      "price": 60.50,
+      "price": 60.5,
       "cover": "https://i.imgur.com/book11.jpg",
       "genre": "juvenil",
       "language": "en"
@@ -263,7 +263,7 @@
       "title": "Sapiens: A Brief History of Humankind",
       "description": "A comprehensive look at the history of our species.",
       "author": "Yuval Noah Harari",
-      "price": 78.50,
+      "price": 78.5,
       "cover": "https://i.imgur.com/book12.jpg",
       "genre": "noficcion",
       "language": "en"
@@ -273,7 +273,7 @@
       "title": "The Lord of the Rings: The Fellowship of the Ring",
       "description": "The start of an epic fantasy quest.",
       "author": "J.R.R. Tolkien",
-      "price": 82.00,
+      "price": 82,
       "cover": "https://i.imgur.com/book13.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -283,7 +283,7 @@
       "title": "Matilda",
       "description": "A gifted young girl with telekinetic powers.",
       "author": "Roald Dahl",
-      "price": 36.80,
+      "price": 36.8,
       "cover": "https://i.imgur.com/book14.jpg",
       "genre": "infantil",
       "language": "en"
@@ -303,7 +303,7 @@
       "title": "Los juegos del hambre",
       "description": "Una distopía juvenil llena de acción y supervivencia.",
       "author": "Suzanne Collins",
-      "price": 42.50,
+      "price": 42.5,
       "cover": "https://i.imgur.com/book16.jpg",
       "genre": "juvenil",
       "language": "es"
@@ -313,7 +313,7 @@
       "title": "Don Quijote de la Mancha",
       "description": "La obra cumbre de la literatura española.",
       "author": "Miguel de Cervantes",
-      "price": 65.00,
+      "price": 65,
       "cover": "https://i.imgur.com/book17.jpg",
       "genre": "literatura",
       "language": "es"
@@ -323,7 +323,7 @@
       "title": "Padre Rico, Padre Pobre",
       "description": "Un libro sobre educación financiera y mentalidad de riqueza.",
       "author": "Robert Kiyosaki",
-      "price": 58.90,
+      "price": 58.9,
       "cover": "https://i.imgur.com/book18.jpg",
       "genre": "noficcion",
       "language": "es"
@@ -333,7 +333,7 @@
       "title": "Ataque a los Titanes #1",
       "description": "El inicio de un manga épico sobre la lucha contra gigantes.",
       "author": "Hajime Isayama",
-      "price": 30.20,
+      "price": 30.2,
       "cover": "https://i.imgur.com/book19.jpg",
       "genre": "mangasycomics",
       "language": "es"
@@ -353,7 +353,7 @@
       "title": "The Da Vinci Code",
       "description": "A mystery thriller filled with hidden symbols.",
       "author": "Dan Brown",
-      "price": 52.90,
+      "price": 52.9,
       "cover": "https://i.imgur.com/book21.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -363,7 +363,7 @@
       "title": "The Hunger Games",
       "description": "A dystopian young adult novel about survival and rebellion.",
       "author": "Suzanne Collins",
-      "price": 47.30,
+      "price": 47.3,
       "cover": "https://i.imgur.com/book22.jpg",
       "genre": "juvenil",
       "language": "en"
@@ -373,7 +373,7 @@
       "title": "Don Quixote",
       "description": "A masterpiece of Spanish literature.",
       "author": "Miguel de Cervantes",
-      "price": 72.00,
+      "price": 72,
       "cover": "https://i.imgur.com/book23.jpg",
       "genre": "literatura",
       "language": "en"
@@ -383,7 +383,7 @@
       "title": "Rich Dad Poor Dad",
       "description": "A book about financial education and wealth mindset.",
       "author": "Robert Kiyosaki",
-      "price": 65.50,
+      "price": 65.5,
       "cover": "https://i.imgur.com/book24.jpg",
       "genre": "noficcion",
       "language": "en"
@@ -393,7 +393,7 @@
       "title": "Attack on Titan Vol. 1",
       "description": "The beginning of an epic manga about the fight against giants.",
       "author": "Hajime Isayama",
-      "price": 34.90,
+      "price": 34.9,
       "cover": "https://i.imgur.com/book25.jpg",
       "genre": "mangasycomics",
       "language": "en"
@@ -433,7 +433,7 @@
       "title": "Steve Jobs",
       "description": "La biografía oficial del cofundador de Apple.",
       "author": "Walter Isaacson",
-      "price": 62.80,
+      "price": 62.8,
       "cover": "https://i.imgur.com/book29.jpg",
       "genre": "noficcion",
       "language": "es"
@@ -443,7 +443,7 @@
       "title": "Dune",
       "description": "Una épica novela de ciencia ficción y aventura.",
       "author": "Frank Herbert",
-      "price": 55.40,
+      "price": 55.4,
       "cover": "https://i.imgur.com/book30.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -453,7 +453,7 @@
       "title": "El Hobbit",
       "description": "Un viaje iniciático a la Tierra Media.",
       "author": "J.R.R. Tolkien",
-      "price": 49.60,
+      "price": 49.6,
       "cover": "https://i.imgur.com/book31.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -473,7 +473,7 @@
       "title": "The Shadow of the Wind",
       "description": "A literary mystery set in old Barcelona.",
       "author": "Carlos Ruiz Zafón",
-      "price": 58.90,
+      "price": 58.9,
       "cover": "https://i.imgur.com/book33.jpg",
       "genre": "literatura",
       "language": "en"
@@ -493,7 +493,7 @@
       "title": "Dune",
       "description": "An epic science fiction and adventure novel.",
       "author": "Frank Herbert",
-      "price": 62.50,
+      "price": 62.5,
       "cover": "https://i.imgur.com/book35.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -503,7 +503,7 @@
       "title": "The Hobbit",
       "description": "A journey to the heart of Middle-earth.",
       "author": "J.R.R. Tolkien",
-      "price": 56.30,
+      "price": 56.3,
       "cover": "https://i.imgur.com/book36.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -513,7 +513,7 @@
       "title": "Cuentos de buenas noches para niñas rebeldes",
       "description": "Historias inspiradoras de mujeres extraordinarias.",
       "author": "Elena Favilli y Francesca Cavallo",
-      "price": 41.90,
+      "price": 41.9,
       "cover": "https://i.imgur.com/book37.jpg",
       "genre": "juvenil",
       "language": "es"
@@ -523,7 +523,7 @@
       "title": "La Metamorfosis",
       "description": "Un relato sobre la transformación y el aislamiento.",
       "author": "Franz Kafka",
-      "price": 25.50,
+      "price": 25.5,
       "cover": "https://i.imgur.com/book38.jpg",
       "genre": "literatura",
       "language": "es"
@@ -543,7 +543,7 @@
       "title": "Buenos presagios",
       "description": "Una divertida colaboración sobre el fin del mundo.",
       "author": "Terry Pratchett & Neil Gaiman",
-      "price": 47.80,
+      "price": 47.8,
       "cover": "https://i.imgur.com/book_40.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -553,7 +553,7 @@
       "title": "Good Omens",
       "description": "A humorous collaboration about the end of the world.",
       "author": "Terry Pratchett & Neil Gaiman",
-      "price": 48.50,
+      "price": 48.5,
       "cover": "https://i.imgur.com/book40.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -563,7 +563,7 @@
       "title": "The Metamorphosis",
       "description": "A novella about transformation and isolation.",
       "author": "Franz Kafka",
-      "price": 29.90,
+      "price": 29.9,
       "cover": "https://i.imgur.com/book41.jpg",
       "genre": "literatura",
       "language": "en"
@@ -573,7 +573,7 @@
       "title": "The Picture of Dorian Gray",
       "description": "A novel about beauty, morality, and decadence.",
       "author": "Oscar Wilde",
-      "price": 38.20,
+      "price": 38.2,
       "cover": "https://i.imgur.com/book42.jpg",
       "genre": "literatura",
       "language": "en"
@@ -583,7 +583,7 @@
       "title": "Don't Call Me Ishmael",
       "description": "A humorous and heartfelt story about a teenager navigating high school.",
       "author": "Michael Gerard Bauer",
-      "price": 35.10,
+      "price": 35.1,
       "cover": "https://i.imgur.com/book43.jpg",
       "genre": "juvenil",
       "language": "en"
@@ -603,7 +603,7 @@
       "title": "El Silmarillion",
       "description": "The mythological history of Middle-earth.",
       "author": "J.R.R. Tolkien",
-      "price": 68.40,
+      "price": 68.4,
       "cover": "https://i.imgur.com/book45.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -613,7 +613,7 @@
       "title": "La oruga muy hambrienta",
       "description": "Un clásico libro infantil sobre la metamorfosis.",
       "author": "Eric Carle",
-      "price": 22.60,
+      "price": 22.6,
       "cover": "https://i.imgur.com/book46.jpg",
       "genre": "infantil",
       "language": "es"
@@ -623,7 +623,7 @@
       "title": "Mujercitas",
       "description": "La historia de cuatro hermanas y su crecimiento.",
       "author": "Louisa May Alcott",
-      "price": 40.50,
+      "price": 40.5,
       "cover": "https://i.imgur.com/book47.jpg",
       "genre": "literatura",
       "language": "es"
@@ -633,7 +633,7 @@
       "title": "1984",
       "description": "Una distopía sobre la vigilancia y el totalitarismo.",
       "author": "George Orwell",
-      "price": 37.80,
+      "price": 37.8,
       "cover": "https://i.imgur.com/book48.jpg",
       "genre": "literatura",
       "language": "es"
@@ -653,7 +653,7 @@
       "title": "The Very Hungry Caterpillar",
       "description": "A classic children's book about metamorphosis.",
       "author": "Eric Carle",
-      "price": 25.30,
+      "price": 25.3,
       "cover": "https://i.imgur.com/book50.jpg",
       "genre": "infantil",
       "language": "en"
@@ -663,7 +663,7 @@
       "title": "Little Women",
       "description": "The story of four sisters and their journey growing up.",
       "author": "Louisa May Alcott",
-      "price": 45.20,
+      "price": 45.2,
       "cover": "https://i.imgur.com/book51.jpg",
       "genre": "literatura",
       "language": "en"
@@ -673,7 +673,7 @@
       "title": "Nineteen Eighty-Four",
       "description": "A dystopian novel about surveillance and totalitarianism.",
       "author": "George Orwell",
-      "price": 42.10,
+      "price": 42.1,
       "cover": "https://i.imgur.com/book52.jpg",
       "genre": "literatura",
       "language": "en"
@@ -683,7 +683,7 @@
       "title": "Cosmos",
       "description": "A popular science book exploring the universe.",
       "author": "Carl Sagan",
-      "price": 70.50,
+      "price": 70.5,
       "cover": "https://i.imgur.com/book53.jpg",
       "genre": "noficcion",
       "language": "en"
@@ -693,7 +693,7 @@
       "title": "The Silmarillion",
       "description": "The mythological history of Middle-earth.",
       "author": "J.R.R. Tolkien",
-      "price": 75.80,
+      "price": 75.8,
       "cover": "https://i.imgur.com/book54.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -703,7 +703,7 @@
       "title": "Watchmen",
       "description": "An influential superhero graphic novel.",
       "author": "Alan Moore & Dave Gibbons",
-      "price": 95.50,
+      "price": 95.5,
       "cover": "https://i.imgur.com/book55.jpg",
       "genre": "mangasycomics",
       "language": "en"
@@ -723,7 +723,7 @@
       "title": "El psicoanalista",
       "description": "Un thriller psicológico lleno de suspense.",
       "author": "John Katzenbach",
-      "price": 53.60,
+      "price": 53.6,
       "cover": "https://i.imgur.com/book57.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -733,7 +733,7 @@
       "title": "Breve historia del tiempo",
       "description": "Un libro de divulgación sobre la cosmología.",
       "author": "Stephen Hawking",
-      "price": 47.20,
+      "price": 47.2,
       "cover": "https://i.imgur.com/book58.jpg",
       "genre": "noficcion",
       "language": "es"
@@ -743,7 +743,7 @@
       "title": "Dragon Ball #1",
       "description": "El clásico manga de aventuras y artes marciales.",
       "author": "Akira Toriyama",
-      "price": 28.90,
+      "price": 28.9,
       "cover": "https://i.imgur.com/book59.jpg",
       "genre": "mangasycomics",
       "language": "es"
@@ -753,7 +753,7 @@
       "title": "Divergent",
       "description": "The start of a dystopian young adult trilogy.",
       "author": "Veronica Roth",
-      "price": 44.80,
+      "price": 44.8,
       "cover": "https://i.imgur.com/book60.jpg",
       "genre": "juvenil",
       "language": "en"
@@ -763,7 +763,7 @@
       "title": "The Psychoanalyst",
       "description": "A psychological thriller full of suspense.",
       "author": "John Katzenbach",
-      "price": 59.30,
+      "price": 59.3,
       "cover": "https://i.imgur.com/book61.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -783,7 +783,7 @@
       "title": "Dragon Ball Vol. 1",
       "description": "The classic martial arts and adventure manga.",
       "author": "Akira Toriyama",
-      "price": 32.50,
+      "price": 32.5,
       "cover": "https://i.imgur.com/book63.jpg",
       "genre": "mangasycomics",
       "language": "en"
@@ -793,7 +793,7 @@
       "title": "El jardín secreto",
       "description": "Un cuento clásico sobre la amistad y el descubrimiento.",
       "author": "Frances Hodgson Burnett",
-      "price": 36.40,
+      "price": 36.4,
       "cover": "https://i.imgur.com/book64.jpg",
       "genre": "infantil",
       "language": "es"
@@ -803,7 +803,7 @@
       "title": "Frankenstein",
       "description": "Una novela gótica sobre la creación y la monstruosidad.",
       "author": "Mary Shelley",
-      "price": 31.90,
+      "price": 31.9,
       "cover": "https://i.imgur.com/book65.jpg",
       "genre": "literatura",
       "language": "es"
@@ -813,7 +813,7 @@
       "title": "Los pilares de la Tierra",
       "description": "Una épica histórica sobre la construcción de una catedral.",
       "author": "Ken Follett",
-      "price": 71.10,
+      "price": 71.1,
       "cover": "https://i.imgur.com/book66.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -823,7 +823,7 @@
       "title": "Homo Deus: Breve historia del mañana",
       "description": "Una exploración del futuro de la humanidad.",
       "author": "Yuval Noah Harari",
-      "price": 79.50,
+      "price": 79.5,
       "cover": "https://i.imgur.com/book67.jpg",
       "genre": "noficcion",
       "language": "es"
@@ -833,7 +833,7 @@
       "title": "Your Name #1",
       "description": "Un popular manga sobre intercambios de cuerpos.",
       "author": "Makoto Shinkai",
-      "price": 33.20,
+      "price": 33.2,
       "cover": "https://i.imgur.com/book68.jpg",
       "genre": "mangasycomics",
       "language": "es"
@@ -853,7 +853,7 @@
       "title": "The Secret Garden",
       "description": "A classic tale about friendship and discovery.",
       "author": "Frances Hodgson Burnett",
-      "price": 41.60,
+      "price": 41.6,
       "cover": "https://i.imgur.com/book70.jpg",
       "genre": "infantil",
       "language": "en"
@@ -863,7 +863,7 @@
       "title": "Frankenstein",
       "description": "A gothic novel about creation and monstrosity.",
       "author": "Mary Shelley",
-      "price": 36.50,
+      "price": 36.5,
       "cover": "https://i.imgur.com/book71.jpg",
       "genre": "literatura",
       "language": "en"
@@ -873,7 +873,7 @@
       "title": "The Pillars of the Earth",
       "description": "An epic historical novel about the building of a cathedral.",
       "author": "Ken Follett",
-      "price": 78.90,
+      "price": 78.9,
       "cover": "https://i.imgur.com/book72.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -893,7 +893,7 @@
       "title": "Your Name Vol. 1",
       "description": "A popular manga about body swaps.",
       "author": "Makoto Shinkai",
-      "price": 37.80,
+      "price": 37.8,
       "cover": "https://i.imgur.com/book74.jpg",
       "genre": "mangasycomics",
       "language": "en"
@@ -903,7 +903,7 @@
       "title": "Dork Diaries #1",
       "description": "A young adult diary full of misadventures.",
       "author": "Rachel Renée Russell",
-      "price": 42.50,
+      "price": 42.5,
       "cover": "https://i.imgur.com/book75.jpg",
       "genre": "juvenil",
       "language": "en"
@@ -913,7 +913,7 @@
       "title": "El cuento de la criada",
       "description": "Una distopía sobre la opresión femenina.",
       "author": "Margaret Atwood",
-      "price": 49.70,
+      "price": 49.7,
       "cover": "https://i.imgur.com/book76.jpg",
       "genre": "literatura",
       "language": "es"
@@ -933,7 +933,7 @@
       "title": "Ready Player One",
       "description": "Una aventura de ciencia ficción en un mundo virtual.",
       "author": "Ernest Cline",
-      "price": 56.20,
+      "price": 56.2,
       "cover": "https://i.imgur.com/book78.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -953,7 +953,7 @@
       "title": "The Handmaid's Tale",
       "description": "A dystopia about the oppression of women.",
       "author": "Margaret Atwood",
-      "price": 55.40,
+      "price": 55.4,
       "cover": "https://i.imgur.com/book80.jpg",
       "genre": "literatura",
       "language": "en"
@@ -973,7 +973,7 @@
       "title": "Ready Player One",
       "description": "A science fiction adventure in a virtual world.",
       "author": "Ernest Cline",
-      "price": 62.80,
+      "price": 62.8,
       "cover": "https://i.imgur.com/book82.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -983,7 +983,7 @@
       "title": "Maus",
       "description": "A graphic novel about the Holocaust.",
       "author": "Art Spiegelman",
-      "price": 80.50,
+      "price": 80.5,
       "cover": "https://i.imgur.com/book83.jpg",
       "genre": "mangasycomics",
       "language": "en"
@@ -993,7 +993,7 @@
       "title": "Coraline",
       "description": "Una oscura y mágica historia para jóvenes lectores.",
       "author": "Neil Gaiman",
-      "price": 34.90,
+      "price": 34.9,
       "cover": "https://i.imgur.com/book84.jpg",
       "genre": "juvenil",
       "language": "es"
@@ -1013,7 +1013,7 @@
       "title": "Sherlock Holmes: Estudio en escarlata",
       "description": "La primera aventura del famoso detective.",
       "author": "Arthur Conan Doyle",
-      "price": 29.50,
+      "price": 29.5,
       "cover": "https://i.imgur.com/book86.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -1023,7 +1023,7 @@
       "title": "One-Punch Man #1",
       "description": "Un manga de superhéroes con un toque de humor.",
       "author": "ONE y Yusuke Murata",
-      "price": 31.70,
+      "price": 31.7,
       "cover": "https://i.imgur.com/book87.jpg",
       "genre": "mangasycomics",
       "language": "es"
@@ -1033,7 +1033,7 @@
       "title": "El árbol que da",
       "description": "Un conmovedor cuento sobre el dar y el recibir.",
       "author": "Shel Silverstein",
-      "price": 27.30,
+      "price": 27.3,
       "cover": "https://i.imgur.com/book88.jpg",
       "genre": "infantil",
       "language": "es"
@@ -1043,7 +1043,7 @@
       "title": "Mujer en la ventana",
       "description": "Un thriller psicológico lleno de giros.",
       "author": "A.J. Finn",
-      "price": 51.90,
+      "price": 51.9,
       "cover": "https://i.imgur.com/book89.jpg",
       "genre": "ficcion",
       "language": "es"
@@ -1053,7 +1053,7 @@
       "title": "Coraline",
       "description": "A dark and magical story for young readers.",
       "author": "Neil Gaiman",
-      "price": 39.50,
+      "price": 39.5,
       "cover": "https://i.imgur.com/book90.jpg",
       "genre": "juvenil",
       "language": "en"
@@ -1073,7 +1073,7 @@
       "title": "Sherlock Holmes: A Study in Scarlet",
       "description": "The first adventure of the famous detective.",
       "author": "Arthur Conan Doyle",
-      "price": 33.10,
+      "price": 33.1,
       "cover": "https://i.imgur.com/book92.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -1083,7 +1083,7 @@
       "title": "One-Punch Man Vol. 1",
       "description": "A superhero manga with a comedic twist.",
       "author": "ONE & Yusuke Murata",
-      "price": 36.20,
+      "price": 36.2,
       "cover": "https://i.imgur.com/book93.jpg",
       "genre": "mangasycomics",
       "language": "en"
@@ -1093,7 +1093,7 @@
       "title": "The Giving Tree",
       "description": "A touching story about giving and receiving.",
       "author": "Shel Silverstein",
-      "price": 31.90,
+      "price": 31.9,
       "cover": "https://i.imgur.com/book94.jpg",
       "genre": "infantil",
       "language": "en"
@@ -1103,7 +1103,7 @@
       "title": "The Woman in the Window",
       "description": "A psychological thriller full of twists.",
       "author": "A.J. Finn",
-      "price": 57.60,
+      "price": 57.6,
       "cover": "https://i.imgur.com/book95.jpg",
       "genre": "ficcion",
       "language": "en"
@@ -1113,7 +1113,7 @@
       "title": "Yo antes de ti",
       "description": "Una historia de amor y decisión.",
       "author": "Jojo Moyes",
-      "price": 41.00,
+      "price": 41,
       "cover": "https://i.imgur.com/QMJ68V4.jpg",
       "genre": "literatura",
       "language": "es"
@@ -1123,7 +1123,7 @@
       "title": "After #1",
       "description": "El inicio de una popular saga juvenil romántica.",
       "author": "Anna Todd",
-      "price": 44.50,
+      "price": 44.5,
       "cover": "https://i.imgur.com/book97.jpg",
       "genre": "juvenil",
       "language": "es"
@@ -1133,7 +1133,7 @@
       "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
       "description": "Un libro esencial para programadores.",
       "author": "Robert C. Martin",
-      "price": 95.00,
+      "price": 95,
       "cover": "https://i.imgur.com/book98.jpg",
       "genre": "ebooks",
       "language": "en"
@@ -1143,14 +1143,11 @@
       "title": "El arte de la guerra",
       "description": "Un antiguo tratado sobre estrategia militar.",
       "author": "Sun Tzu",
-      "price": 28.20,
+      "price": 28.2,
       "cover": "https://i.imgur.com/book99.jpg",
       "genre": "noficcion",
       "language": "es"
     }
   ],
-  "cart": [
-
-  ]
-
+  "cart": []
 }

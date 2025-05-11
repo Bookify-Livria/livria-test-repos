@@ -1,6 +1,6 @@
 <script>
 import BookItem from './book-item.component.vue'
-import { BookApiService } from '../service/book-api.service.js'
+import { BookApiService } from '../services/book-api.service.js'
 
 export default {
   name: 'genreBooks',

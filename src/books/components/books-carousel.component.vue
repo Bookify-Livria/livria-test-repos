@@ -1,5 +1,5 @@
 <script>
-import { BookApiService } from '../service/book-api.service.js'
+import { BookApiService } from '../services/book-api.service.js'
 import BookItem from './book-item.component.vue'
 
 export default {

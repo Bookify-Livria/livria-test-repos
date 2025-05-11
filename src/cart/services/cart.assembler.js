@@ -1,10 +1,10 @@
 import { CartItem } from '../model/cart-item.entity.js';
-import { BookAssembler } from '../../books/service/book.assembler.js';
+import { BookAssembler } from '../../books/services/book.assembler.js';
 
 export class CartAssembler {
     static toEntityFromResource(resource) {
         const book = BookAssembler.toEntityFromResource(resource.book);
-        return new CartItem(book, resource.quantity);
+        return new CartItem(resource.id, book, resource.quantity);
     }
 
     static toEntitiesFromResponse(response) {
@@ -13,6 +13,7 @@ export class CartAssembler {
 
     static toResource(cartItem) {
         return {
+            id: cartItem.id,
             book: {
                 id: cartItem.book.id,
                 title: cartItem.book.title,

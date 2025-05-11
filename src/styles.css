@@ -11,6 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Drawer */
+  --p-drawer-background: var(--color-primary);
+  --p-drawer-content-padding: 2rem;
+  --p-drawer-footer-padding: 2rem;
 }
 
 * {
@@ -46,6 +51,7 @@ p {
   width: 100%;
   text-align: left;
   padding: 2rem;
+  margin-bottom: 0;
 }
 
 button {
