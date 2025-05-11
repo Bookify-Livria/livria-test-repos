@@ -34,6 +34,7 @@ export default {
       this.$refs.cartDrawerRef.toggleDrawer()
     },
     updateCartVisibility(val) {
+      console.log('Drawer visible?', val)
       this.isCartActive = val
     }
   }
@@ -61,7 +62,7 @@ export default {
         <nav class="header__nav" aria-label="Main Navigation">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <pv-button @click="openCart" :class="['header__nav-link', { active: isCartActive }]"><cartIcon class="nav-icon" />{{ $t('cart') }}</pv-button>
+              <pv-button @click="openCart" :class="['header__nav-link', { active: isCartActive }]"><cartIcon class="nav-icon" />{{ $t('toolbar.cart') }}</pv-button>
               <CartDrawer ref="cartDrawerRef" @visibility-change="updateCartVisibility" />
             </li>
             <li class="header__nav-item">
@@ -92,7 +93,7 @@ export default {
     </div>
 
     <div class="header">
-      <div class="header__nav-subitem"><router-link to="" class="header__nav-link go--orange">{{ $t('recommendations') }}</router-link></div>
+      <div class="header__nav-subitem"><router-link to="/recommendations" class="header__nav-link go--orange">{{ $t('recommendations') }}</router-link></div>
       <div class="header__nav-subitem"><router-link to="/bookl" class="header__nav-link go--orange">{{ $t('literature') }}</router-link></div>
       <div class="header__nav-subitem"><router-link to="/booknf" class="header__nav-link go--orange">{{ $t('non-fiction') }}</router-link></div>
       <div class="header__nav-subitem"><router-link to="/bookf" class="header__nav-link go--yellow">{{ $t('fiction') }}</router-link></div>

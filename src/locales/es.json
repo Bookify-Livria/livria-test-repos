@@ -1,10 +1,11 @@
 {
   "toolbar": {
     "search": "Buscar",
+    "cart": "Carrito",
     "notifications": "Notificaciones",
     "account": "Cuenta"
   },
-  "cart": "Carrito",
+
   "shop": "Tienda",
   "literature": "Literatura",
   "non-fiction": "No Ficción",
@@ -17,6 +18,27 @@
   "communities": "Comunidades",
   "genre": "Género",
 
+  "recommended": {
+    "title": "RECOMENDACIONES PARA TI",
+    "subtitle": "¡Hola! En base a tus preferencias, te dejamos las siguientes recomendaciones..."
+  },
+
+  "carousel": {
+    "community": {
+      "title": "PLAN COMUNIDAD",
+      "description": "Conecta con otros lectores, comparte tus opiniones y forma parte de espacios donde la lectura cobra vida."
+    },
+    "worlds": {
+      "title": "DESCUBRE NUEVOS MUNDOS",
+      "description": "Explora lecturas recomendadas por la comunidad y abre las puertas a historias fascinantes."
+    },
+    "passion": {
+      "title": "COMPARTE TU PASIÓN",
+      "description": "Recomienda libros, escribe reseñas y crea conexiones con otros amantes de la lectura."
+    },
+    "button": "OBTÉNLO AQUÍ"
+  },
+
   "loading-book": "Cargando Libro...",
   "synopsis": "Sinópsis",
   "comments": "Comentarios",
@@ -24,9 +46,7 @@
     "es": "Español",
     "en": "Inglés"
   },
-  "empty-cart": "Vaciar Carrito",
   "add-to-cart": "Añadir al carrito",
-  "buy-cart": "Finalizar mi compra",
 
   "genres": {
     "literatura": "Literatura",

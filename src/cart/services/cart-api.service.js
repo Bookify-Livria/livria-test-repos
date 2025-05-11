@@ -3,7 +3,7 @@ import { CartAssembler} from "./cart.assembler.js";
 
 export class CartApiService {
     getCart() {
-        return axios.get('http://localhost:3001/cart')
+        return axios.get('http://localhost:3000/cart')
             .then(response => CartAssembler.toEntitiesFromResponse(response))
             .catch(error => {
                 console.error('Error fetching cart:', error);
@@ -12,7 +12,7 @@ export class CartApiService {
     }
 
     addToCart(cartItem) {
-        return axios.post('http://localhost:3001/cart', CartAssembler.toResource(cartItem))
+        return axios.post('http://localhost:3000/cart', CartAssembler.toResource(cartItem))
             .catch(error => {
                 console.error('Error adding to cart:', error);
                 throw error;
@@ -20,7 +20,7 @@ export class CartApiService {
     }
 
     removeFromCart(Id) {
-        return axios.delete(`http://localhost:3001/cart/${Id}`)
+        return axios.delete(`http://localhost:3000/cart/${Id}`)
             .then(response => {
                 console.log('User deleted successfully:', response.data);
             })
@@ -31,11 +31,11 @@ export class CartApiService {
     }
 
     clearCart() {
-        return axios.get('http://localhost:3001/cart')
+        return axios.get('http://localhost:3000/cart')
             .then(response => {
                 const items = response.data;
                 return Promise.all(items.map(item =>
-                    axios.delete(`http://localhost:3001/cart/${item.id}`)
+                    axios.delete(`http://localhost:3000/cart/${item.id}`)
                 ));
             })
             .catch(error => {

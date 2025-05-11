@@ -1,10 +1,10 @@
 {
   "toolbar": {
     "search": "Search",
+    "cart": "Kart",
     "notifications": "Notifications",
     "account": "Account"
   },
-  "cart": "Cart",
   "shop": "Shop",
   "literature": "Literature",
   "non-fiction": "Non-Fiction",
@@ -17,6 +17,27 @@
   "communities": "Communities",
   "genre": "Genre",
 
+  "recommended": {
+    "title": "RECOMMENDATIONS FOR YOU",
+    "subtitle": "Hi! Based on your preferences, here are some recommendations..."
+  },
+
+  "carousel": {
+    "community": {
+      "title": "COMMUNITY PLAN",
+      "description": "Connect with other readers, share your thoughts and join spaces where reading comes alive."
+    },
+    "worlds": {
+      "title": "DISCOVER NEW WORLDS",
+      "description": "Explore community-recommended readings and open the doors to fascinating stories."
+    },
+    "passion": {
+      "title": "SHARE YOUR PASSION",
+      "description": "Recommend books, write reviews, and connect with fellow book lovers."
+    },
+    "button": "GET IT HERE"
+  },
+
   "loading-book": "Loading Book...",
   "synopsis": "Synopsis",
   "comments": "Comments",
@@ -25,8 +46,6 @@
     "en": "English"
   },
   "add-to-cart": "Add to cart",
-  "empty-cart": "Empty Cart",
-  "buy-cart": "Complete my purchase",
 
   "genres": {
     "literatura": "Literature",
