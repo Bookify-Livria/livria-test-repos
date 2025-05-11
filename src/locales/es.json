@@ -1,11 +1,11 @@
 {
-
   "toolbar": {
     "search": "Buscar",
-    "kart": "Carrito",
+    "cart": "Carrito",
     "notifications": "Notificaciones",
     "account": "Cuenta"
   },
+
   "shop": "Tienda",
   "literature": "Literatura",
   "non-fiction": "No Ficción",
@@ -16,7 +16,17 @@
   "ebooks-audiobooks": "Ebooks Y Audiobooks",
   "recommendations": "Recomendaciones",
   "communities": "Comunidades",
-  "genre": "Genero",
+  "genre": "Género",
+
+  "loading-book": "Cargando Libro...",
+  "synopsis": "Sinópsis",
+  "comments": "Comentarios",
+  "languages": {
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "add-to-cart": "Añadir al carrito",
+
   "genres": {
     "literatura": "Literatura",
     "ficcion": "Ficción",
@@ -27,6 +37,7 @@
     "ebooks": "eBooks",
     "default": "Género"
   },
+
   "sort": "Ordenar por",
   "language": "Idioma",
   "titleaz": "Título A-Z",

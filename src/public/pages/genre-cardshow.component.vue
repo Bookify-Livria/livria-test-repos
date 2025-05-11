@@ -1,14 +1,14 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import BookCard from "../../books/components/Book-Card.component.vue";
+import genreBooks from "../../books/components/genre-books.component.vue";
 
 export default {
   name: "book-literature.component",
   components: {
     toolbarComponent,
     footerComponent,
-    BookCard,
+    genreBooks,
   },
   props: {
     genre: {
@@ -36,6 +36,7 @@ export default {
 </script>
 
 <template>
+  <!-- Header -->
   <toolbarComponent />
 
   <div class="literature-container">
@@ -47,14 +48,16 @@ export default {
     </div>
 
     <div class="cards__container">
-      <BookCard :genre="genre" />
+      <genreBooks :genre="genre" />
     </div>
 
+    <!-- Footer -->
     <div class="footer__container-fullwidth">
       <footerComponent />
     </div>
   </div>
 </template>
+
 <style scoped>
 .literature-container {
   margin: 7.5rem calc(-1 * ((100vw - 100%) / 2)) 0;
@@ -62,7 +65,7 @@ export default {
 
 .literature__fullwidth {
   padding: 0 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 </style>

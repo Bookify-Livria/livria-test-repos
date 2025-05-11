@@ -3,7 +3,9 @@ import { createWebHistory, createRouter } from 'vue-router';
 import Home from '../public/pages/home.component.vue';
 import Account from '../public/pages/account.component.vue';
 import Communities from "../public/pages/communities.component.vue";
-import Booksss from '../public/pages/Bookcardshow.component.vue';
+import Booksss from '../public/pages/genre-cardshow.component.vue';
+import SingularBook from '../public/pages/book-page.component.vue'
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -52,7 +54,8 @@ const router = createRouter({
             name: 'EaBooks',
             component: Booksss,
             props: { genre: 'ebooks' }
-        }
+        },
+        {path: '/books/:title', name: 'BookDetail',component: SingularBook}
     ]
 })
 

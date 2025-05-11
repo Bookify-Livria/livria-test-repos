@@ -1,7 +1,7 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import bookCarousel from "../../books/components/Book.Carousel.vue";
+import bookCarousel from "../../books/components/books-carousel.component.vue";
 
 export default {
   name: "home.component",
@@ -89,6 +89,8 @@ export default {
       <footerComponent/>
     </div>
   </div>
+
+
 </template>
 
 <style scoped>

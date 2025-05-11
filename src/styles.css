@@ -37,10 +37,32 @@ p {
   margin: 0;
 }
 
+.h3__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .title__container {
   width: 100%;
   text-align: left;
   padding: 2rem;
+}
+
+button {
+  background-color: var(--color-secondary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: var(--color-blue);
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-blue);
+  color: var(--color-background);
 }
 
 /* Color Bar */

@@ -1,8 +1,9 @@
 <script>
 import LanguageSwitcher from "./language-switcher.component.vue";
+import CartDrawer from "../../cart/components/cart-drawer.component.vue"
 
 //icons
-import kartIcon from "../../assets/images/icons/Shop_kart.svg";
+import cartIcon from "../../assets/images/icons/Shop_kart.svg";
 import locationIcon from "../../assets/images/icons/Location.svg";
 import bellIcon from "../../assets/images/icons/Bell.svg";
 import userIcon from "../../assets/images/icons/User_alt.svg";
@@ -13,7 +14,8 @@ export default {
   name: "Toolbar.component",
   components:{
     LanguageSwitcher,
-    kartIcon,
+    CartDrawer,
+    cartIcon,
     locationIcon,
     bellIcon,
     userIcon,
@@ -23,6 +25,11 @@ export default {
   data() {
     return {
       value1: ""
+    }
+  },
+  methods: {
+    openCart() {
+      this.$refs.cartDrawerRef.toggleDrawer()
     }
   }
 }
@@ -49,7 +56,8 @@ export default {
         <nav class="header__nav" aria-label="Main Navigation">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <router-link to="" class="header__nav-link"><kartIcon class="nav-icon" />{{ $t('toolbar.kart') }}</router-link>
+              <pv-button @click="openCart" class="header__nav-link"><cartIcon class="nav-icon" />{{ $t('toolbar.cart') }}</pv-button>
+              <CartDrawer ref="cartDrawerRef" />
             </li>
             <li class="header__nav-item">
               <router-link to="" class="header__nav-link"><locationIcon class="nav-icon"/>{{ $t('shop') }}</router-link>

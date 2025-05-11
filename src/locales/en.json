@@ -1,7 +1,7 @@
 {
   "toolbar": {
     "search": "Search",
-    "kart": "Kart",
+    "cart": "Kart",
     "notifications": "Notifications",
     "account": "Account"
   },
@@ -17,6 +17,14 @@
   "communities": "Communities",
   "genre": "Genre",
 
+  "loading-book": "Loading Book...",
+  "synopsis": "Synopsis",
+  "comments": "Comments",
+  "languages": {
+    "es": "Spanish",
+    "en": "English"
+  },
+  "add-to-cart": "Add to cart",
 
   "genres": {
     "literatura": "Literature",

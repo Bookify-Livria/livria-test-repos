@@ -17,6 +17,7 @@ import SelectButton from "primevue/selectbutton";
 import Password from "primevue/password";
 import Image from "primevue/image";
 import Message from "primevue/message";
+import Drawer from "primevue/drawer";
 
 import router from "./router/index.js";
 
@@ -36,7 +37,8 @@ app
     .component("pv-select-button", SelectButton)
     .component("pv-password", Password)
     .component("pv-image", Image)
-    .component("pv-message", Message);
+    .component("pv-message", Message)
+    .component("pv-drawer", Drawer);
 
 
 app.mount("#app");

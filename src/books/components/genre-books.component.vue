@@ -1,9 +1,9 @@
 <script>
-import Card from 'primevue/card'
+import BookItem from './book-item.component.vue'
 import { BookApiService } from '../service/book-api.service.js'
 
 export default {
-  name: 'BookCardComponent',
+  name: 'genreBooks',
   props: {
     genre: {
       type: String,
@@ -11,7 +11,7 @@ export default {
     }
   },
   components: {
-    Card
+    BookItem,
   },
   data() {
     return {
@@ -70,34 +70,17 @@ export default {
   <div class="book-view-container">
 
     <div class="book-grid">
-
       <div
           v-for="book in filteredBooks"
           :key="book.id"
           class="custom-card-wrapper"
       >
-
-        <Card>
-          <template #header>
-            <div class="cover-container">
-              <img :src="book.cover" :alt="book.title" class="book-cover" />
-            </div>
-          </template>
-          <template #title>
-            <div class="book-title">{{ book.title }}</div>
-          </template>
-          <template #subtitle>
-            <div class="book-author">{{ book.author }}</div>
-          </template>
-          <template #footer>
-            <div class="book-price">S/ {{ book.price.toFixed(2) }}</div>
-          </template>
-        </Card>
+        <BookItem :book="book" />
       </div>
     </div>
 
     <div class="filter-panel">
-      <Card>
+      <pv-card>
         <template #title>
           <div class="filter-title">
             <span class="ordenar-label">{{ $t('sort') }}</span>
@@ -130,7 +113,7 @@ export default {
           </div>
         </template>
 
-      </Card>
+      </pv-card>
     </div>
   </div>
 </template>
@@ -142,25 +125,17 @@ export default {
   padding: 2rem;
   flex-wrap: wrap;
 }
-.cover-container {
-  padding-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1rem;
-}
 
 .book-grid {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 4.2rem;
-  column-gap: 4rem;
+  row-gap: 3rem;
+  column-gap: 1rem;
   flex: 3;
 }
 
 .custom-card-wrapper {
-  width: 250px;
-
+  width: 300px;
 }
 
 .p-card {
@@ -172,29 +147,6 @@ export default {
 
 .p-card:hover {
   transform: scale(1.02);
-}
-
-.book-cover {
-  width: 150px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.book-title {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #333;
-}
-
-.book-author {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.book-price {
-  margin-top: 0.5rem;
-  font-weight: bold;
 }
 
 .filter-panel {
