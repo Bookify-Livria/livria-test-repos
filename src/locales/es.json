@@ -1,11 +1,10 @@
 {
   "toolbar": {
     "search": "Buscar",
-    "cart": "Carrito",
     "notifications": "Notificaciones",
     "account": "Cuenta"
   },
-
+  "cart": "Carrito",
   "shop": "Tienda",
   "literature": "Literatura",
   "non-fiction": "No Ficción",
@@ -25,6 +24,7 @@
     "es": "Español",
     "en": "Inglés"
   },
+  "empty-cart": "Vaciar Carrito",
   "add-to-cart": "Añadir al carrito",
   "buy-cart": "Finalizar mi compra",
 

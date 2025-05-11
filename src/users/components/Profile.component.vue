@@ -80,29 +80,30 @@ export default {
 
 
 <template>
-  <div class="all">
-    <h1 class="head">{{$t('account')}}</h1>
-    <div class="profile">
-      <div class="profile-details">
+  <div class="profile">
+    <!-- Left Panel -->
+    <div class="account__profile-details">
+      <div>
+        <pv-image :src="kingTurkey.icon" alt="Foto de perfil" width="200" height="200" class="pfp"></pv-image>
         <div>
-          <pv-image :src="kingTurkey.icon" alt="Foto de perfil" width="200" height="200" class="pfp"></pv-image>
-          <div>
-            <p class="display-name">{{ kingTurkey.display }}</p>
-            <p class="username">{{ kingTurkey.username }}</p>
-            <p class="email">{{ kingTurkey.email }}</p>
-          </div>
+          <p class="account__profile-display-name">{{ kingTurkey.display }}</p>
+          <p class="account__profile-username">{{ kingTurkey.username }}</p>
+          <p class="account__profile-email">{{ kingTurkey.email }}</p>
         </div>
       </div>
+    </div>
 
-      <div class="profile-info">
-
+    <!-- Middle Panel -->
+    <div class="profile__info">
+      <div class="profile__info-half">
         <pv-card>
           <template #title>{{ $t('profile') }}</template>
           <template #content>
             <p>{{ kingTurkey.phrase }}</p>
           </template>
         </pv-card>
-
+      </div>
+      <div class="profile__info-half">
         <pv-card>
           <template #title>{{ $t('recent-orders') }}</template>
           <template #content>
@@ -115,114 +116,90 @@ export default {
             </div>
           </template>
         </pv-card>
-
-      </div>
-
-      <div class="profile-config">
-        <pv-card>
-          <template #title>{{ $t('settings') }}</template>
-          <template #content>
-            <div class="same-line">
-              <p>{{ $t('setting.allow-not')}}</p>
-              <pv-select-button v-model="value1" :default-value="value1" :options="options1" optionLabel="name"/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.not-status')}}</p>
-              <pv-select-button v-model="value2" :default-value="value2" :options="options2" optionLabel="name"/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.not-email')}}</p>
-              <pv-select-button v-model="value3" :default-value="value3" :options="options3" optionLabel="name"/>
-            </div>
-
-            <div class="same-line">
-              <p>{{ $t('setting.visibility')}}</p>
-              <pv-select-button v-model="value4" :default-value="value4" :options="options4" optionLabel="name"/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.current-password')}}</p>
-              <p>*********</p>
-              <pv-button class="buttonn" severity="warn">{{ $t('change')}}</pv-button>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('setting.new-password')}}</p>
-              <pv-password class="pas" :feedback="false" toggle-mask/>
-            </div>
-            <div class="same-line">
-              <p>{{ $t('confpass')}}</p>
-              <pv-password class="pas" :feedback="false" toggle-mask/>
-            </div>
-            <div class="set-options">
-              <div class="buton">
-                <pv-button class="but-set delete" severity="danger">{{ $t('delete1')}}</pv-button>
-              </div>
-              <div class="butons">
-                <pv-button class="but-set logout" severity="warn">{{ $t('logout')}}</pv-button>
-                <pv-button class="but-set save" severity="success">{{ $t('save')}}</pv-button>
-              </div>
-            </div>
-          </template>
-        </pv-card>
       </div>
     </div>
+
+    <!-- Right Panel -->
+    <div class="profile__config">
+      <pv-card>
+        <template #title>{{ $t('settings') }}</template>
+        <template #content>
+          <div class="same-line">
+            <p>{{ $t('setting.allow-not')}}</p>
+            <pv-select-button v-model="value1" :default-value="value1" :options="options1" optionLabel="name"/>
+          </div>
+          <div class="same-line">
+            <p>{{ $t('setting.not-status')}}</p>
+            <pv-select-button v-model="value2" :default-value="value2" :options="options2" optionLabel="name"/>
+          </div>
+          <div class="same-line">
+            <p>{{ $t('setting.not-email')}}</p>
+            <pv-select-button v-model="value3" :default-value="value3" :options="options3" optionLabel="name"/>
+          </div>
+          <div class="same-line">
+            <p>{{ $t('setting.visibility')}}</p>
+            <pv-select-button v-model="value4" :default-value="value4" :options="options4" optionLabel="name"/>
+          </div>
+          <div class="same-line">
+            <p>{{ $t('setting.current-password')}}</p>
+            <p>*********</p>
+            <button>{{ $t('change')}}</button>
+          </div>
+          <div class="same-line">
+            <p>{{ $t('setting.new-password')}}</p>
+            <pv-password class="pas" :feedback="false" toggle-mask/>
+          </div>
+          <div class="same-line">
+            <p>{{ $t('confpass')}}</p>
+            <pv-password class="pas" :feedback="false" toggle-mask/>
+          </div>
+          <div class="set-options">
+            <div class="buton">
+              <button>{{ $t('delete1')}}</button>
+            </div>
+            <div class="butons">
+              <button>{{ $t('logout')}}</button>
+              <button>{{ $t('save')}}</button>
+            </div>
+          </div>
+        </template>
+      </pv-card>
+    </div>
   </div>
+
 </template>
 
 <style scoped>
 
-.head {
-  color: #063A5D;
-  left: 0;
-  text-align: left;
-  margin-left: 2%;
-  font-weight: lighter;
-  letter-spacing: 10px;
-  width: 100%;
-}
-
-.all {
-  display: block;
-  position: absolute;
-  background: white;
-  justify-content: space-around;
-  justify-items: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  align-items: center;
-  margin-bottom: 0;
-}
-
 .profile {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  justify-items: center;
+  align-items: stretch;
+  justify-content: space-between;
   width: 100%;
+  gap: 3rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
 }
 
 .p-card {
-  background: #F4F5F7;
+  background: var(--color-light);
   border: 2px solid transparent;
   padding: 2rem;
+  height: 100%;
   border-radius: 10px;
-  margin-bottom: 1rem;
-  color: black;
+  color: var(--color-text);
   text-align: left;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 ::v-deep(.p-card-title) {
-  color: #FF5C00;
+  color: var(--color-accent-orange);
   font-weight: normal;
   font-size: 1.5rem;
 }
 
 ::v-deep(.p-message-text) {
-  color: black;
+  color: var(--color-text);
 }
 
 .same-line {
@@ -231,41 +208,54 @@ export default {
   align-items: center;
 }
 
-.display-name {
-  color: #063A5D;
+.account__profile-display-name {
+  color: var(--color-primary);
   font-size: 32px;
   text-align: left;
   margin-bottom: 0;
 }
 
-.username {
+.account__profile-username {
   margin-top:0;
-  color: #FEB913;
+  color: var(--color-accent-yellow);
   font-size: 24px;
   text-align: left;
   margin-bottom: 0;
 }
 
-.email {
+.account__profile-email {
   margin-top:0;
-  color: #2364A0;
+  color: var(--color-blue);
   font-size: 24px;
   text-align: left;
 }
 
-.profile-details {
+.account__profile-details {
   width: 15%;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.profile-info {
-  width: 35%;
+.profile__info {
+  width: 20%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.profile-config {
-  width: 35%;
+.profile__info-half {
+  flex: 0 0 45%;
+}
+
+.profile__config {
+  width: 30%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .set-options {
@@ -277,42 +267,34 @@ export default {
   gap: 20px;
 }
 
-::v-deep(.p-togglebutton) {
+::v-deep(.p-selectbutton) {
   background-color: transparent;
-  color: #2364A0;
-  border-color: #2364A0;
-  width: 70px;
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  border-radius: 5px;
+  width: 200px;
   height: 40px;
 }
 
-::v-deep(.p-togglebutton.p-togglebutton-checked) {
-  color: orange;
-  background-color: orangered;
-  width: 70px;
-  height: 40px;
+::v-deep(.p-selectbutton.p-selectbutton-checked) {
+  background-color: var(--color-accent-light-yellow);
+  color: var(--color-accent-orange);
 }
 
-::v-deep(.p-togglebutton-checked .p-togglebutton-content) {
-  background: orangered;
+::v-deep(.p-selectbutton-checked .p-selectbutton-content) {
+  background-color:  var(--color-accent-light-yellow);
 }
 
-::v-deep(.p-togglebutton:hover) {
-  background: orangered;
+::v-deep(.p-selectbutton:hover) {
+  background-color: var(--color-accent-orange);
+  color: var(--color-background);
 }
 
 ::v-deep(.p-password-input) {
-  background: white;
-  color: black;
+  background: transparent;
+  color: var(--color-text);
 }
 
-.buttonn {
-  background-color: transparent;
-  color: #2364A0;
-  border: 2px solid #2364A0;
-  width: 100px;
-  height: 40px;
-  border-radius: 15px;
-}
 
 .buton {
   width: 50%;
@@ -330,34 +312,10 @@ export default {
   color: black;
 }
 
-.delete {
-  background-color: red;
-  color: white;
-  width: 150px;
-  height: 50px;
-  border-radius: 15px;
-}
-
-.logout {
-  background-color: orangered;
-  color: white;
-  width: 150px;
-  height: 50px;
-  border-radius: 15px;
-}
-
-.save {
-  background-color: darkgreen;
-  color: white;
-  width: 150px;
-  height: 50px;
-  border-radius: 15px;
-}
-
 .pas {
   width: 200px;
   height: 40px;
-  border: 2px solid #2364A0;
+  border: 2px solid var(--color-blue);
   border-radius: 10px;
   padding: 5px;
   display: flex;

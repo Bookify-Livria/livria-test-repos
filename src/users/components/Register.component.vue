@@ -87,7 +87,7 @@ export default {
 .all {
   display: block;
   position: absolute;
-  background: white;
+  background: var(--color-background);
   justify-content: space-around;
   justify-items: center;
   width: 100%;
@@ -109,7 +109,7 @@ export default {
 .head {
   justify-items: center;
   justify-content: space-between;
-  color: black;
+  color: var(--color-text);
   width: 100%;
 }
 
@@ -150,7 +150,7 @@ export default {
 
 .form-input {
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid var(--color-text);
   justify-self: center;
   padding: 0.5rem;
   border-radius: 5px;
@@ -166,7 +166,7 @@ export default {
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 1rem;
-  color: black;
+  color: var(--color-text);
   text-align: left;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   align-items: center;
@@ -223,8 +223,8 @@ export default {
 
 .form-button {
   background-color: transparent;
-  color: #2364A0;
-  border: 2px solid #2364A0;
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
   width: 100px;
   height: 40px;
   border-radius: 15px;
