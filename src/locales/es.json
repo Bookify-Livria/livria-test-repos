@@ -160,6 +160,14 @@
   "register-fail-details": "Algunos campos están vacíos o las contraseñas no son iguales",
   "register-success": "Registro exitoso",
   "register-success-details": "¡Bienvenido a Livria!",
+  "update-success": "Contraseña actualizada exitosamente",
+  "update-success-details": "La contraseña ha sido actualizada.",
+  "update-fill-fail": "Debe llenar todos los campos",
+  "update-fill-fail-details": "Error: debe llenar todos los campos del formulario",
+  "update-password-fail": "Contraseña incorrecta",
+  "update-password-fail-details": "Error: ingrese la contraseña correcta antes de realizar los cambios",
+  "update-confirm-fail": "Error de confirmación",
+  "update-confirm-fail-details": "Error: las contraseñas deben coincidir",
 
   "or": "O"
 }

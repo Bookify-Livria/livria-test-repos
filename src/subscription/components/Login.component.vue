@@ -68,6 +68,11 @@ export default {
       this.$router.push('/home');
     },
 
+    goToRegister() {
+      this.$router.push('/register');
+    },
+
+
     async handleLogin(valueA, valueB) {
       const matchedUser = await this.validateLogin(valueA, valueB);
       if (matchedUser && valueA!=='' && valueB!=='') {
@@ -151,7 +156,7 @@ export default {
         </template>
 
         <template #footer>
-          <pv-toast ref="toast"  position="top-right" style="margin-top: 8.5rem" />
+          <pv-toast ref="toast"  position="top-right" style="margin-top: 2rem" />
           <pv-button @click="handleLogin(value1, value2)" class="form-button">{{ $t('login')}}</pv-button>
         </template>
       </pv-card>
@@ -159,7 +164,7 @@ export default {
       <pv-card>
         <template #content class="ext-buttons">
           <div>
-            <pv-button href="" class="justify-center external"  :label="$t('createacc')" iconPos="left" />
+            <pv-button @click="goToRegister()" class="justify-center external"  :label="$t('createacc')" iconPos="left" />
           </div>
         </template>
       </pv-card>
@@ -190,13 +195,14 @@ export default {
 
 .same-line {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .head {
   justify-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   color: black;
   width: 100%;
 }
@@ -253,7 +259,7 @@ export default {
 }
 
 .content {
-  width: 40%;
+  width: 100%;
   justify-items: center;
   justify-content: center;
   align-items: center;
@@ -327,14 +333,16 @@ export default {
 }
 
 .external {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  align-content: center;
-  text-align: center;
-  border: 2px solid var(--color-blue);
-  gap: 1rem;
+  background-color: transparent;
   color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  width: 200px;
+  height: 60px;
+  border-radius: 15px;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 

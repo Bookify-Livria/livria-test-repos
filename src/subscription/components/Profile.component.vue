@@ -33,6 +33,9 @@ export default {
     const value2 = ref(options2.value[0]);
     const value3 = ref(options3.value[0]);
     const value4 = ref(options4.value[0]);
+    const valueA = ref('');
+    const valueB = ref('');
+    const valueC = ref('');
 
     return {
       options1,
@@ -42,7 +45,10 @@ export default {
       value1,
       value2,
       value3,
-      value4
+      value4,
+      valueA,
+      valueB,
+      valueC
     };
   },
 
@@ -63,6 +69,58 @@ export default {
     };
   },
   methods: {
+    showSuccess() {
+      try {
+        this.$refs.toast.add({
+          severity: 'success',
+          summary: this.$t('update-success'),
+          detail: this.$t('update-success-details'),
+          life: 3000
+        });
+      } catch (error) {
+        console.error("Error adding toast:", error);
+      }
+    },
+
+    showFailFill() {
+      try {
+        this.$refs.toast.add({
+          severity: 'error',
+          summary: this.$t('update-fill-fail'),
+          detail: this.$t('update-fill-fail-details'),
+          life: 3000
+        });
+      } catch (error) {
+        console.error("Error adding toast:", error);
+      }
+    },
+
+    showFailPassword() {
+      try {
+        this.$refs.toast.add({
+          severity: 'error',
+          summary: this.$t('update-password-fail'),
+          detail: this.$t('update-password-fail-details'),
+          life: 3000
+        });
+      } catch (error) {
+        console.error("Error adding toast:", error);
+      }
+    },
+
+    showFailConfirm() {
+      try {
+        this.$refs.toast.add({
+          severity: 'error',
+          summary: this.$t('update-confirm-fail'),
+          detail: this.$t('update-confirm-fail-details'),
+          life: 3000
+        });
+      } catch (error) {
+        console.error("Error adding toast:", error);
+      }
+    },
+
     async InvocaAPI() {
       const service = new UserApiService();
 
@@ -103,8 +161,50 @@ export default {
       }
     },
 
-    async DeleteUser() {
+    goToLogin() {
+      this.$router.push('/login');
+    },
 
+    async changePassword(currentPassword, newPassword, confirmPassword) {
+      if (!currentPassword || !newPassword || !confirmPassword) {
+        this.showFailFill();
+        console.warn('All password fields must be filled.');
+        return;
+      }
+
+      if (currentPassword !== this.user.password) {
+        console.warn('Current password is incorrect.');
+        this.showFailPassword();
+        return;
+      }
+
+      if (newPassword !== confirmPassword) {
+        this.showFailConfirm();
+        return;
+      }
+
+      const service = new UserApiService();
+      try {
+        await service.updateUser({
+          ...this.user,
+          password: newPassword
+        });
+
+        await this.InvocaAPI();
+        this.valueA = '';
+        this.valueB = '';
+        this.valueC = '';
+        this.showLogin();
+      } catch (error) {
+        console.error('Failed to update password:', error);
+        this.showSuccess();
+      }
+    }
+    ,
+
+    async DeleteUser() {
+      const service = new UserApiService();
+      service.deleteUser(this.getLoggedInUserId());
     }
   },
   mounted() {
@@ -121,7 +221,7 @@ export default {
         <pv-image :src="user.icon" alt="Foto de perfil" width="200" height="200" class="pfp"></pv-image>
         <div>
           <p class="account__profile-display-name">{{ user.display }}</p>
-          <p class="account__profile-username">{{ user.username }}</p>
+          <p class="account__profile-username">@{{ user.username }}</p>
           <p class="account__profile-email">{{ user.email }}</p>
         </div>
       </div>
@@ -179,22 +279,27 @@ export default {
           <div class="same-line">
             <p>{{ $t('setting.current-password')}}</p>
             <p>*********</p>
-            <pv-button class="buttonn" severity="warn">{{ $t('change')}}</pv-button>
+            <pv-toast ref="toast"  position="top-right" style="margin-top: 2rem" />
+            <pv-button class="buttonn" @click="changePassword(valueA, valueB, valueC)" severity="warn">{{ $t('change')}}</pv-button>
+          </div>
+          <div class="same-line">
+            <p>{{ $t('passinput')}}</p>
+            <pv-password v-model="valueA" class="pas" :feedback="false" />
           </div>
           <div class="same-line">
             <p>{{ $t('setting.new-password')}}</p>
-            <pv-password class="pas" :feedback="false" />
+            <pv-password v-model="valueB" class="pas" :feedback="false" />
           </div>
           <div class="same-line">
             <p>{{ $t('confpass')}}</p>
-            <pv-password class="pas" :feedback="false" />
+            <pv-password v-model="valueC" class="pas" :feedback="false" />
           </div>
           <div class="set-options">
             <div class="buton">
               <pv-button class="but-set delete" severity="danger">{{ $t('delete1')}}</pv-button>
             </div>
             <div class="butons">
-              <pv-button class="but-set logout" severity="warn">{{ $t('logout')}}</pv-button>
+              <pv-button @click="goToLogin()" class="but-set logout" severity="warn">{{ $t('logout')}}</pv-button>
               <pv-button class="but-set save" severity="success">{{ $t('save')}}</pv-button>
             </div>
           </div>

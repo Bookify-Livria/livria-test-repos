@@ -131,7 +131,6 @@
   "change": "Change",
   "delete1": "Delete account",
 
-
   "login": "Log in",
   "userinput": "Username",
   "passinput": "Password",
@@ -160,6 +159,15 @@
   "register-fail-details": "Fields are empty or passwords didn't match",
   "register-success": "Register success",
   "register-success-details": "Welcome to Livria!",
+
+  "update-success": "Password updated successfully",
+  "update-success-details": "Password has been updated.",
+  "update-fill-fail": "Must fill all camps",
+  "update-fill-fail-details": "Error: fill all form camps",
+  "update-password-fail": "Wrong password",
+  "update-password-fail-details": "Error: Use current password to save changes",
+  "update-confirm-fail": "Confirmation error",
+  "update-confirm-fail-details": "Error: passwords must match",
 
   "or": "OR"
 }

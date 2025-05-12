@@ -20,8 +20,8 @@ export class UserApiService {
         }).then(res => res.json())
     }
 
-    updateMember(user) {
-        return axios.put('http://localhost:3000/users/${user.id}', user)
+    updateUser(user) {
+        return axios.put(`http://localhost:3000/users/${user.id}`, user)
             .catch(error => {
                 console.error('Error updating users:', error);
                 throw error;

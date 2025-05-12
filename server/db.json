@@ -7,7 +7,9 @@
       "email": "kingturkey@gmail.com",
       "icon": "https://img.freepik.com/premium-photo/turkey-is-depicted-wearing-luxurious-red-white-cape-adorned-with-jeweled-crown_1115583-48702.jpg",
       "password": "reypavobnd4",
-      "phrase": "¡¡Soy el rey pavo!!"
+      "phrase": "¡¡Soy el rey pavo!!",
+      "order": "123456",
+      "orderstatus": "delivered"
     },
     {
       "id": "2",
@@ -16,7 +18,19 @@
       "email": "salad@gmail.com",
       "icon": "https://fengfitfoods.com/cdn/shop/products/Dr-Fengs-Signature-Salad.jpg?v=1449160732",
       "password": "ensaladadoctorada1",
-      "phrase": "¡¡Soy el doctor ensalada!!"
+      "phrase": "¡¡Soy el doctor ensalada!!",
+      "order": "654321",
+      "orderstatus": "pending"
+    },
+    {
+      "id": "3",
+      "display": "Place",
+      "email": "e@gmail.com",
+      "icon": "",
+      "password": "palace",
+      "phrase": "",
+      "order": "",
+      "orderstatus": ""
     }
   ],
   "communities": [
@@ -175,27 +189,6 @@
       "communityId": "4",
       "joinedAt": "2024-02-10T14:20:00.000Z",
       "role": "member"
-    },
-    {
-      "id": "3",
-      "userId": "4",
-      "communityId": "4",
-      "joinedAt": "2024-03-05T09:15:00.000Z",
-      "role": "member"
-    },
-    {
-      "id": "4",
-      "userId": "5",
-      "communityId": "4",
-      "joinedAt": "2024-01-20T16:45:00.000Z",
-      "role": "moderator"
-    },
-    {
-      "id": "5",
-      "userId": "5",
-      "communityId": "5",
-      "joinedAt": "2024-02-01T11:30:00.000Z",
-      "role": "admin"
     }
   ],
   "posts": [
@@ -225,40 +218,6 @@
           "createdAt": "2024-05-10T12:45:00.000Z"
         }
       ]
-    },
-    {
-      "id": "2",
-      "communityId": "1",
-      "userId": "4",
-      "content": "Me encantó la dedicatoria de Rick en el libro de The Sun and The Star, jamás tan identificada!",
-      "createdAt": "2024-05-09T15:20:00.000Z",
-      "image": "https://i.imgur.com/m5CjFGr.jpg",
-      "likes": [
-        "5",
-        "3"
-      ],
-      "comments": [
-        {
-          "id": "1",
-          "userId": "5",
-          "text": "Es mi libro favorito de toda la saga hasta ahora",
-          "createdAt": "2024-05-09T15:30:00.000Z"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "communityId": "1",
-      "userId": "5",
-      "content": "Un like y me vuelvo a leer todos los libros de percy jackson + los de magnus chase + los de los kane",
-      "createdAt": "2024-05-08T18:15:00.000Z",
-      "image": null,
-      "likes": [
-        "1",
-        "3",
-        "4"
-      ],
-      "comments": []
     },
     {
       "id": "4",

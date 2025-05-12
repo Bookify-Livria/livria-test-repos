@@ -29,6 +29,10 @@ export default {
       })
     },
 
+    goToLogin() {
+      this.$router.push('/login');
+    },
+
     showFail() {
       try {
         this.$refs.toast.add({
@@ -81,11 +85,15 @@ export default {
             icon: this.value3,
             email: this.value4,
             password: this.value5,
+            order: '',
+            orderstatus: ''
           };
 
-          const result = await axios.post('http://localhost:3000/users', newUser);
+          const service = new UserApiService();
+          const result = await service.createUser(newUser);
           console.log("User created:", result.data);
           this.showSuccess();
+          this.goToLogin();
           return result.data;
 
         } catch (error) {
@@ -189,9 +197,10 @@ export default {
           </div>
         </template>
 
-        <template #footer>
+        <template #footer class="foter">
           <pv-toast ref="toast"  position="top-right" style="margin-top: 8.5rem" />
           <pv-button type="submit" @click="createUserWithAutoId()" class="form-button">{{ $t('register')}}</pv-button>
+          <pv-button  @click="goToLogin()" class="form-button">{{ $t('login')}}</pv-button>
         </template>
       </pv-card>
     </div>
@@ -221,16 +230,17 @@ export default {
 
 .same-line {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .head {
-  justify-items: center;
-  justify-content: space-between;
-  color: black;
+  display: flex;
+  justify-content: center;
   width: 100%;
+  margin-bottom: 1rem;
 }
+
 
 .name{
   margin-left: 15px;
@@ -274,7 +284,7 @@ export default {
 
 .content {
   width: 100%;
-  max-width: 1000px; /* Optional: constrain max width for readability */
+  max-width: 1000px;
   margin: 0 auto;
   justify-items: center;
   justify-content: center;
@@ -341,6 +351,12 @@ export default {
   text-align: center;
   justify-content: center;
   margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.foter {
+  gap: 0.5rem;
 }
 
 </style>
