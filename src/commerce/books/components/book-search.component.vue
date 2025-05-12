@@ -1,7 +1,7 @@
 <script>
-import BookItem from '../../books/components/book-item.component.vue'
+import BookItem from './book-item.component.vue'
 import { BookApiService } from '../services/book-api.service.js'
-import Recommendation from '../../books/components/recommended-books.component.vue'
+import Recommendation from './recommended-books.component.vue'
 
 export default {
   name: 'bookSearch',

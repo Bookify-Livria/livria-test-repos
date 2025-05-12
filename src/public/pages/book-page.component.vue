@@ -1,7 +1,7 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import BookDetail from '../../books/components/book-detail.component.vue';
+import BookDetail from '../../commerce/books/components/book-detail.component.vue';
 
 export default {
   name: "book-page.component",

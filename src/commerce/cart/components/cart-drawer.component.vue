@@ -1,6 +1,6 @@
 <script>
-import {CartApiService} from "../services/cart-api.service.js";
-import trashIcon from "../../assets/images/icons/Trash.svg";
+import {CartApiService} from "../../shared-services/cart-api.service.js";
+import trashIcon from "../../../assets/images/icons/Trash.svg";
 
 export default {
   name: "cartDrawer",

@@ -6,7 +6,7 @@ export class UserApiService {
         return axios.get('http://localhost:3000/users')
             .then(response => UserAssembler.toEntitiesFromResponse(response))
             .catch(error => {
-                console.error('Error fetching users:', error);
+                console.error('Error fetching subscription:', error);
                 throw error;
             });
     }

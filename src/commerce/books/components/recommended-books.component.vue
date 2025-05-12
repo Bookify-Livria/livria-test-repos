@@ -23,16 +23,17 @@ export default {
 
 <template>
   <div class="recommended__container">
-    <h2 class="recommended__title">{{ $t("recommended.title") }}</h2>
-    <p class="recommended__subtitle">{{ $t("recommended.subtitle") }}</p>
-
+    <div class="title__container">
+      <h2 class="h1__title">{{ $t("recommended.title") }}</h2>
+      <p class="h3__title">{{ $t("recommended.subtitle") }}</p>
+    </div>
     <div class="recommended__cards">
       <div
           v-for="book in books"
           :key="book.id"
           class="custom-card-wrapper"
       >
-        <BookItem :book="book" />
+        <BookItem :book="book"/>
       </div>
     </div>
   </div>
@@ -44,17 +45,6 @@ export default {
   text-align: center;
 }
 
-.recommended__title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #003366;
-  margin-bottom: 0.5rem;
-}
-
-.recommended__subtitle {
-  margin-bottom: 2rem;
-  color: #555;
-}
 
 .recommended__cards {
   display: flex;

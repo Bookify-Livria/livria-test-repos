@@ -1,7 +1,7 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import Profile from "../../users/components/Profile.component.vue";
+import Profile from "../../subscription/components/Profile.component.vue";
 
 export default {
   name: "home.component",

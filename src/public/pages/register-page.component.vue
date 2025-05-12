@@ -1,7 +1,7 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import Register from "../../users/components/Register.component.vue";
+import Register from "../../subscription/components/Register.component.vue";
 
 export default {
   name: "login-page.component",

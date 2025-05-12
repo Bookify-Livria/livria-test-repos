@@ -1,8 +1,8 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import BookSearch from "../../books/components/book-search.component.vue";
-import BookDetail from "../../books/components/book-detail.component.vue";
+import BookSearch from "../../commerce/books/components/book-search.component.vue";
+import BookDetail from "../../commerce/books/components/book-detail.component.vue";
 
 export default {
   name: "search-component",

@@ -1,7 +1,7 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import recommendedBooks from "../../books/components/recommended-books.component.vue";
+import recommendedBooks from "../../commerce/books/components/recommended-books.component.vue";
 
 export default {
   name: "recomendation.component",

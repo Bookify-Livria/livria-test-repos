@@ -1,6 +1,6 @@
 <script>
 import { BookApiService } from '../services/book-api.service.js'
-import { CartApiService} from "../../cart/services/cart-api.service.js";
+import { CartApiService} from "../../shared-services/cart-api.service.js";
 
 export default {
   name: 'BookDetail',

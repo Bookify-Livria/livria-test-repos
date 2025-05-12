@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CartAssembler} from "./cart.assembler.js";
+import { CartAssembler} from "../cart/services/cart.assembler.js";
 
 export class CartApiService {
     getCart() {

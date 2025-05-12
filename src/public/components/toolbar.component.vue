@@ -1,6 +1,6 @@
 <script>
 import LanguageSwitcher from "./language-switcher.component.vue";
-import CartDrawer from "../../cart/components/cart-drawer.component.vue"
+import CartDrawer from "../../commerce/cart/components/cart-drawer.component.vue"
 
 //icons
 import cartIcon from "../../assets/images/icons/Shop_kart.svg";
