@@ -50,6 +50,18 @@ export default {
       } catch (error) {
         console.error("Error adding item:", error)
       }
+    },
+    showConfirmation() {
+      try {
+        this.$toast.add({
+          severity: 'success',
+          summary: this.$t('cart.modified'),
+          detail: this.$t('cart.book-added'),
+          life: 3000
+        });
+      } catch (error) {
+        console.error("Error adding item:", error)
+      }
     }
   },
   mounted() {
@@ -84,7 +96,10 @@ export default {
           <option>2</option>
           <option>3</option>
         </select>
-        <button @click="addToCart(book, quantity)">{{ $t('add-to-cart') }}</button>
+        <div class="book-detail__add-cart">
+          <pv-toast position="top-right" style="margin-top: 8.5rem" />
+          <button @click="addToCart(book, quantity); showConfirmation()">{{ $t('add-to-cart') }}</button>
+        </div>
         <button>Interes</button>
         <button>No Interes</button>
       </div>

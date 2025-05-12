@@ -1,10 +1,10 @@
 {
   "toolbar": {
     "search": "Search",
-    "cart": "Kart",
     "notifications": "Notifications",
     "account": "Account"
   },
+  "cart": "cart",
   "shop": "Shop",
   "literature": "Literature",
   "non-fiction": "Non-Fiction",
@@ -46,6 +46,13 @@
     "en": "English"
   },
   "add-to-cart": "Add to cart",
+  "empty-cart": "Empty Cart",
+  "buy-cart": "Complete my purchase",
+
+  "cart": {
+    "modified": "Cart Modified",
+    "book-added": "This books has been added to your cart!"
+  },
 
   "genres": {
     "literatura": "Literature",

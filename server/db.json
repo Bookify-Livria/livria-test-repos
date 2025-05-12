@@ -1149,20 +1149,5 @@
       "language": "es"
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "book": {
-        "id": "2",
-        "title": "Orgullo y prejuicio",
-        "description": "Un clásico sobre el amor y las clases sociales en la Inglaterra del siglo XIX.",
-        "author": "Jane Austen",
-        "price": 35.5,
-        "cover": "https://i.imgur.com/book2.jpg",
-        "genre": "literatura",
-        "language": "es"
-      },
-      "quantity": 1
-    }
-  ]
+  "cart": []
 }

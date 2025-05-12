@@ -16,6 +16,15 @@
   --p-drawer-background: var(--color-primary);
   --p-drawer-content-padding: 2rem;
   --p-drawer-footer-padding: 2rem;
+
+  /* Toast */
+  --p-toast-blur: 2rem;
+  --p-toast-border-radius: 5px;
+  --p-toast-success-background: rgba(var(--color-accent-yellow-rgb), 0.15);
+  --p-toast-content-padding: 1rem;
+  --p-toast-content-gap: 1rem;
+  --p-toast-success-border-color: transparent;
+  --p-toast-success-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 * {

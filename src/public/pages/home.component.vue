@@ -1,6 +1,5 @@
 <script>
 import { ref } from 'vue'
-import Carousel from 'primevue/carousel'
 import Button from 'primevue/button'
 
 import toolbarComponent from "../components/toolbar.component.vue"
@@ -13,7 +12,6 @@ export default {
     toolbarComponent,
     footerComponent,
     bookCarousel,
-    Carousel,
     Button
   },
   setup() {
@@ -54,7 +52,7 @@ export default {
   <toolbarComponent />
 
   <div class="home-container">
-    <Carousel :value="slides" :numVisible="1" :numScroll="1" circular :autoplayInterval="5000">
+    <pv-carousel :value="slides" :numVisible="1" :numScroll="1" circular :autoplayInterval="5000">
       <template #item="slotProps">
         <div
             class="carousel-slide"
@@ -71,7 +69,7 @@ export default {
           </div>
         </div>
       </template>
-    </Carousel>
+    </pv-carousel>
 
     <section class="carousels__section">
       <div class="carousels__section-container" v-for="genre in genres" :key="genre.id">

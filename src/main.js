@@ -18,6 +18,8 @@ import Password from "primevue/password";
 import Image from "primevue/image";
 import Message from "primevue/message";
 import Drawer from "primevue/drawer";
+import Toast from "primevue/toast";
+import ToastService from 'primevue/toastservice';
 
 import router from "./router/index.js";
 
@@ -27,6 +29,7 @@ app
     .use(i18n)
     .use(router)
     .use(PrimeVue)
+    .use(ToastService)
     .component("pv-button", Button)
     .component("pv-toolbar", Toolbar)
     .component("pv-icon-field", IconField)
@@ -38,7 +41,8 @@ app
     .component("pv-password", Password)
     .component("pv-image", Image)
     .component("pv-message", Message)
-    .component("pv-drawer", Drawer);
+    .component("pv-drawer", Drawer)
+    .component("pv-toast", Toast);
 
 
 app.mount("#app");
