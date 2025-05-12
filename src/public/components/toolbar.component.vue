@@ -12,7 +12,7 @@ import searchIcon from "../../assets/images/icons/Search_alt.svg";
 
 export default {
   name: "Toolbar.component",
-  components:{
+  components: {
     LanguageSwitcher,
     CartDrawer,
     cartIcon,
@@ -36,6 +36,12 @@ export default {
     updateCartVisibility(val) {
       console.log('Drawer visible?', val)
       this.isCartActive = val
+    },
+    performSearch() {
+      if (this.value1.trim()) {
+        this.$router.push({name: 'BookSearch', query: {q: this.value1}});
+        this.value1 = "";
+      }
     }
   }
 }
@@ -53,8 +59,11 @@ export default {
         <div class="search-bar">
           <pv-icon-field>
             <pv-input-icon><searchIcon class="nav-icon" /></pv-input-icon>
-            <input v-model="value1" :placeholder="$t('toolbar.search')">
-          </pv-icon-field>
+            <input
+                v-model="value1"
+                :placeholder="$t('toolbar.search')"
+                @keyup.enter="performSearch"
+            />          </pv-icon-field>
         </div>
       </template>
 
@@ -62,7 +71,7 @@ export default {
         <nav class="header__nav" aria-label="Main Navigation">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <pv-button @click="openCart" :class="['header__nav-link', { active: isCartActive }]"><cartIcon class="nav-icon" />{{ $t('cart') }}</pv-button>
+              <pv-button @click="openCart" :class="['header__nav-link', { active: isCartActive }]"><cartIcon class="nav-icon" />{{ $t('cart-toolbar') }}</pv-button>
               <CartDrawer ref="cartDrawerRef" @visibility-change="updateCartVisibility" />
             </li>
             <li class="header__nav-item">

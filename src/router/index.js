@@ -6,7 +6,7 @@ import Communities from "../public/pages/communities.component.vue";
 import Booksss from '../public/pages/genre-cardshow.component.vue';
 import SingularBook from '../public/pages/book-page.component.vue';
 import Recomendation from "../public/pages/recommendation.component.vue";
-
+import Search from "../public/pages/search-component.vue";
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -61,7 +61,12 @@ const router = createRouter({
             name: 'Recommendations',
             component: Recomendation
         },
-        {path: '/books/:title', name: 'BookDetail',component: SingularBook}
+        {path: '/books/:title', name: 'BookDetail',component: SingularBook},
+        {
+            path: '/search',
+            name: 'BookSearch',
+            component: Search
+        }
     ]
 })
 

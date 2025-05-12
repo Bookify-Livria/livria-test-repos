@@ -4,7 +4,8 @@
     "notifications": "Notifications",
     "account": "Account"
   },
-  "cart": "cart",
+
+  "cart-toolbar": "Cart",
   "shop": "Shop",
   "literature": "Literature",
   "non-fiction": "Non-Fiction",
@@ -21,6 +22,10 @@
     "title": "RECOMMENDATIONS FOR YOU",
     "subtitle": "Hi! Based on your preferences, here are some recommendations..."
   },
+
+  "Search": "Search for: ",
+  "NoSearch": "No results found in the search",
+  "RecoSearch": "The following recommendations might interest you",
 
   "carousel": {
     "community": {
@@ -86,7 +91,7 @@
   "help": "Help",
   "frequent-questions": "Frequent Questions",
   "contact-us": "Contact Us",
-  "copyrights":"© 2025 Bookify - Livria. All rights reserved.",
+  "copyrights":"Â© 2025 Bookify - Livria. All rights reserved.",
 
 
   "profile": "Profile",

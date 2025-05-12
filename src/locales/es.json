@@ -4,7 +4,9 @@
     "notifications": "Notificaciones",
     "account": "Cuenta"
   },
-  "cart": "Carrito",
+
+
+  "cart-toolbar": "Carrito",
   "shop": "Tienda",
   "literature": "Literatura",
   "non-fiction": "No Ficción",
@@ -21,6 +23,10 @@
     "title": "RECOMENDACIONES PARA TI",
     "subtitle": "¡Hola! En base a tus preferencias, te dejamos las siguientes recomendaciones..."
   },
+
+  "Search": "Resultados de: ",
+  "NoSearch": "No se encontraron resultados para la búsqueda",
+  "RecoSearch": "Puede que te interesen las siguientes recomendaciones",
 
   "carousel": {
     "community": {
