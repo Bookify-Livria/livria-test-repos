@@ -145,6 +145,163 @@
       "description": "somos esos ",
       "type": "anime",
       "image": "https://i.imgur.com/K9hEj0v.jpg"
+    },
+    {
+      "id": "1747031493994",
+      "name": "Mustangs🐴",
+      "description": "Comunidad para amantes de la mejor marca de carros: Ford",
+      "type": "Carros",
+      "image": "https://es.ford.com/is/image/content/dam/na/ford/en_us/images/mustang/2025/dm/_S5A3247_V4_ST.tif?croppathe=21x9&wid=1440&fmt=webp"
+    },
+    {
+      "id": "1747032145792",
+      "name": "Hate a Livria",
+      "description": "Livria la peor app 🔥👎",
+      "type": "Love",
+      "image": "https://i.ibb.co/WNt3WDcc/image.jpg"
+    }
+  ],
+  "communityMembers": [
+    {
+      "id": "1",
+      "userId": "1",
+      "communityId": "4",
+      "joinedAt": "2024-01-15T10:30:00.000Z",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "userId": "3",
+      "communityId": "4",
+      "joinedAt": "2024-02-10T14:20:00.000Z",
+      "role": "member"
+    },
+    {
+      "id": "3",
+      "userId": "4",
+      "communityId": "4",
+      "joinedAt": "2024-03-05T09:15:00.000Z",
+      "role": "member"
+    },
+    {
+      "id": "4",
+      "userId": "5",
+      "communityId": "4",
+      "joinedAt": "2024-01-20T16:45:00.000Z",
+      "role": "moderator"
+    },
+    {
+      "id": "5",
+      "userId": "5",
+      "communityId": "5",
+      "joinedAt": "2024-02-01T11:30:00.000Z",
+      "role": "admin"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "communityId": "1",
+      "userId": "3",
+      "content": "Hace poco empecé los libros del riordanverse gracias a mi amiguibi ainhoa que me los recomendó y de verdad son los mejores!!",
+      "createdAt": "2024-05-10T12:30:00.000Z",
+      "image": "https://i.imgur.com/hZJwkBm.jpg",
+      "likes": [
+        "4",
+        "5",
+        "1"
+      ],
+      "comments": [
+        {
+          "id": "1",
+          "userId": "4",
+          "text": "Me alegra que te gusten! Son increíbles 😍",
+          "createdAt": "2024-05-10T12:40:00.000Z"
+        },
+        {
+          "id": "2",
+          "userId": "5",
+          "text": "Yo también los amo! ¿Por cuál empezaste?",
+          "createdAt": "2024-05-10T12:45:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "communityId": "1",
+      "userId": "4",
+      "content": "Me encantó la dedicatoria de Rick en el libro de The Sun and The Star, jamás tan identificada!",
+      "createdAt": "2024-05-09T15:20:00.000Z",
+      "image": "https://i.imgur.com/m5CjFGr.jpg",
+      "likes": [
+        "5",
+        "3"
+      ],
+      "comments": [
+        {
+          "id": "1",
+          "userId": "5",
+          "text": "Es mi libro favorito de toda la saga hasta ahora",
+          "createdAt": "2024-05-09T15:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "communityId": "1",
+      "userId": "5",
+      "content": "Un like y me vuelvo a leer todos los libros de percy jackson + los de magnus chase + los de los kane",
+      "createdAt": "2024-05-08T18:15:00.000Z",
+      "image": null,
+      "likes": [
+        "1",
+        "3",
+        "4"
+      ],
+      "comments": []
+    },
+    {
+      "id": "4",
+      "communityId": "1",
+      "userId": "1",
+      "content": "Alguien sabe si debo leer antes las pruebas de apolo o la trilogía de magnus chase???? Importa el orden?? Leo sus comentarioss",
+      "createdAt": "2024-05-07T09:10:00.000Z",
+      "image": null,
+      "likes": [
+        "5"
+      ],
+      "comments": [
+        {
+          "id": "1",
+          "userId": "5",
+          "text": "Puedes leerlos en paralelo, pero yo te recomendaría primero Las Pruebas de Apolo porque están más conectadas con los eventos de Héroes del Olimpo",
+          "createdAt": "2024-05-07T09:20:00.000Z"
+        },
+        {
+          "id": "2",
+          "userId": "3",
+          "text": "Yo leí primero Magnus Chase y me encantó, pero es cierto que no está tan conectada con la historia principal",
+          "createdAt": "2024-05-07T10:30:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "7e83",
+      "communityId": "1",
+      "userId": "1",
+      "content": "🥸",
+      "createdAt": "2025-05-12T05:57:06.203Z",
+      "likes": [],
+      "comments": []
+    },
+    {
+      "id": "b430",
+      "communityId": "1",
+      "userId": "1",
+      "content": "Fan de las pizzas con piña 🍍🍕",
+      "createdAt": "2025-05-12T05:57:33.094Z",
+      "likes": [],
+      "comments": []
     }
   ],
   "books": [

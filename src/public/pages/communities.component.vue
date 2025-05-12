@@ -44,6 +44,7 @@ export default {
 <style scoped>
 .community-container {
   margin: 7.5rem calc(-1 * ((100vw - 100%) / 2)) 0;
+  margin-top: 200px;
 }
 
 .community__fullwidth,

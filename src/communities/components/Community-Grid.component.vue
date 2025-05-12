@@ -36,7 +36,10 @@ export default {
     handleCommunityCreated(newCommunity) {
       this.communities.push(newCommunity)
       this.hideCreateForm()
-    }
+    },
+    redirectToCommunity(communityId) {
+      this.$router.push({ name: 'CommunityView', params: { id: communityId } });
+    },
   }
 }
 </script>
@@ -56,7 +59,12 @@ export default {
       </pv-card>
     </div>
 
-    <div v-for="community in communities" :key="community.id" class="custom-card-wrapper">
+    <div
+        v-for="community in communities"
+        :key="community.id"
+        class="custom-card-wrapper"
+        @click="redirectToCommunity(community.id)"
+    >
       <pv-card>
         <template #header>
           <img :src="community.image" :alt="community.name" class="community-cover" />
@@ -80,8 +88,8 @@ export default {
 .community-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: flex-start;
+  gap: 2.8rem;
   padding: 0;
 }
 
@@ -90,10 +98,19 @@ export default {
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: .3s;
+}
+
+.custom-card-wrapper:hover .community-cover{
+  transform: scale(1.02);
+}
+
+.custom-card-wrapper:hover{
+  transform: translateY(-5px);
 }
 
 .community-cover {
@@ -102,6 +119,7 @@ export default {
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: .5s;
 }
 
 .community-title {
