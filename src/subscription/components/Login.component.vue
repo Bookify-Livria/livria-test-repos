@@ -2,14 +2,113 @@
 import axios from 'axios';
 
 import { ref } from 'vue';
-
 import 'primeicons/primeicons.css';
 
-const value1 = ref(null);
-const value2 = ref(null);
+const value1 = '';
+const value2 = '';
 
 export default {
-  name: "Login"
+  name: "Login",
+
+  methods: {
+    async clearLogin() {
+      try {
+        const response = await axios.get('http://localhost:3000/userlogin');
+        const users = response.data;
+
+        await Promise.all(users.map(user =>
+            axios.delete(`http://localhost:3000/userlogin/${user.id}`)
+        ));
+
+        console.log("Cleared login.");
+      } catch (error) {
+        console.error("Error clearing login:", error);
+      }
+    },
+
+    async createLogin(userId, valueA, valueB) {
+      const newUser = {
+        id: userId,
+        username: valueA,
+        password: valueB
+      };
+
+      try {
+        const response = await axios.post('http://localhost:3000/userlogin', newUser);
+        console.log("Login session created:", response.data);
+      } catch (error) {
+        console.error("Error creating login session:", error);
+      }
+    },
+
+    async validateLogin(valueA, valueB) {
+      try {
+        const response = await axios.get('http://localhost:3000/users');
+        const users = response.data;
+
+        const matchedUser = users.find(
+            user => user.user === valueA && user.password === valueB
+        );
+
+        if (matchedUser) {
+          console.log("Login successful:", matchedUser.display);
+          return matchedUser;
+        } else {
+          console.warn("Login failed: invalid credentials.");
+          return null;
+        }
+
+      } catch (error) {
+        console.error("Error validating login:", error);
+        return null;
+      }
+    },
+
+    goToHome() {
+      this.$router.push('/home');
+    },
+
+    async handleLogin(valueA, valueB) {
+      const matchedUser = await this.validateLogin(valueA, valueB);
+      if (matchedUser && valueA!=='' && valueB!=='') {
+        await this.createLogin(matchedUser.id, valueA, valueB);
+        this.showLogin();
+        this.goToHome();
+      } else {
+        this.showFail();
+      }
+    },
+
+    showLogin() {
+      try {
+        this.$refs.toast.add({
+          severity: 'success',
+          summary: this.$t('login-success'),
+          detail: this.$t('login-success-details'),
+          life: 3000
+        });
+      } catch (error) {
+        console.error("Error adding toast:", error);
+      }
+    },
+
+    showFail() {
+      try {
+        this.$refs.toast.add({
+          severity: 'error',
+          summary: this.$t('login-fail'),
+          detail: this.$t('login-fail-details'),
+          life: 3000
+        });
+      } catch (error) {
+        console.error("Error adding toast:", error);
+      }
+    }
+  },
+
+  mounted() {
+    this.clearLogin();
+  },
 }
 </script>
 
@@ -45,24 +144,22 @@ export default {
               <pv-password v-model="value2" class="form-input" :feedback="false" />
             </div>
 
-            <div class="help-class">
+            <div class="link-class">
               <a href="" class="forgot-password">{{ $t('passforg')}}</a>
             </div>
           </div>
         </template>
 
         <template #footer>
-          <pv-button href="" class="form-button">{{ $t('login')}}</pv-button>
+          <pv-toast ref="toast"  position="top-right" style="margin-top: 8.5rem" />
+          <pv-button @click="handleLogin(value1, value2)" class="form-button">{{ $t('login')}}</pv-button>
         </template>
       </pv-card>
       <div class="division">{{ $t('or')}}</div>
       <pv-card>
         <template #content class="ext-buttons">
           <div>
-            <pv-button href="" class="justify-center external" icon="pi pi-google" :label="$t('login-google')" iconPos="left" />
-          </div>
-          <div>
-            <pv-button href="" class="justify-center external" icon="pi pi-apple" :label="$t('login-apple')" iconPos="left" />
+            <pv-button href="" class="justify-center external"  :label="$t('createacc')" iconPos="left" />
           </div>
         </template>
       </pv-card>
@@ -74,8 +171,7 @@ export default {
 
 .all {
   display: block;
-  position: absolute;
-  background: var(--color-background);
+  background: white;
   justify-content: space-around;
   justify-items: center;
   width: 100%;
@@ -101,7 +197,7 @@ export default {
 .head {
   justify-items: center;
   justify-content: space-between;
-  color: var(--color-text);
+  color: black;
   width: 100%;
 }
 
@@ -133,7 +229,7 @@ export default {
   width: 100%;
 }
 
-.help-class {
+.link-class {
   justify-content: right;
   justify-items: right;
   text-align: right;
@@ -142,7 +238,7 @@ export default {
 
 .form-input {
   width: 100%;
-  border: 2px solid var(--color-text);
+  border: 2px solid black;
   justify-self: center;
   padding: 0.5rem;
   border-radius: 5px;
@@ -157,7 +253,7 @@ export default {
 }
 
 .content {
-  width: 20%;
+  width: 40%;
   justify-items: center;
   justify-content: center;
   align-items: center;
@@ -170,6 +266,7 @@ export default {
 ::v-deep(.p-card-body) {
   justify-content: center;
   justify-items: center;
+  width: 70%;
 }
 
 ::v-deep(.p-card-content) {
@@ -235,17 +332,19 @@ export default {
   margin: 0.5rem;
   align-content: center;
   text-align: center;
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--color-blue);
   gap: 1rem;
+  color: var(--color-blue);
 }
 
+
 .p-card {
-  background: #F4F5F7;
+  background: var(--color-light);
   border: 2px solid transparent;
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 1rem;
-  color: var(--color-text);
+  color: black;
   text-align: left;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   align-items: center;
@@ -257,13 +356,14 @@ export default {
   background-color: transparent;
   color: var(--color-blue);
   border: 2px solid var(--color-blue);
-  width: 100px;
-  height: 40px;
+  width: 180px;
+  height: 60px;
   border-radius: 15px;
   font-size: 20px;
   text-align: center;
   justify-content: center;
   margin-top: 0.5rem;
 }
+
 
 </style>

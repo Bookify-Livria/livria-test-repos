@@ -144,6 +144,22 @@
   "register": "Registrarse",
   "emailerror": "Ingrese un correo electrónico válido",
 
-  "or": "O"
+  "createacc": "¿No tienes una cuenta?",
+  "no-phrase": "Ninguna frase",
+  "no-order": "Ninguna orden registrada",
+  "password-error": "Error de contraseña",
+  "password-error-details": "La contraseña debe ser la misma (Confirmar contraseña)",
+  "login-success": "Inicio de sesión exitoso",
+  "login-success-details": "¡Bienvenido de vuelta!",
+  "login-fail": "Error de inicio de sesión",
+  "login-fail-details": "Credenciales inválidas",
+  "displayinput": "Apodo",
+  "phraseinput": "Frase",
+  "icon-input": "URL de avatar",
+  "register-fail": "Error de registro",
+  "register-fail-details": "Algunos campos están vacíos o las contraseñas no son iguales",
+  "register-success": "Registro exitoso",
+  "register-success-details": "¡Bienvenido a Livria!",
 
+  "or": "O"
 }

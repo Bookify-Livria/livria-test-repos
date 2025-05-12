@@ -4,7 +4,7 @@ import footerComponent from "../components/footer-content.component.vue";
 import Register from "../../subscription/components/Register.component.vue";
 
 export default {
-  name: "login-page.component",
+  name: "register-page",
   components: {
     toolbarComponent,
     footerComponent,
@@ -19,24 +19,15 @@ export default {
   <!-- Header -->
   <toolbarComponent/>
 
-  <!-- Title -->
-  <div class="title__container">
-    <h1 class="h1__title">{{$t('account')}}</h1>
-  </div>
-
-
   <!-- Register form -->
   <div class="register__container">
     <Register/>
   </div>
 
-  <!-- Footer -->
-  <div class="footer__container-fullwidth">
-    <footerComponent/>
-  </div>
-
 </template>
 
 <style scoped>
-
+.register__container {
+  margin-top: 200px;
+}
 </style>

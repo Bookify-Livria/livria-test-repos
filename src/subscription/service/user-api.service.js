@@ -6,7 +6,7 @@ export class UserApiService {
         return axios.get('http://localhost:3000/users')
             .then(response => UserAssembler.toEntitiesFromResponse(response))
             .catch(error => {
-                console.error('Error fetching subscription:', error);
+                console.error('Error fetching users:', error);
                 throw error;
             });
     }
@@ -18,5 +18,21 @@ export class UserApiService {
             },
             body: JSON.stringify(user)
         }).then(res => res.json())
+    }
+
+    updateMember(user) {
+        return axios.put('http://localhost:3000/users/${user.id}', user)
+            .catch(error => {
+                console.error('Error updating users:', error);
+                throw error;
+            });
+    }
+
+    deleteUser(user) {
+        return axios.delete('http://localhost:3000/users/${user.id}')
+            .catch(error => {
+                console.error('Error deleting user:', error);
+                throw error;
+            });
     }
 }

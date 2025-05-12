@@ -131,6 +131,7 @@
   "change": "Change",
   "delete1": "Delete account",
 
+
   "login": "Log in",
   "userinput": "Username",
   "passinput": "Password",
@@ -142,6 +143,23 @@
   "emailinput": "Email",
   "register": "Register",
   "emailerror": "Please enter a valid email address",
+
+  "createacc": "Don't have an account?",
+  "no-phrase": "No phrase yet",
+  "no-order": "No orders yet",
+  "password-error": "Password error",
+  "password-error-details": "Password must be the same (Confirm password)",
+  "login-success": "Login successful",
+  "login-success-details": "Welcome back!",
+  "login-fail": "Login error",
+  "login-fail-details": "Invalid credentials",
+  "displayinput": "Nickname",
+  "phraseinput": "Phrase",
+  "icon-input": "Avatar URL",
+  "register-fail": "Register error",
+  "register-fail-details": "Fields are empty or passwords didn't match",
+  "register-success": "Register success",
+  "register-success-details": "Welcome to Livria!",
 
   "or": "OR"
 }

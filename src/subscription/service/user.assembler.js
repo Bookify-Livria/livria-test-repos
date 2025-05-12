@@ -10,6 +10,8 @@ export class UserAssembler {
             resource.icon,
             resource.password,
             resource.phrase,
+            resource.order,
+            resource.orderstatus
         );
     }
 
