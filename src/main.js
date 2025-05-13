@@ -20,6 +20,11 @@ import Message from "primevue/message";
 import Drawer from "primevue/drawer";
 import Toast from "primevue/toast";
 import ToastService from 'primevue/toastservice';
+import Stepper from "primevue/stepper";
+import StepList from "primevue/steplist";
+import StepPanel from "primevue/steppanel";
+import StepPanels from "primevue/steppanels";
+import Step from "primevue/step";
 
 import router from "./router/index.js";
 
@@ -42,7 +47,12 @@ app
     .component("pv-image", Image)
     .component("pv-message", Message)
     .component("pv-drawer", Drawer)
-    .component("pv-toast", Toast);
+    .component("pv-toast", Toast)
+    .component("pv-stepper", Stepper)
+    .component("pv-step-list", StepList)
+    .component("pv-step-panel", StepPanel)
+    .component("pv-step-panels", StepPanels)
+    .component("pv-step", Step);
 
 
 app.mount("#app");

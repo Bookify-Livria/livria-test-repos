@@ -23,10 +23,6 @@ export default {
 
 <template>
   <div class="recommended__container">
-    <div class="title__container">
-      <h2 class="h1__title">{{ $t("recommended.title") }}</h2>
-      <p class="h3__title">{{ $t("recommended.subtitle") }}</p>
-    </div>
     <div class="recommended__cards">
       <div
           v-for="book in books"

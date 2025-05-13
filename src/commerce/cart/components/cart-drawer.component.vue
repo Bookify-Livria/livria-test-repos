@@ -18,10 +18,6 @@ export default {
       this.visibleRight = !this.visibleRight
       if (this.visibleRight) this.loadCart()
     },
-    openDrawer() {
-      this.visibleRight = true
-      this.loadCart()
-    },
     closeDrawer() {
       this.visibleRight = false
     },
@@ -102,8 +98,7 @@ export default {
       <template #footer>
         <div class="shopping-cart__footer">
           <p>Subtotal: <strong>S/ {{ getSubtotal().toFixed(2) }}</strong></p>
-          <!-- falta que lleve a las pantallas de finalizar compra -->
-          <button>{{$t('buy-cart')}}</button>
+          <router-link to="/purchase" class="shopping-cart__purchase"><button>{{$t('buy-cart')}}</button></router-link>
         </div>
       </template>
     </pv-drawer>
@@ -182,7 +177,17 @@ export default {
 .shopping-cart__footer p {
   margin: 0;
   color: var(--color-accent-light-yellow);
-  font-weight: bold;
+  font-weight: 400;
+}
+
+.shopping-cart__purchase {
+  color: var(--color-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.shopping-cart__purchase:hover {
+  color: var(--color-background);
 }
 
 </style>

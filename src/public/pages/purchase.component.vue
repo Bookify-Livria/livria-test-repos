@@ -1,34 +1,33 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import Profile from "../../subscription/components/Profile.component.vue";
+import finishOrder from "../../commerce/orders/components/finish-order.component.vue"
 
 export default {
-  name: "home.component",
+  name: "purchase.component" ,
   components: {
     toolbarComponent,
     footerComponent,
-    Profile
+    finishOrder
   }
 }
-
 </script>
-
 
 <template>
   <!-- Header -->
-  <toolbarComponent/>
+  <toolbarComponent />
 
-  <div class="account-container">
-    <div class="account__fullwidth">
+  <div class="purchase-container">
+
+    <div class="purchase__fullwidth">
       <!-- Title -->
       <div class="title__container">
-        <h1 class="h1__title">{{$t('account')}}</h1>
+        <h1 class="h1__title">{{$t('finish-purchase')}}</h1>
       </div>
 
-      <!-- Profile -->
-      <div class="profile__container">
-        <Profile/>
+      <!-- Cart Summary and Stepper -->
+      <div class="purchase__info">
+        <finishOrder />
       </div>
     </div>
 
@@ -41,14 +40,12 @@ export default {
 </template>
 
 <style scoped>
-
-.account-container {
+.purchase-container {
   margin: 7.5rem calc(-1 * ((100vw - 100%) / 2)) 0;
 }
 
-.account__fullwidth {
+.purchase__fullwidth {
   padding: 0 2rem;
   margin-bottom: 4rem;
 }
-
 </style>

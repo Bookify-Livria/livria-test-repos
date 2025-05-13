@@ -169,5 +169,44 @@
   "update-confirm-fail": "Confirmation error",
   "update-confirm-fail-details": "Error: passwords must match",
 
-  "or": "OR"
+  "or": "OR",
+
+  "purchase": {
+    "step-summary": "Summary",
+    "step-id": "Identification",
+    "step-delivery": "Delivery",
+    "step-payment": "Payment",
+    "summary": "Purchase Summary",
+    "igv": "Included IGV",
+    "cancel": "Continue Shopping",
+    "back": "Back",
+    "next": "Next",
+    "pay": "Complete Order",
+    "notice": "Wait!!!",
+    "field-missing": "We can't proceed with the purchase because there's one or more fields missing.",
+    "info-recipient": "Recipient Information",
+    "delivery": "Delivery Information",
+    "payment": "Payment Details",
+    "name": "Name",
+    "last-name": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "pickup-store": "Pick up in store",
+    "home-delivery": "Home Delivery",
+    "pick-it-up": "You can come to the store to pick up your order starting 3 business days after your order confirmation.",
+    "see-more": "For more details about our store, click ",
+    "here": "here",
+    "address": "Address",
+    "district": "District",
+    "reference": "Reference",
+    "izipay": "All our payments are made through Izipay. Upon accepting the terms and conditions, you will be redirected to the Izipay page where you can make your payment. A payment confirmation will be sent to your email.",
+    "terms": "I have read and authorize the processing of my data according to the Privacy Policy and Terms and Conditions.",
+    "privacy": "I authorize the processing of my data for commercial promotion purposes according to the Privacy Policy."
+  },
+
+  "confirmation": {
+    "thanks-title": "Thank you for your purchase!",
+    "thanks-text" : "Livria thanks you for your purchase. We hope you enjoy your reading as much as we do. Delivery will be made as indicated.",
+    "order": "Order Code: #"
+  }
 }

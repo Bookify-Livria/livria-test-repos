@@ -1,7 +1,7 @@
 <script>
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
-import Login from "../../users/components/Login.component.vue";
+import Login from "../../subscription/components/Login.component.vue";
 
 export default {
   name: "login-page",
@@ -16,9 +16,6 @@ export default {
 
 
 <template>
-  <!-- Header -->
-  <toolbarComponent/>
-
   <!-- Login form -->
   <div class="login__container">
     <Login/>

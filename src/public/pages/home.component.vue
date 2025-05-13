@@ -49,6 +49,7 @@ export default {
 </script>
 
 <template>
+  <!-- Header -->
   <toolbarComponent />
 
   <div class="home-container">
@@ -171,18 +172,6 @@ export default {
   text-decoration: none;
   font-size: 32px;
   font-weight: 600;
-}
-
-.go--orange {
-  color: #ff9800;
-}
-
-.go--yellow {
-  color: #ffeb3b;
-}
-
-.go--blue {
-  color: #2196f3;
 }
 
 .carousel__section-fullwidth,

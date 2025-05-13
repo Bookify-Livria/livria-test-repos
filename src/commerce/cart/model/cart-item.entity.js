@@ -1,4 +1,3 @@
-import {Book} from "../../books/model/book.entity.js";
 
 export class CartItem {
     constructor(id, book, quantity = 1) {

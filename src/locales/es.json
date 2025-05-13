@@ -169,5 +169,44 @@
   "update-confirm-fail": "Error de confirmación",
   "update-confirm-fail-details": "Error: las contraseñas deben coincidir",
 
-  "or": "O"
+  "or": "O",
+
+  "purchase": {
+    "step-summary": "Resumen",
+    "step-id": "Identificación",
+    "step-delivery": "Entrega",
+    "step-payment": "Pago",
+    "summary": "Resumen de Compra",
+    "igv": "IGV incluído",
+    "cancel": "Continuar comprando",
+    "back": "Regresar",
+    "next": "Siguiente",
+    "pay": "Completar Orden",
+    "notice": "Espera!!!",
+    "field-missing": "No podemos continuar con la compra porque faltan uno o más campos.",
+    "info-recipient": "Información del Destinatario",
+    "delivery": "Información de Entrega",
+    "payment": "Detalles de Pago",
+    "name": "Nombre",
+    "last-name": "Apellido",
+    "email": "Correo electrónico",
+    "phone": "Número celular",
+    "pickup-store": "Recojo en Tienda",
+    "home-delivery": "Envío a Domicilio",
+    "pick-it-up": "Podrás venir a la tienda a recoger tu pedido a partir de 3 días hábiles desde la confirmación de tu pedido.",
+    "see-more": "Para más detalles sobre nuestra tienda, haga clic ",
+    "here": "aquí",
+    "address": "Dirección",
+    "district": "Distrito",
+    "reference": "Referencia",
+    "izipay": "Todos nuestros pagos se realizan a través de Izipay. Al aceptar los términos y condiciones, será redirigido a la página de Izipay donde podrá realizar su pago. Recibirá una confirmación de pago en su correo electrónico.",
+    "terms": "He leído y autorizo el tratamiento de mis datos de acuerdo con la Política de Privacidad y los Términos y Condiciones.",
+    "privacy": "Autorizo el tratamiento de mis datos con fines de promoción comercial según la Política de Privacidad."
+  },
+
+  "confirmation": {
+    "thanks-title": "¡Gracias por tu compra",
+    "thanks-text" : "Livria le agradece su compra. Esperamos que disfrute de la lectura tanto como nosotros. La entrega se realizará según lo indicado.",
+    "order": "Código de Orden: #"
+  }
 }

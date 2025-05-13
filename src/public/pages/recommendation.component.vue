@@ -14,8 +14,16 @@ export default {
 </script>
 
 <template>
+  <!-- Header -->
   <toolbarComponent />
+
   <div class="book-container">
+
+    <div class="title__container">
+      <h2 class="h1__title">{{ $t("recommended.title") }}</h2>
+      <p class="h3__title">{{ $t("recommended.subtitle") }}</p>
+    </div>
+
     <div class="book__fullwidth">
       <div class="cards__container">
         <recommendedBooks />

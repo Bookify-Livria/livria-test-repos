@@ -82,9 +82,9 @@ export default {
             user: this.value1,
             display: this.value2,
             phrase: this.value3,
-            icon: this.value3,
-            email: this.value4,
-            password: this.value5,
+            icon: this.value4,
+            email: this.value5,
+            password: this.value6,
             order: '',
             orderstatus: ''
           };
@@ -123,84 +123,84 @@ export default {
     </div>
     <div class="content">
       <pv-card>
-        <template #title>{{ $t('register')}}</template>
+        <template #title>{{ $t('register') }}</template>
         <template #content>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('userinput')}}</label>
+              <label class="form-label">{{ $t('userinput') }}</label>
             </div>
 
             <div class="input-class">
-              <pv-input-text v-model="value1" class="form-input" />
+              <pv-input-text v-model="value1" class="form-input"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('displayinput')}}</label>
+              <label class="form-label">{{ $t('displayinput') }}</label>
             </div>
 
             <div class="input-class">
-              <pv-input-text v-model="value2" class="form-input" />
+              <pv-input-text v-model="value2" class="form-input"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('phraseinput')}}</label>
+              <label class="form-label">{{ $t('phraseinput') }}</label>
             </div>
 
             <div class="input-class">
-              <pv-input-text v-model="value3" class="form-input" />
+              <pv-input-text v-model="value3" class="form-input"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('icon-input')}}</label>
+              <label class="form-label">{{ $t('icon-input') }}</label>
             </div>
 
             <div class="input-class">
-              <pv-input-text v-model="value4" class="form-input" />
+              <pv-input-text v-model="value4" class="form-input"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('emailinput')}}</label>
+              <label class="form-label">{{ $t('emailinput') }}</label>
             </div>
 
             <div class="input-class">
-              <pv-input-text inputmode="email" v-model="value5" class="form-input" />
+              <pv-input-text inputmode="email" v-model="value5" class="form-input"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('passinput')}}</label>
+              <label class="form-label">{{ $t('passinput') }}</label>
             </div>
 
             <div class="input-class">
-              <pv-password v-model="value6" class="form-input"/>
+              <pv-password v-model="value6" :feedback="false" class="form-input"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('confpass')}}</label>
+              <label class="form-label">{{ $t('confpass') }}</label>
             </div>
 
             <div class="input-class">
-              <pv-password v-model="value7" class="form-input"/>
+              <pv-password v-model="value7" :feedback="false" class="form-input"/>
             </div>
           </div>
         </template>
 
         <template #footer class="foter">
-          <pv-toast ref="toast"  position="top-right" style="margin-top: 8.5rem" />
-          <pv-button type="submit" @click="createUserWithAutoId()" class="form-button">{{ $t('register')}}</pv-button>
-          <pv-button  @click="goToLogin()" class="form-button">{{ $t('login')}}</pv-button>
+          <pv-toast ref="toast" position="top-right" style="margin-top: 8.5rem"/>
+          <pv-button type="submit" @click="createUserWithAutoId()" class="form-button">{{ $t('register') }}</pv-button>
+          <pv-button @click="goToLogin()" class="form-button">{{ $t('login') }}</pv-button>
         </template>
       </pv-card>
     </div>
@@ -242,7 +242,7 @@ export default {
 }
 
 
-.name{
+.name {
   margin-left: 15px;
 }
 

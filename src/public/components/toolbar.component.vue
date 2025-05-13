@@ -63,7 +63,8 @@ export default {
                 v-model="value1"
                 :placeholder="$t('toolbar.search')"
                 @keyup.enter="performSearch"
-            />          </pv-icon-field>
+            />
+          </pv-icon-field>
         </div>
       </template>
 
@@ -75,7 +76,7 @@ export default {
               <CartDrawer ref="cartDrawerRef" @visibility-change="updateCartVisibility" />
             </li>
             <li class="header__nav-item">
-              <router-link to="/nofuncatodav" class="header__nav-link" exact exact-active-class="active"><locationIcon class="nav-icon"/>{{ $t('shop') }}</router-link>
+              <router-link to="/shop" class="header__nav-link" exact exact-active-class="active"><locationIcon class="nav-icon"/>{{ $t('shop') }}</router-link>
             </li>
             <li class="header__nav-item">
               <router-link to="/nofuncatodav" class="header__nav-link" exact exact-active-class="active"><bellIcon class="nav-icon"/>{{ $t('toolbar.notifications') }}</router-link>

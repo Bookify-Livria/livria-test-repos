@@ -19,12 +19,21 @@
 
   /* Toast */
   --p-toast-blur: 2rem;
-  --p-toast-border-radius: 5px;
-  --p-toast-success-background: rgba(var(--color-accent-yellow-rgb), 0.15);
+  --p-toast-border-radius: 10px;
   --p-toast-content-padding: 1rem;
   --p-toast-content-gap: 1rem;
+  --p-toast-summary-font-weight: 600;
+  --p-toast-success-background: rgba(var(--color-accent-yellow-rgb), 0.15);
   --p-toast-success-border-color: transparent;
-  --p-toast-success-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --p-toast-success-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --p-toast-warn-background: rgba(var(--color-accent-orange-rgb), 0.15);
+  --p-toast-warn-border-color: transparent;
+  --p-toast-warn-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  /* Stepper */
+  --p-stepper-step-header-gap: 0.5rem;
+  --p-stepper-step-title-color: var(--color-blue);
+  --p-stepper-step-title-active-color: var(--color-primary);
 }
 
 * {
