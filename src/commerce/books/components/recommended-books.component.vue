@@ -37,19 +37,19 @@ export default {
 
 <style scoped>
 .recommended__container {
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem 0;
 }
-
 
 .recommended__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
+  height: 400px;
 }
 
 .custom-card-wrapper {
-  width: 300px;
+  margin: 0;
+  height: 100%;
 }
 </style>

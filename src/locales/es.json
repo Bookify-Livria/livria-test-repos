@@ -21,7 +21,8 @@
 
   "recommended": {
     "title": "RECOMENDACIONES PARA TI",
-    "subtitle": "¡Hola! En base a tus preferencias, te dejamos las siguientes recomendaciones..."
+    "subtitle": "¡Hola! En base a tus preferencias, te dejamos las siguientes recomendaciones...",
+    "reminder": "¡Ojalá te gusten! Recuerda que puedes marcar tu interés en cada libro con los íconos del marcador y del signo negativo, respectivamente."
   },
 
   "Search": "Resultados de: ",

@@ -217,13 +217,11 @@ export default {
 <template>
   <div class="profile">
     <div class="account__profile-details">
-      <div>
-        <pv-image :src="user.icon" alt="Foto de perfil" width="200" height="200" class="pfp"></pv-image>
-        <div>
-          <p class="account__profile-display-name">{{ user.display }}</p>
-          <p class="account__profile-username">@{{ user.username }}</p>
-          <p class="account__profile-email">{{ user.email }}</p>
-        </div>
+      <pv-image :src="user.icon" alt="Foto de perfil" width="100%" height="auto" class="pfp"></pv-image>
+      <div class="account__profile-text">
+        <p class="account__profile-display-name">{{ user.display }}</p>
+        <p class="account__profile-username">@{{ user.username }}</p>
+        <p class="account__profile-email">{{ user.email }}</p>
       </div>
     </div>
 
@@ -358,7 +356,7 @@ export default {
 .account__profile-username {
   margin-top:0;
   color: var(--color-accent-yellow);
-  font-size: 24px;
+  font-size: 20px;
   text-align: left;
   margin-bottom: 0;
 }
@@ -366,7 +364,7 @@ export default {
 .account__profile-email {
   margin-top:0;
   color: var(--color-blue);
-  font-size: 24px;
+  font-size: 20px;
   text-align: left;
 }
 
@@ -375,7 +373,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .profile__info {

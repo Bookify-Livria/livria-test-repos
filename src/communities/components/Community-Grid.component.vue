@@ -74,7 +74,7 @@ export default {
         </template>
         <template #footer>
           <div class="flex justify-end">
-            <pv-button :label="$t('see-more')" class="p-button-sm" />
+            <button class="see-more-btn">{{$t('see-more')}}</button>
           </div>
         </template>
       </pv-card>
@@ -89,7 +89,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 2.8rem;
+  gap: 4.5rem;
   padding: 0;
 }
 
@@ -105,12 +105,8 @@ export default {
   transition: .3s;
 }
 
-.custom-card-wrapper:hover .community-cover{
-  transform: scale(1.02);
-}
-
 .custom-card-wrapper:hover{
-  transform: translateY(-5px);
+  transform: scale(1.02);
 }
 
 .community-cover {
@@ -174,6 +170,16 @@ export default {
   margin-top: 1rem;
   color: #f4511e;
   text-transform: uppercase;
+}
+
+.see-more-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--color-accent-yellow);
+}
+
+.see-more-btn:hover {
+  color: var(--color-accent-orange);
 }
 
 

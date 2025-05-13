@@ -34,6 +34,7 @@
   --p-stepper-step-header-gap: 0.5rem;
   --p-stepper-step-title-color: var(--color-blue);
   --p-stepper-step-title-active-color: var(--color-primary);
+
 }
 
 * {

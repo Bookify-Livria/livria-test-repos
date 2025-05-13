@@ -140,14 +140,13 @@ export default {
 }
 
 .carousel-button {
-  background-color: #ffffff !important;
+  background-color: var(--color-background) !important;
   color: #1a237e !important;
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 8px;
 }
 
-/* === Sección de géneros === */
 .carousels__section {
   padding: 1rem;
 }

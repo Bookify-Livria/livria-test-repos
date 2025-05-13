@@ -20,7 +20,8 @@
 
   "recommended": {
     "title": "RECOMMENDATIONS FOR YOU",
-    "subtitle": "Hi! Based on your preferences, here are some recommendations..."
+    "subtitle": "Hi! Based on your preferences, here are some recommendations...",
+    "reminder": "We hope you like them! Remember, you can mark your interest in each book with the bookmark and negative icons, respectively."
   },
 
   "Search": "Search for: ",

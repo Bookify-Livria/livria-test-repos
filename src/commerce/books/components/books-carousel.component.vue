@@ -44,7 +44,7 @@ export default {
         showNavigators
     >
       <template #item="slotProps">
-        <div >
+        <div class="card-wrapper">
           <BookItem :book="slotProps.data" />
         </div>
       </template>
@@ -57,6 +57,10 @@ export default {
   width: 100%;
   padding: 0 2rem 2rem;
   margin: 0;
+}
+
+.card-wrapper {
+  margin: 1rem;
 }
 
 </style>

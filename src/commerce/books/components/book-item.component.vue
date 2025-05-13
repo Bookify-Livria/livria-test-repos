@@ -47,11 +47,11 @@ export default {
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   height: 100%;
+  width: 21rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -72,7 +72,7 @@ export default {
 .book-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 0.25rem;
   text-align: center;
 }

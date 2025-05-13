@@ -29,7 +29,7 @@ export default {
 
       <!-- Communities Cards Section -->
       <div class="cards__container">
-        <p>{{ $t('communities-intro')}}</p>
+        <p class="h3__title">{{ $t('communities-intro')}}</p>
         <community-grid/>
       </div>
     </div>
@@ -53,7 +53,7 @@ export default {
 }
 
 .cards__container p {
-  margin: 0 0 3rem;
+  margin: 0 0 4rem;
 }
 
 </style>
