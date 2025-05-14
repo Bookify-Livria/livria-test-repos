@@ -1,8 +1,10 @@
 <script>
 import { CartApiService } from "../../shared-services/cart-api.service.js";
 import { OrderApiService } from "../services/order-api.service.js";
+import { UserApiService } from "../../../subscription/service/user-api.service.js";
 import { generateOrderCode } from "../services/order-code.generator.js";
 import { getLoggedInUser } from "../../../public/shared-services/get-logged-user.js";
+import { notifyEvent } from "../../../public/shared-services/to-notify.js";
 import OrderConfirmation from "./order-confirmation.component.vue";
 
 import trashIcon from "../../../assets/images/icons/Trash.svg";
@@ -123,6 +125,14 @@ export default {
         life: 3000
       });
     },
+    youveGotANoti() {
+      this.$toast.add({
+        severity: 'secondary',
+        summary: this.$t('noti.notice'),
+        detail: this.$t('noti.info'),
+        life: 3000
+      });
+    },
     validateStep2() {
       return this.recipient.name && this.recipient.lastname && this.recipient.phone;
     },
@@ -138,8 +148,8 @@ export default {
       if (this.cartItems.length === 0) {
         this.$toast.add({
           severity: 'warn',
-          summary: this.$t('field.cart-empty'),
-          detail: this.$t('field.cart-empty'),
+          summary: this.$t('purchase.notice'),
+          detail: this.$t('purchase.cart-empty'),
           life: 3000
         });
       } else {
@@ -167,7 +177,42 @@ export default {
       }
       try {
         await this.createOrder(this.recipient.phone, this.delivery);
+
+        const service = new UserApiService();
+        const freshUser = await getLoggedInUser();
+        this.user = freshUser;
+
+        const newId = String(
+            this.user.order.length > 0
+                ? Math.max(...this.user.order.map(item => parseInt(item.id))) + 1
+                : 1
+        );
+
+        const updatedOrders = (this.user.order || []).map(order => ({
+          ...order,
+          orderstatus: "delivered"
+        }));
+
+        const newOrder = {
+          id: newId,
+          code: this.code,
+          orderstatus: "pending"
+        };
+
+        try {
+          await service.updateUser({
+            ...this.user,
+            order: [...updatedOrders, newOrder]
+          });
+          this.showConfirmation = true;
+
+        } catch (error) {
+          console.error('Fail!!!!!!!', error);
+        }
+
         this.showConfirmation = true;
+        await notifyEvent("order");
+        this.youveGotANoti();
       } catch (err) {
         console.error(err);
       }

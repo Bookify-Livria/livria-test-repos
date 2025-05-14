@@ -53,7 +53,6 @@ export default {
       valueD,
     };
   },
-
   data() {
     return {
       info: [],
@@ -65,10 +64,9 @@ export default {
         icon: '',
         password: 'Loading...',
         phrase: 'Loading...',
-        order: '000000',
-        orderstatus: 'pending',
+        order: [],
         subscription: 'false',
-      }
+      },
     };
   },
   methods: {
@@ -137,7 +135,6 @@ export default {
 
         if (loggedInUserId) {
           this.user = this.info.find(user => String(user.id) === String(loggedInUserId));
-          console.log("Matched user:", this.user);
         } else {
           console.warn("No logged-in user found.");
         }
@@ -259,24 +256,40 @@ export default {
           </template>
           <template #footer>
             <h3 class="h3__title go--orange" style="margin-bottom: 0">{{ $t('subscription') }}</h3>
-            <p v-if="user.subscription !== ''">{{ $t('yes-subs') }}</p>
-            <p v-if="user.subscription === ''">{{ $t('no-subs') }}</p>
+            <p v-if="user.subscription">{{ $t('yes-subs') }}</p>
+            <p v-if="!user.subscription">{{ $t('no-subs') }}</p>
           </template>
         </pv-card>
       </div>
 
-      <div class="profile__info-half">
+      <div class="profile__info-half" v-if="user.order">
         <pv-card>
           <template #title>{{ $t('recent-orders') }}</template>
           <template #content>
-            <div class="same-line">
-              <p v-if="user.order !== ''">{{ $t('order') }} #{{ user.order }}</p>
-              <p v-if="user.order === ''">{{ $t('no-order') }}</p>
-              <div>
-                <pv-message v-if="user.orderstatus === 'pending'" class="flex flex-wrap gap-4 justify-center align-center" severity="warn">{{ $t('pending') }}</pv-message>
-                <pv-message v-if="user.orderstatus === 'delivered'" class="flex flex-wrap gap-4 justify-center align-center" severity="success">{{ $t('delivered') }}</pv-message>
+            <div v-if="user.order && user.order.length">
+              <div
+                  class="same-line"
+                  v-for="order in user.order.slice().reverse()"
+                  :key="order.id"
+              >
+                <p>{{ $t('order') }} #{{ order.code }}</p>
+                <div>
+                  <pv-message
+                      v-if="order.orderstatus === 'pending'"
+                      style="border-radius:6px; width: 100px; padding: 0.5rem; background-color: rgba(var(--color-accent-yellow-rgb), 0.15); color: var(--color-accent-yellow)"
+                  >
+                    {{ $t('pending') }}
+                  </pv-message>
+                  <pv-message
+                      v-else-if="order.orderstatus === 'delivered'"
+                      style="border-radius:6px; width: 100px; padding: 0.5rem; background-color: rgba(var(--color-secondary-rgb), 0.15); color: var(--color-secondary)"
+                  >
+                    {{ $t('delivered') }}
+                  </pv-message>
+                </div>
               </div>
             </div>
+            <p v-else>{{ $t('no-order') }}</p>
           </template>
         </pv-card>
       </div>
@@ -490,7 +503,7 @@ export default {
 }
 
 .pfp {
-  color: black;
+  color: var(--color-text);
 }
 
 .delete {
@@ -503,7 +516,7 @@ export default {
 
 .logout {
   background-color: var(--color-accent-light-yellow);
-  color: black;
+  color: var(--color-text);
   width: 150px;
   height: 50px;
   border-radius: 15px;
@@ -531,7 +544,7 @@ export default {
 }
 
 ::v-deep(.p-message-text) {
-  color: black;
+  color: var(--color-text);
   text-align: center;
 }
 

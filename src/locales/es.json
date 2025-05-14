@@ -1,10 +1,9 @@
 {
   "toolbar": {
     "search": "Buscar",
-    "notifications": "Notificaciones",
     "account": "Cuenta"
   },
-
+  "notifications": "Notificaciones",
   "cart-toolbar": "Carrito",
   "shop": "Tienda",
   "literature": "Literatura",
@@ -28,6 +27,7 @@
   },
 
   "address": "Dirección",
+  "empty-list": "Vaciar Lista de Notificaciones",
 
   "Search": "Resultados de: ",
   "NoSearch": "No se encontraron resultados para la búsqueda",
@@ -200,6 +200,7 @@
     "next": "Siguiente",
     "pay": "Completar Orden",
     "notice": "Espera!!!",
+    "cart-empty": "No podemos continuar con la compra porque su carrito está vacío.",
     "field-missing": "No podemos continuar con la compra porque faltan uno o más campos.",
     "info-recipient": "Información del Destinatario",
     "delivery": "Información de Entrega",
@@ -219,6 +220,11 @@
     "izipay": "Todos nuestros pagos se realizan a través de Izipay. Al aceptar los términos y condiciones, será redirigido a la página de Izipay donde podrá realizar su pago. Recibirá una confirmación de pago en su correo electrónico.",
     "terms": "He leído y autorizo el tratamiento de mis datos de acuerdo con la Política de Privacidad y los Términos y Condiciones.",
     "privacy": "Autorizo el tratamiento de mis datos con fines de promoción comercial según la Política de Privacidad."
+  },
+
+  "noti": {
+    "notice": "¡Tienes una nueva notificación!",
+    "info": "Pulsa \"Notificaciones\" en la barra de herramientas para más información..."
   },
 
   "confirmation": {

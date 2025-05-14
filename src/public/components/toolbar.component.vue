@@ -1,7 +1,7 @@
 <script>
 import LanguageSwitcher from "./language-switcher.component.vue";
 import CartDrawer from "../../commerce/cart/components/cart-drawer.component.vue";
-
+import NotificationsDrawer from "../../notifications/components/notifications-drawer.component-api.vue";
 // Icons
 import cartIcon from "../../assets/images/icons/Shop_kart.svg";
 import locationIcon from "../../assets/images/icons/Location.svg";
@@ -17,6 +17,7 @@ export default {
   components: {
     LanguageSwitcher,
     CartDrawer,
+    NotificationsDrawer,
     cartIcon,
     locationIcon,
     bellIcon,
@@ -28,6 +29,7 @@ export default {
     return {
       value1: "",
       isCartActive: false,
+      isNotisActive: false
     };
   },
   methods: {
@@ -37,6 +39,13 @@ export default {
     },
     updateCartVisibility(val) {
       this.isCartActive = val;
+    },
+    openNotis() {
+      this.isNotisActive = true;
+      this.$refs.notisDrawerRef.toggleDrawer();
+    },
+    updateNotisVisibility(val) {
+      this.isNotisActive = val;
     },
     performSearch() {
       if (this.value1.trim()) {
@@ -98,9 +107,10 @@ export default {
               </router-link>
             </li>
             <li class="header__nav-item">
-              <router-link to="/nofuncatodav" class="header__nav-link" exact exact-active-class="active">
-                <bellIcon class="nav-icon" />{{ $t("toolbar.notifications") }}
-              </router-link>
+              <pv-button @click="openNotis" :class="['header__nav-link', { active: isNotisActive }]">
+                <bellIcon class="nav-icon" />{{ $t("notifications") }}
+              </pv-button>
+              <NotificationsDrawer ref="notisDrawerRef" @visibility-change="updateNotisVisibility" />
             </li>
             <li class="header__nav-item">
               <router-link to="/account" class="header__nav-link" exact exact-active-class="active">

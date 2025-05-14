@@ -5,6 +5,7 @@ import { ref } from 'vue';
 import 'primeicons/primeicons.css';
 import {UserApiService} from "../service/user-api.service.js";
 import LanguageSwitcher from "../../public/components/language-switcher.component.vue";
+import {notifyEvent} from "../../public/shared-services/to-notify.js";
 
 export default {
   name: "Register",
@@ -24,7 +25,6 @@ export default {
       info: []
     }
   },
-
   methods: {
     InvocaAPI() {
       const service = new UserApiService()
@@ -33,11 +33,12 @@ export default {
         console.log(this.info)
       })
     },
-
     goToLogin() {
       this.$router.push('/login');
     },
-
+    goToHome() {
+      this.$router.push('/home');
+    },
     showFail() {
       try {
         this.$refs.toast.add({
@@ -50,7 +51,6 @@ export default {
         console.error("Error adding toast:", error);
       }
     },
-
     showSuccess() {
       try {
         this.$refs.toast.add({
@@ -63,36 +63,6 @@ export default {
         console.error("Error adding toast:", error);
       }
     },
-    async createUserr() {
-      try {
-        const service = new UserApiService();
-        const users = await service.getUsers();
-
-        const newId = String(
-            users.length > 0
-                ? Math.max(...users.map(item => parseInt(item.id))) + 1
-                : 1
-        );
-
-        const newUser = {
-          id: newId,
-          display: this.userDisplay,
-          user: this.userUser,
-          email: this.userEmail,
-          icon: this.userIcon,
-          password: this.userPassword,
-          phrase: this.userPhrase,
-          order: this.userOrder,
-          orderStatus: this.userOrderStatus,
-          subscription: this.userSubscription
-        };
-        await service.createUser(newUser);
-
-      } catch (error) {
-        console.error("Error creating user:", error);
-      }
-    },
-
     async createUserWithAutoId() {
       if (
           this.value6 === this.value7 &&
@@ -121,13 +91,13 @@ export default {
             icon: this.value4,
             password: this.value6,
             phrase: this.value3,
-            order: '',
-            orderStatus: '',
+            order: [],
             subscription: false
           };
 
           await service.createUser(newUser);
-          this.goToLogin()
+          await notifyEvent("welcome");
+          this.goToHome()
 
         } catch (error) {
           console.error("Error creating user:", error);

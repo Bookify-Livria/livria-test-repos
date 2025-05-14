@@ -10,8 +10,11 @@ export class UserAssembler {
             resource.icon,
             resource.password,
             resource.phrase,
-            resource.order,
-            resource.orderstatus,
+            (resource.order || []).map(o => ({
+                id: o.id,
+                code: o.code,
+                orderstatus: o.orderstatus
+            })),
             resource.subscription
         );
     }
@@ -20,18 +23,21 @@ export class UserAssembler {
         return response.data.map(this.toEntityFromResource);
     }
 
-    static toResource(User){
+    static toResource(user) {
         return {
-            id: User.id,
-            display: User.display,
-            user: User.user,
-            email: User.email,
-            icon: User.icon,
-            password: User.password,
-            phrase: User.phrase,
-            order: User.order,
-            orderstatus: User.orderstatus,
-            subscription: User.subscription
+            id: user.id,
+            display: user.display,
+            user: user.username,
+            email: user.email,
+            icon: user.icon,
+            password: user.password,
+            phrase: user.phrase,
+            order: (user.order || []).map(o => ({
+                id: o.id,
+                code: o.code,
+                orderstatus: o.orderstatus
+            })),
+            subscription: user.subscription
         };
     }
 }

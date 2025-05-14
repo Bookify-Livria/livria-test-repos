@@ -2,6 +2,7 @@
 import { getLoggedInUser } from "../../public/shared-services/get-logged-user.js";
 import {UserApiService} from "../service/user-api.service.js";
 import confirmation from "../components/Subscription-confirmation.component.vue"
+import {notifyEvent} from "../../public/shared-services/to-notify.js";
 
 export default {
   name: "CommunityPlanComponent",
@@ -20,6 +21,14 @@ export default {
     goCommunities(){
       this.$router.push('/communities');
     },
+    youveGotANoti() {
+      this.$toast.add({
+        severity: 'secondary',
+        summary: this.$t('noti.notice'),
+        detail: this.$t('noti.info'),
+        life: 3000
+      });
+    },
     async updateSubs() {
       const service = new UserApiService();
       const freshUser = await getLoggedInUser();
@@ -33,7 +42,8 @@ export default {
         });
         this.showConfirmation = true;
         console.log('showConfirmation:', this.showConfirmation);
-
+        await notifyEvent("plan");
+        this.youveGotANoti();
       } catch (error) {
         console.error('Fail!!!!!!!', error);
       }
@@ -80,6 +90,7 @@ export default {
           </div>
 
           <div class="nav-buttons">
+            <pv-toast position="top-right" style="margin-top: 8.5rem" />
             <button
                 class="pay-button"
                 type="button"

@@ -8,7 +8,13 @@
       "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuVjgb8MySnWy78K7s5vVjTyM8z3PxqXe2iRNtV8MTLGvqcDuptmtaMg4sMBzfmaT41sSqbjdgo8JpyPmexNpTp9KuUeu5K2F5Qhaoc8OMHFkxy-Cr-stKrJva0ro7pYapzeoo5OGKiwjv/s752/jabberwocky-illustration-by-john-tenniel-500x752.jpg",
       "password": "madhatter",
       "phrase": "We're all mad here. I'm mad. You're mad.",
-      "order": "",
+      "order": [
+        {
+          "id": "1",
+          "code": "7LZ1KL",
+          "orderstatus": "delivered"
+        }
+      ],
       "subscription": true
     }
   ],
@@ -53,7 +59,7 @@
       "description": "Para los fans de novelas de misterio y detectives.",
       "type": "ficcion",
       "image": "https://i.imgur.com/lZSIKt1.jpg",
-      "banner": "https://i.imgur.com/E12pOp3.jpg",
+      "banner": "https://i.imgur.com/leM9X71,jpg",
       "posts": [
         {
           "id": "1",
@@ -65,7 +71,7 @@
           "id": "2",
           "username": "misterylover",
           "content": "¿Alguien más piensa que Poirot es más astuto que Sherlock?",
-          "img": "https://i.imgur.com/wEECdkj.jpg"
+          "img": "https://i.imgur.com/FWIytkN.jpg"
         },
         {
           "id": "3",
@@ -1762,6 +1768,26 @@
       "id": "1",
       "username": "jabberwock",
       "password": "madhatter"
+    }
+  ],
+  "notificaciones": [
+    {
+      "id": "1",
+      "date": "2025-05-14T13:21:43.689Z",
+      "title": "Plan Activated",
+      "content": "You just subscribed to a community plan. Enjoy the perks!"
+    },
+    {
+      "id": "1",
+      "date": "2025-05-14T13:24:33.588Z",
+      "title": "Welcome back!",
+      "content": "Nice to see you again. Let’s continue exploring."
+    },
+    {
+      "id": "1",
+      "date": "2025-05-14T13:39:03.555Z",
+      "title": "Welcome back!",
+      "content": "Nice to see you again. Let’s continue exploring."
     }
   ]
 }

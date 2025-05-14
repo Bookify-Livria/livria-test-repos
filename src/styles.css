@@ -29,6 +29,8 @@
   --p-toast-warn-background: rgba(var(--color-accent-orange-rgb), 0.15);
   --p-toast-warn-border-color: transparent;
   --p-toast-warn-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --p-toast-secondary-background: rgba(var(--color-secondary-rgb), 0.15);
+  --p-toast-secondary-border-color: var(--color-secondary);
 
   /* Stepper */
   --p-stepper-step-header-gap: 0.5rem;

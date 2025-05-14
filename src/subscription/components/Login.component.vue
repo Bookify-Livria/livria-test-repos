@@ -4,6 +4,7 @@ import axios from 'axios';
 import { ref } from 'vue';
 import 'primeicons/primeicons.css';
 import LanguageSwitcher from "../../public/components/language-switcher.component.vue";
+import {notifyEvent} from "../../public/shared-services/to-notify.js";
 
 const value1 = '';
 const value2 = '';
@@ -66,21 +67,18 @@ export default {
         return null;
       }
     },
-
     goToHome() {
       this.$router.push('/home');
     },
-
     goToRegister() {
       this.$router.push('/register');
     },
-
-
     async handleLogin(valueA, valueB) {
       const matchedUser = await this.validateLogin(valueA, valueB);
       if (matchedUser && valueA!=='' && valueB!=='') {
         await this.createLogin(matchedUser.id, valueA, valueB);
         this.showLogin();
+        await notifyEvent("login");
         this.goToHome();
       } else {
         this.showFail();
