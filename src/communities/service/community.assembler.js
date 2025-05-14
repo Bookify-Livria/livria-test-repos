@@ -1,3 +1,4 @@
+import { Post } from '../model/post.entity.js';
 import { Community } from '../model/community.entity.js';
 
 export class CommunityAssembler {
@@ -16,26 +17,19 @@ export class CommunityAssembler {
             return null;
         }
 
-        return {
-            id: item.id,
-            name: item.name,
-            description: item.description,
-            type: item.type,
-            image: item.image
-        };
+        const posts = Array.isArray(item.posts)
+            ? item.posts.map(post => new Post(post.id, post.username, post.content, post.img))
+            : [];
+
+        return new Community(
+            item.id,
+            item.name,
+            item.description,
+            item.type,
+            item.image,
+            item.banner,
+            posts
+        );
     }
 
-    // Convert entity model to API model (for creating/updating)
-    static toApiModel(entity) {
-        if (!entity) {
-            return null;
-        }
-
-        return {
-            name: entity.name,
-            description: entity.description,
-            type: entity.type,
-            image: entity.image
-        };
-    }
 }

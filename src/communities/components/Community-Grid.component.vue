@@ -11,6 +11,7 @@ export default {
     Button,
     CreateCommunity
   },
+
   data() {
     return {
       communities: [],
@@ -37,15 +38,16 @@ export default {
       this.communities.push(newCommunity)
       this.hideCreateForm()
     },
-    redirectToCommunity(communityId) {
-      this.$router.push({ name: 'CommunityView', params: { id: communityId } });
-    },
+    goToDetail(community) {
+      this.$router.push({ name: 'CommunityView', params: { name: community.name } })
+    }
   }
 }
 </script>
 
 <template>
   <div class="community-grid">
+    <!-- Create Button -->
     <div class="custom-card-wrapper">
       <pv-card class="create-card">
         <template #content>
@@ -58,12 +60,11 @@ export default {
         </template>
       </pv-card>
     </div>
-
+    <!-- Communities Grid -->
     <div
         v-for="community in communities"
         :key="community.id"
         class="custom-card-wrapper"
-        @click="redirectToCommunity(community.id)"
     >
       <pv-card>
         <template #header>
@@ -74,7 +75,7 @@ export default {
         </template>
         <template #footer>
           <div class="flex justify-end">
-            <button class="see-more-btn">{{$t('see-more')}}</button>
+            <button @click="goToDetail(community)" class="see-more-btn">{{$t('see-more')}}</button>
           </div>
         </template>
       </pv-card>

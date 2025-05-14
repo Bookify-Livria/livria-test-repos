@@ -19,4 +19,12 @@ export class CommunityApiService {
             body: JSON.stringify(community)
         }).then(res => res.json())
     }
+    updateCommunity(community) {
+        return axios.put(`http://localhost:3000/communities/${community.id}`, community)
+            .catch(error => {
+                console.error('Error updating users:', error);
+                throw error;
+            });
+    }
+
 }

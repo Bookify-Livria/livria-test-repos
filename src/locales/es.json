@@ -28,6 +28,8 @@
     "reminder": "¡Ojalá te gusten! Recuerda que puedes marcar tu interés en cada libro con los íconos del marcador y del signo negativo, respectivamente."
   },
 
+  "address": "Dirección",
+
   "Search": "Resultados de: ",
   "NoSearch": "No se encontraron resultados para la búsqueda",
   "RecoSearch": "Puede que te interesen las siguientes recomendaciones",
@@ -85,6 +87,7 @@
   "english": "Inglés",
   "spanish": "Español",
   "delete": "Borrar selección",
+
   "phrase": "Descubre el placer de leer en una vibrante comunidad literaria.",
   "navigation": "Navegación",
   "home": "Inicio",
@@ -125,6 +128,13 @@
     "image": "URL de la imagen"
   },
   "see-more": "Ver Más +",
+
+  "comm" : {
+    "thoughts": "¿En qué estás pensando?",
+    "join": "Unirse +",
+    "post": "Publicar",
+    "image": "Pega aquí la URL de una imagen que quieras agregar."
+  },
 
   "yes": "Sí",
   "no": "No",

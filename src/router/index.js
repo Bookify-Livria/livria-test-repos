@@ -11,6 +11,8 @@ import Login from "../public/pages/login-page.component.vue";
 import Register from "../public/pages/register-page.component.vue";
 import Purchase from "../public/pages/purchase.component.vue";
 import SubscriptionComponent from "../public/pages/subscription.component.vue";
+import CommunityView from '../public/pages/view-communities.component.vue';
+import Shop from '../public/pages/shop.component.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -22,6 +24,7 @@ const router = createRouter({
         {path: '/login', component: Login},
         {path: '/register', component: Register},
         {path: "/purchase", component: Purchase},
+        {path: "/shop", component: Shop},
         {
             path: '/bookl',
             name: 'LiteratureBooks',
@@ -69,7 +72,11 @@ const router = createRouter({
             name: 'Recommendations',
             component: Recommendation
         },
-        {path: '/books/:title', name: 'BookDetail', component: SingularBook},
+        {
+            path: '/books/:title',
+            name: 'BookDetail',
+            component: SingularBook
+        },
         {
             path: '/search',
             name: 'BookSearch',
@@ -79,6 +86,11 @@ const router = createRouter({
             path: '/subscription',
             name: 'CommunitySubscription',
             component: SubscriptionComponent
+        },
+        {
+            path: '/communities/:name',
+            name: 'CommunityView',
+            component: CommunityView
         }
     ]
 })

@@ -2,12 +2,12 @@
   "users": [
     {
       "id": "1",
-      "display": "a",
-      "user": "a",
-      "email": "a",
-      "icon": "a",
-      "password": "e",
-      "phrase": "a",
+      "display": "Alice",
+      "user": "jabberwocky",
+      "email": "alice.jabberwock.1951@gmail.com",
+      "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuVjgb8MySnWy78K7s5vVjTyM8z3PxqXe2iRNtV8MTLGvqcDuptmtaMg4sMBzfmaT41sSqbjdgo8JpyPmexNpTp9KuUeu5K2F5Qhaoc8OMHFkxy-Cr-stKrJva0ro7pYapzeoo5OGKiwjv/s752/jabberwocky-illustration-by-john-tenniel-500x752.jpg",
+      "password": "madhatter",
+      "phrase": "We're all mad here. I'm mad. You're mad.",
       "order": "",
       "subscription": true
     }
@@ -18,210 +18,1139 @@
       "name": "Jojofans",
       "description": "Aquí amamos a Joseph sobre todas las cosas",
       "type": "mangasycomics",
-      "image": "https://i.imgur.com/K9hEj0v.jpg"
+      "image": "https://i.imgur.com/K9hEj0v.jpg",
+      "banner": "https://i.imgur.com/E12pOp3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "joja",
+          "content": "jojo's será por siempre mi anime fav y los mangas son igual de chéveres",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "kingturkey",
+          "content": "steel ball run ya pronto sale !!!",
+          "img": "https://a.storyblok.com/f/178900/1920x1080/e77cdecbac/steel-ball-run-jojo-s-bizarre-adventure-trailer-teaser.jpg/m/1200x0/filters:quality(95)format(webp)"
+        },
+        {
+          "id": "3",
+          "username": "b",
+          "content": "can't wait for sbr",
+          "img": "https://animesuperhero.com/wp-content/uploads/2025/04/steelballrun.jpg"
+        },
+        {
+          "id": "4",
+          "username": "jabberwocky",
+          "content": "Descubrí tarde JoJo's Bizarre Adventure, el anime, pero cuando lo hice me tragué del tirón todo lo que había por aquel entonces, aunque reconozco que acabé un poco cansado de ver cómo todo se resolvía de manera similar y el absurdo, uno de los, por otra parte, puntos fuertes del también manga creado por Hirohiko Araki, acabó por superarme.\n\nAsí las cosas y sin haber acabado Stone Ocean, el anuncio de una nueva adaptación al formato animado me sigue interesando, sobre todo porque Steel Ball Run, que es lo que toca ahora, representa un reinicio narrativo y temporal, saltando hacia atrás en el tiempo y creando una nueva línea de historia.",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "2",
       "name": "Detectives de tinta",
       "description": "Para los fans de novelas de misterio y detectives.",
       "type": "ficcion",
-      "image": "https://i.imgur.com/lZSIKt1.jpg"
+      "image": "https://i.imgur.com/lZSIKt1.jpg",
+      "banner": "https://i.imgur.com/E12pOp3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "cluehunter",
+          "content": "¡Acabo de terminar 'El nombre de la rosa' y no puedo superar ese final!",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "misterylover",
+          "content": "¿Alguien más piensa que Poirot es más astuto que Sherlock?",
+          "img": "https://i.imgur.com/wEECdkj.jpg"
+        },
+        {
+          "id": "3",
+          "username": "noirreader",
+          "content": "Los thrillers escandinavos tienen algo que me atrapa. ¿Recomendaciones?",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "agathafangirl",
+          "content": "No hay nada como una novela de Agatha Christie para una noche de lluvia ☔📚",
+          "img": "https://i.imgur.com/4Q1R6Na.jpg"
+        },
+        {
+          "id": "5",
+          "username": "bibliodetective",
+          "content": "Estoy escribiendo mi propia historia de detectives, ¡pronto la subo!",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "3",
       "name": "Cuentitos mágicos",
       "description": "Comunidad de libros para peques y cuentos de hadas.",
       "type": "infantil",
-      "image": "https://i.imgur.com/lxrbFYU.jpg"
+      "image": "https://i.imgur.com/lxrbFYU.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "cuentacuentos",
+          "content": "Hoy leímos 'El gigante egoísta' en clase y los niños quedaron fascinados 💫",
+          "img": "https://i.imgur.com/pUF8vL0.jpg"
+        },
+        {
+          "id": "2",
+          "username": "hadasyduendes",
+          "content": "¿Alguien recuerda ese cuento del dragón que lloraba flores? 🐉🌸",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "lecturamagica",
+          "content": "Los libros de la colección 'Mi primer cuento de hadas' son ideales para la hora de dormir 💤",
+          "img": "https://i.imgur.com/N1WTVZ8.jpg"
+        },
+        {
+          "id": "4",
+          "username": "cuentosparaelalma",
+          "content": "Los cuentos infantiles también enseñan valores. A mis peques les encantó uno sobre la amistad 🤝",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "4",
       "name": "Club Austen",
       "description": "Amamos a Jane Austen y el drama de época.",
       "type": "literatura",
-      "image": "https://i.imgur.com/YvapK03.jpg"
+      "image": "https://i.imgur.com/YvapK03.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "lizzyfan",
+          "content": "Mr. Darcy no es solo un personaje, es un estándar. 🖋️💌",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "teaandpride",
+          "content": "Hoy volvimos a leer 'Persuasión' en el club. Anne Elliot merece más reconocimiento 💔",
+          "img": "https://i.imgur.com/8rMFvWd.jpg"
+        },
+        {
+          "id": "3",
+          "username": "biblioromance",
+          "content": "¿Cuál es su frase favorita de Austen? La mía: 'Hay pocas personas a las que amo de verdad...'",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "drama_regency",
+          "content": "Las adaptaciones modernas de 'Emma' tienen su encanto, pero nada como el libro 📚✨",
+          "img": "https://i.imgur.com/WiFpxYT.jpg"
+        },
+        {
+          "id": "5",
+          "username": "austenaddict",
+          "content": "Amo leer Austen con una taza de té y música clásica de fondo. ¿Ustedes cómo lo hacen?",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "5",
       "name": "Crimen y café",
       "description": "Para debatir sobre thrillers, asesinatos y buenos giros.",
       "type": "ficcion",
-      "image": "https://i.imgur.com/l6kYM0x.jpg"
+      "image": "https://i.imgur.com/l6kYM0x.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "thrilleraddict",
+          "content": "Me quedé en shock con el plot twist de 'La chica del tren'. Nadie lo vio venir. 😱",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "misteriolatte",
+          "content": "Nada como leer sobre un asesinato mientras tomas café caliente ☕🔪",
+          "img": "https://i.imgur.com/K1S8sQg.jpg"
+        },
+        {
+          "id": "3",
+          "username": "lecturanegracrimen",
+          "content": "Estoy releyendo a Agatha Christie. ¿Algún fan de Poirot por aquí?",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "giroslocos",
+          "content": "Acabo de terminar 'El paciente' de Juan Gómez-Jurado. TREMENDO.",
+          "img": "https://i.imgur.com/4wGBWgM.jpg"
+        },
+        {
+          "id": "5",
+          "username": "noespoilers",
+          "content": "¿Cuál ha sido el libro con el mejor asesino oculto que han leído?",
+          "img": ""
+        },
+        {
+          "id": "6",
+          "username": "crimenyplot",
+          "content": "El nuevo libro de Paula Hawkins no decepcionó. Más oscuro que nunca.",
+          "img": ""
+        },
+        {
+          "id": "7",
+          "username": "b",
+          "content": "craving a coffee and a book rn",
+          "img": "https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2024/05/2b102-top-book-cafes-to-explore-in-delhi-ncr.jpg?fit=1000%2C667&ssl=1"
+        }
+      ]
     },
     {
       "id": "6",
       "name": "Solo datos reales",
       "description": "Comunidad de no ficción: historia, ciencia, biografías.",
       "type": "noficcion",
-      "image": "https://i.imgur.com/eAmm5QL.jpg"
+      "image": "https://i.imgur.com/eAmm5QL.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "saberdicesaber",
+          "content": "Estoy obsesionado con los libros de Yuval Noah Harari. ¡Sapiens cambió mi forma de ver la historia!",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "biofreak",
+          "content": "¿Recomendaciones de biografías que realmente inspiren? Ya leí la de Steve Jobs.",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "lecturacientifica",
+          "content": "Nada como un buen libro de divulgación científica para cerrar el día. ¿Conocen a Carlo Rovelli?",
+          "img": "https://i.imgur.com/QZc8wXM.jpg"
+        },
+        {
+          "id": "4",
+          "username": "datogeek",
+          "content": "Acabo de leer un libro entero sobre la historia del café. Nunca imaginé que fuera tan fascinante.",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "histofact",
+          "content": "Releyendo 'Guns, Germs, and Steel'. Si te interesa la evolución de las sociedades, es un must.",
+          "img": "https://i.imgur.com/Wn0Z9VK.jpg"
+        },
+        {
+          "id": "6",
+          "username": "datoscuriosos",
+          "content": "¿Sabías que un solo gramo de ADN puede almacenar más información que un disco duro? 📚🧬",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "7",
       "name": "Románticxs Anónimxs",
       "description": "Amamos los finales felices y las historias intensas.",
       "type": "juvenil",
-      "image": "https://i.imgur.com/SrpeUww.jpg"
+      "image": "https://i.imgur.com/SrpeUww.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "romancejunkie",
+          "content": "Acabo de terminar 'El amor en los tiempos del cólera' y tengo el corazón hecho pedazos (en el mejor sentido).",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "finalfeliz",
+          "content": "Los clichés del romance me dan vida: enemigos a amantes, reencuentros, cartas... ¡Dámelos todos!",
+          "img": "https://i.imgur.com/rZhQzt5.jpg"
+        },
+        {
+          "id": "3",
+          "username": "lectoralatina",
+          "content": "Si aún no han leído 'A través de mi ventana', ¿qué están esperando? ¡Me lo devoré en una tarde!",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "teamnoah",
+          "content": "No supero 'El cuaderno de Noah'. ¿Cómo algo tan cursi puede doler tanto? 💔",
+          "img": "https://i.imgur.com/6M3vTJc.jpg"
+        },
+        {
+          "id": "5",
+          "username": "romancebajoestrella",
+          "content": "Estoy escribiendo mi propia historia de amor inspirada en los libros que leemos aquí. ¡Gracias por tanta inspiración!",
+          "img": ""
+        },
+        {
+          "id": "6",
+          "username": "fanficqueen",
+          "content": "Los libros de Colleen Hoover son un torbellino de emociones. ¿Favorito? Verity, sin duda.",
+          "img": ""
+        },
+        {
+          "id": "7",
+          "username": "corazonliterario",
+          "content": "Me enamoré de un personaje ficticio otra vez. 😭 ¿Cómo superan ustedes eso?",
+          "img": "https://i.imgur.com/O1n4kAA.jpg"
+        }
+      ]
     },
     {
       "id": "8",
       "name": "Multiverso manga",
       "description": "Para fans del manga de todos los géneros.",
       "type": "mangasycomics",
-      "image": "https://i.imgur.com/BR3tJpT.jpg"
+      "image": "https://i.imgur.com/BR3tJpT.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "mangamaniac",
+          "content": "Acabo de terminar Chainsaw Man y NECESITO que alguien hable conmigo del final. 😭",
+          "img": "https://i.imgur.com/8yWkQ1V.jpg"
+        },
+        {
+          "id": "2",
+          "username": "otaku_infernal",
+          "content": "No hay nada como leer One Piece a las 2 am con ramen al lado. #TeamZoro",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "shojoromance",
+          "content": "Me encanta cómo el romance en 'Kimi ni Todoke' es tan puro 🥹. ¡Quiero un Kazehaya en mi vida!",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "senpaiwatcher",
+          "content": "Recién descubrí 'Blue Lock' y me atrapó desde el primer capítulo. ¡Fútbol y drama, excelente combinación!",
+          "img": "https://i.imgur.com/97Bvj06.jpg"
+        },
+        {
+          "id": "5",
+          "username": "mangasempai",
+          "content": "¿Alguien más colecciona tomos físicos? Mi repisa ya no da más 🫠",
+          "img": "https://i.imgur.com/TZg1Wuw.jpg"
+        },
+        {
+          "id": "6",
+          "username": "shonenpower",
+          "content": "Jujutsu Kaisen se está convirtiendo en mi shonen favorito. Gojo es simplemente otro nivel.",
+          "img": ""
+        },
+        {
+          "id": "7",
+          "username": "mangaprincess",
+          "content": "Recomienden mangas estilo slice of life que no sean tristes, porfa 🙏",
+          "img": ""
+        },
+        {
+          "id": "8",
+          "username": "multiverso_real",
+          "content": "Hoy terminé 'Berserk'... no sé cómo seguir con mi vida.",
+          "img": "https://i.imgur.com/DRtqkTZ.jpg"
+        }
+      ]
     },
     {
       "id": "9",
       "name": "Escuadrón distopía",
       "description": "Discutimos libros donde el mundo se va a la ruina.",
       "type": "juvenil",
-      "image": "https://i.imgur.com/OWckAP1.jpg"
+      "image": "https://i.imgur.com/OWckAP1.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "finallight",
+          "content": "¿Qué libro distópico les voló la cabeza últimamente? Yo no supero *1984* 😶‍🌫️",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "rebeldelinker",
+          "content": "Releyendo *Un mundo feliz* y sigue siendo brutalmente vigente. ¿Lo han leído?",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "bookpandemonium",
+          "content": "*El corredor del laberinto* fue mi entrada al género 😭 ¿Y la de ustedes?",
+          "img": "https://i.imgur.com/dwK0XCI.jpeg"
+        },
+        {
+          "id": "4",
+          "username": "nohopezone",
+          "content": "Me recomendaron *Vox* y *El cuento de la criada*. ¿Cuál debería empezar primero?",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "therising",
+          "content": "*Battle Royale* >>>> *Los juegos del hambre* 👀",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "10",
       "name": "Ficción que arde",
       "description": "Libros que nos hacen pensar, llorar o enojarnos.",
       "type": "ficcion",
-      "image": "https://i.imgur.com/qMAjiiT.jpg"
+      "image": "https://i.imgur.com/qMAjiiT.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "lloranconlibros",
+          "content": "Terminé 'La ladrona de libros' y no puedo dejar de llorar. Qué historia tan dolorosamente bella.",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "lectoresfuriosos",
+          "content": "¡No supero ese final injusto! Necesito hablar con alguien que haya leído este libro YA.",
+          "img": "https://i.imgur.com/8N1nWjP.jpg"
+        },
+        {
+          "id": "3",
+          "username": "paginasquemarcan",
+          "content": "Ese momento cuando el personaje muere y todo tu corazón se rompe en pedacitos...",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "emocionliteraria",
+          "content": "¿Por qué nadie me advirtió que ‘Un pequeño favor’ iba a jugar así con mis emociones?",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "cafeconlagrimas",
+          "content": "Libros que me destrozaron este año: ‘Mil soles espléndidos’, ‘Yo antes de ti’, ‘Una vida pequeña’. Recomendadísimos si quieren sufrir.",
+          "img": "https://i.imgur.com/kWvEbpS.jpg"
+        }
+      ]
     },
     {
       "id": "11",
       "name": "Niños lectores",
       "description": "Padres, profes y peques hablando de libros infantiles.",
       "type": "infantil",
-      "image": "https://i.imgur.com/Nmd7Frm.jpg"
+      "image": "https://i.imgur.com/Nmd7Frm.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "mamácuenta",
+          "content": "Mi hijo está obsesionado con 'El monstruo de colores', ¡es una gran herramienta para hablar de emociones!",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "profeluz",
+          "content": "En el aula usamos 'Cuentos para educar niños felices' cada semana. ¡Funciona genial!",
+          "img": "https://i.imgur.com/3AVayfB.jpg"
+        },
+        {
+          "id": "3",
+          "username": "cuentacuentos24",
+          "content": "Les recomiendo 'La ovejita que vino a cenar' para la hora del cuento. Es tierno y divertido.",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "soylectorpeque",
+          "content": "¡Leí mi primer libro solito! Era '¿A qué sabe la luna?' y me encantó.",
+          "img": "https://i.imgur.com/DQxKtZd.jpg"
+        }
+      ]
     },
     {
       "id": "12",
       "name": "Clásicos con café",
       "description": "Comunidad para hablar de clásicos de la literatura.",
       "type": "literatura",
-      "image": "https://i.imgur.com/qT4IHDf.jpg"
+      "image": "https://i.imgur.com/qT4IHDf.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "cafeytolstoi",
+          "content": "Nada como leer *Anna Karénina* con una taza de espresso al lado. Doloroso y hermoso.",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "charlesdickensfan",
+          "content": "Releí *Grandes Esperanzas* y cada vez encuentro algo nuevo. Dickens es un genio.",
+          "img": "https://i.imgur.com/N74X3ZB.jpg"
+        },
+        {
+          "id": "3",
+          "username": "lectoraempedernida",
+          "content": "*Jane Eyre* me marcó para siempre. Qué fuerza la de Charlotte Brontë.",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "clásicosconleche",
+          "content": "*Crimen y castigo* me dejó pensando en la moral humana durante semanas. Intenso.",
+          "img": "https://i.imgur.com/zSSxVtv.jpg"
+        },
+        {
+          "id": "5",
+          "username": "poesiayvino",
+          "content": "Revisité *Cumbres borrascosas* y qué locura de historia. Oscura, tormentosa... fascinante.",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "13",
       "name": "Cyberpunkers",
       "description": "Donde hablamos de robots, futuro oscuro y chips cerebrales.",
       "type": "ficcion",
-      "image": "https://i.imgur.com/sqd9ijG.jpg"
+      "image": "https://i.imgur.com/sqd9ijG.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "neonmatrix",
+          "content": "Acabo de terminar *Neuromante* de Gibson. Me explotó la mente. ¡Cyberpunk puro!",
+          "img": "https://i.imgur.com/v6MoFjM.jpg"
+        },
+        {
+          "id": "2",
+          "username": "chipxcore",
+          "content": "*Snow Crash* predijo demasiadas cosas. ¿El metaverso ya está aquí?",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "tecnoclara",
+          "content": "*Black Mirror* me hizo buscar más libros del estilo. Recomendaciones cyberpunk, porfa 👀",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "dystowriter",
+          "content": "*Akira* y *Ghost in the Shell* son la definición visual de cyberpunk. Brutales.",
+          "img": "https://i.imgur.com/1Z7bHNb.jpg"
+        },
+        {
+          "id": "5",
+          "username": "borgeso",
+          "content": "¿Alguien ha leído *Autonomous* de Annalee Newitz? Robots, género y control corporativo. 👾",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "14",
       "name": "Audiolectores",
       "description": "Amantes de los audiolibros y escuchar historias.",
       "type": "ebooks",
-      "image": "https://i.imgur.com/kDb7VjU.jpg"
+      "image": "https://i.imgur.com/kDb7VjU.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "vozdelibro",
+          "content": "La narración de Eduardo Noriega en *1984* es simplemente espectacular. Te atrapa.",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "auralista",
+          "content": "Me encantan los audiolibros de misterio. Escuchar *La chica del tren* fue adrenalina pura 🔊",
+          "img": "https://i.imgur.com/pMFzDox.jpg"
+        },
+        {
+          "id": "3",
+          "username": "leeconorejas",
+          "content": "*Sapiens* narrado en audio tiene otro nivel. Caminatas largas con conocimiento a full.",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "15",
       "name": "Datos Curiosos",
       "description": "Para fans de libros de curiosidades, ciencia y más.",
       "type": "noficcion",
-      "image": "https://i.imgur.com/dAwpEaU.jpg"
+      "image": "https://i.imgur.com/dAwpEaU.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "sabíasque",
+          "content": "📘 *El libro de los hechos asombrosos* me dejó en shock. ¿Sabías que las hormigas no duermen?",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "mentecuriosa",
+          "content": "*Cosmos* de Carl Sagan me hizo ver el universo con nuevos ojos 🌌",
+          "img": "https://i.imgur.com/lfXtp4V.jpg"
+        },
+        {
+          "id": "3",
+          "username": "neuronacolor",
+          "content": "Descubrí en un libro que las jirafas no emiten sonidos... ¡pero sí tienen cuerdas vocales! 😮",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "datonerd",
+          "content": "*Why do we sleep* es fascinante. El sueño afecta TODO, desde tu memoria hasta tu sistema inmune 🛌🧠",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "curiozine",
+          "content": "Estoy obsesionado con los libros tipo *Sabías que...*. Perfectos para romper el hielo 👀",
+          "img": "https://i.imgur.com/gGVwKJr.jpg"
+        }
+      ]
     },
     {
       "id": "16",
       "name": "Mangamanía",
       "description": "Comunidad otaku: shonen, shojo, seinen y más.",
       "type": "mangasycomics",
-      "image": "https://i.imgur.com/tOQkbaZ.jpg"
+      "image": "https://i.imgur.com/tOQkbaZ.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "otakusenpai",
+          "content": "Acabo de terminar *Chainsaw Man* y solo puedo decir: necesito terapia 😵‍💫",
+          "img": "https://i.imgur.com/Q8YUzxq.jpg"
+        },
+        {
+          "id": "2",
+          "username": "kawaiikumo",
+          "content": "*Fruits Basket* me hizo llorar y reír a la vez. El mejor shojo que he leído 💕",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "gokusensei",
+          "content": "No hay nada como un buen shonen clásico. *Naruto*, *Bleach*, *One Piece* = leyendas 🔥",
+          "img": "https://i.imgur.com/olZhkU8.jpg"
+        },
+        {
+          "id": "4",
+          "username": "mangaka_84",
+          "content": "Si no han leído *Berserk*, no saben lo que es el seinen de verdad. Arte y oscuridad pura 🖤⚔️",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "mangaobsessed",
+          "content": "Mi top del mes: *Blue Lock*, *Oshi no Ko*, y *My Dress-Up Darling*. Variedad asegurada 👘⚽🎤",
+          "img": ""
+        },
+        {
+          "id": "6",
+          "username": "otakucoffee",
+          "content": "*Tokyo Revengers* es el guilty pleasure que no sabía que necesitaba 😳",
+          "img": "https://i.imgur.com/XgKClxg.jpg"
+        }
+      ]
     },
     {
       "id": "17",
       "name": "Poetas del sur",
       "description": "Espacio para hablar de poesía en español.",
       "type": "literatura",
-      "image": "https://i.imgur.com/bAjqQvz.jpg"
+      "image": "https://i.imgur.com/bAjqQvz.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "versolibre",
+          "content": "“Y en el sur, donde el viento canta, también mi alma se levanta.” 🌬️✍️",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "poetadeagua",
+          "content": "Releyendo a Alejandra Pizarnik. Qué fuerza tan frágil tienen sus palabras.",
+          "img": "https://i.imgur.com/VpY9xNo.jpg"
+        },
+        {
+          "id": "3",
+          "username": "tinta_y_mate",
+          "content": "Poesía es cuando una frase simple te deja pensando toda la tarde.",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "haikulatino",
+          "content": "hojas en el sur / susurran viejas penas / bajo la lluvia 🍂",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "corazonrimado",
+          "content": "¿Cuál es su poema favorito en español? El mío es *Altazor*, de Huidobro. 🎈",
+          "img": "https://i.imgur.com/xnBskcT.jpg"
+        }
+      ]
     },
     {
       "id": "18",
       "name": "PDF Lovers",
       "description": "Gente que ama leer desde su tablet o Kindle.",
       "type": "ebooks",
-      "image": "https://i.imgur.com/nQ5dY6e.jpg"
+      "image": "https://i.imgur.com/nQ5dY6e.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "lecturadigital",
+          "content": "No hay nada como llevar 200 libros en el bolsillo gracias a mi Kindle 🤓📚",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "kindlequeen",
+          "content": "Acabo de terminar *Dune* en mi tablet. ¡Qué experiencia tan épica!",
+          "img": "https://i.imgur.com/7Ea3v9r.jpg"
+        },
+        {
+          "id": "3",
+          "username": "bibliotecavirtual",
+          "content": "¿Ustedes también subrayan y anotan en sus ebooks o soy la única freak? ✍️",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "pdfhunter",
+          "content": "Encontré una versión preciosa en PDF de *Orgullo y prejuicio*. ¡Con ilustraciones! 😍",
+          "img": "https://i.imgur.com/2zWm3Zz.jpg"
+        },
+        {
+          "id": "5",
+          "username": "ebookaddict",
+          "content": "El brillo nocturno de mi lector es mi nuevo romance. Leer en la cama nunca fue tan cómodo.",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "19",
       "name": "Historias reales",
       "description": "Discutimos sobre libros biográficos e históricos.",
       "type": "noficcion",
-      "image": "https://i.imgur.com/ioWU2Rc.jpg"
+      "image": "https://i.imgur.com/ioWU2Rc.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "histofriki",
+          "content": "Recién terminé la biografía de Leonardo da Vinci de Walter Isaacson. Fascinante cómo conectaba arte y ciencia.",
+          "img": "https://i.imgur.com/YFgS7Mw.jpg"
+        },
+        {
+          "id": "2",
+          "username": "realidadeslibres",
+          "content": "Me atrapó *Los niños del tren*. Historia dura, pero importantísima.",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "cronistaurbana",
+          "content": "¿Recomiendan alguna biografía potente escrita por mujeres? Quiero voces distintas.",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "memoriaylibros",
+          "content": "Leyendo sobre el ascenso del Imperio Otomano… no sabía que me iba a gustar tanto 🕌📖",
+          "img": "https://i.imgur.com/gfrtbS6.jpg"
+        },
+        {
+          "id": "5",
+          "username": "datosreales",
+          "content": "*Sapiens* debería ser lectura obligatoria. Cambió cómo veo la historia de la humanidad.",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "20",
       "name": "Fantasía de tinta",
       "description": "Elfos, magia, dragones y épicas batallas.",
       "type": "ficcion",
-      "image": "https://i.imgur.com/D6LuXwz.jpg"
+      "image": "https://i.imgur.com/D6LuXwz.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "dragonsoul",
+          "content": "¡Estoy releyendo Eragon y aún me emociona como la primera vez!",
+          "img": "https://i.imgur.com/zKeo5vC.jpg"
+        },
+        {
+          "id": "2",
+          "username": "magiaoscura",
+          "content": "¿Alguien más llora cada vez que lee sobre el final de *Elantris*? Sanderson, te odio y te amo.",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "elfoenelbosque",
+          "content": "Tolkien me enseñó que cada piedra en el camino tiene historia. Viva la Tierra Media ✨",
+          "img": "https://i.imgur.com/8A1fY8p.jpg"
+        }
+      ]
     },
     {
       "id": "21",
       "name": "BookTok Perú",
       "description": "Donde se habla de los libros virales en TikTok.",
       "type": "juvenil",
-      "image": "https://i.imgur.com/D7pIFSw.jpg"
+      "image": "https://i.imgur.com/D7pIFSw.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "flordelibros",
+          "content": "*Heartstopper* me destruyó emocionalmente 😭 Gracias BookTok por tanto.",
+          "img": "https://i.imgur.com/oFiPxqz.jpg"
+        },
+        {
+          "id": "2",
+          "username": "tiktokera_lectora",
+          "content": "Estoy en mi era de *It Ends With Us* y nadie me detiene 💔",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "libroshock",
+          "content": "TOP 3 libros que me volaron la cabeza gracias a TikTok: 1) *A Court of Thorns and Roses*, 2) *Shatter Me*, 3) *The Seven Husbands of Evelyn Hugo* 📚🔥",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "perulee",
+          "content": "¿Qué libro viral no te gustó nada? Yo empiezo: *The Love Hypothesis* 👀",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "22",
       "name": "Solo novelas gráficas",
       "description": "Para quienes disfrutan leer con dibujos.",
       "type": "mangasycomics",
-      "image": "https://i.imgur.com/gxJk81g.jpg"
+      "image": "https://i.imgur.com/gxJk81g.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "viñetasdeviaje",
+          "content": "Leí *Persepolis* en una tarde y no he dejado de pensar en cada viñeta desde entonces.",
+          "img": "https://i.imgur.com/2TFRNKN.jpg"
+        },
+        {
+          "id": "2",
+          "username": "comicbiblio",
+          "content": "La narrativa visual de *Daytripper* es una joya que todos deberían experimentar. Emotiva, profunda, perfecta.",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "historietax",
+          "content": "Me encanta cuando las novelas gráficas juegan con el tiempo y los recuerdos. *Fun Home* lo hace de forma brillante.",
+          "img": "https://i.imgur.com/MHGH9nE.jpg"
+        },
+        {
+          "id": "4",
+          "username": "mangadicto",
+          "content": "*Blue Period* me motivó a volver a pintar. El arte literalmente inspira arte.",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "23",
       "name": "Mini cuenteros",
       "description": "Niños contando y comentando sus historias favoritas.",
       "type": "infantil",
-      "image": "https://i.imgur.com/8YOK9Qj.jpg"
+      "image": "https://i.imgur.com/8YOK9Qj.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "cuentitodani",
+          "content": "¡Me encanta *El monstruo de colores*! Aprendí a decir cómo me siento 💛💙❤️",
+          "img": "https://i.imgur.com/W0LRIoP.jpg"
+        },
+        {
+          "id": "2",
+          "username": "pequelectora",
+          "content": "*Alicia en el país de las maravillas* tiene un conejo con reloj. ¡Yo quiero uno así para mi cuarto!",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "profecristina",
+          "content": "Mis alumnos amaron *¿A qué sabe la luna?* – hicimos una luna gigante de cartulina 🍽🌕",
+          "img": "https://i.imgur.com/LdX8Bkn.jpg"
+        }
+      ]
     },
     {
       "id": "24",
       "name": "Lectores rebeldes",
       "description": "Nos gusta lo raro, lo alternativo, lo diferente.",
       "type": "ficcion",
-      "image": "https://i.imgur.com/ggT3KIh.jpg"
+      "image": "https://i.imgur.com/ggT3KIh.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "sintapujos",
+          "content": "House of Leaves me voló la cabeza. Literalmente tuve que girar el libro para seguir leyendo 🤯📖",
+          "img": "https://i.imgur.com/jvMYClg.jpg"
+        },
+        {
+          "id": "2",
+          "username": "lecturaexperimental",
+          "content": "Acabo de terminar *Pájaro de celda* y todavía no sé si me encantó o me perturbó. O ambas.",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "rebellectora",
+          "content": "*El club de la lucha* no es solo una película, el libro es aún más crudo. Y sí, rompo la primera regla 👊📕",
+          "img": "https://i.imgur.com/jkxXkpT.jpg"
+        },
+        {
+          "id": "4",
+          "username": "editoranaranja",
+          "content": "Nos gusta lo marginal, lo transgresor. ¿Han leído *Autobiografía del algodón*? Imperdible.",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "distorsionletrada",
+          "content": "*La broma infinita* es mi montaña literaria. Voy en la página 643 y aún no sé por qué sufro con gusto.",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "25",
       "name": "Amamos el drama",
       "description": "Comunidad de novelas intensas, conflictos y pasión.",
       "type": "juvenil",
-      "image": "https://i.imgur.com/UVUJQde.jpg"
+      "image": "https://i.imgur.com/UVUJQde.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": []
     },
     {
       "id": "26",
       "name": "Sabiduría pop",
       "description": "Leemos libros de autoayuda y desarrollo personal.",
       "type": "noficcion",
-      "image": "https://i.imgur.com/NtbUCnB.jpg"
+      "image": "https://i.imgur.com/NtbUCnB.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "claramenteyo",
+          "content": "Empecé *Los 7 hábitos de la gente altamente efectiva* y ya quiero reorganizar toda mi vida 😅📒",
+          "img": ""
+        },
+        {
+          "id": "2",
+          "username": "menteenbalance",
+          "content": "*El poder del ahora* me está enseñando a respirar antes de reaccionar. Gracias, Tolle. 🧘‍♂️",
+          "img": "https://i.imgur.com/dcrKxEi.jpg"
+        },
+        {
+          "id": "3",
+          "username": "librosquesanan",
+          "content": "¿Recomendaciones parecidas a *Hábitos atómicos*? Estoy lista para construir mi mejor versión 🔥📈",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "reflexionando",
+          "content": "*Cómo hacer que te pasen cosas buenas* es ese libro que subrayas cada tres líneas. 😍",
+          "img": "https://i.imgur.com/mOC5v7p.jpg"
+        }
+      ]
     },
     {
       "id": "27",
       "name": "Solo ebooks",
       "description": "Nos encanta leer digital y compartir recomendaciones.",
       "type": "ebooks",
-      "image": "https://i.imgur.com/qw5B3gB.jpg"
+      "image": "https://i.imgur.com/qw5B3gB.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "ebookaddict",
+          "content": "¿Alguien más ha probado *Kindle Unlimited*? He encontrado joyas ocultas. 📚✨",
+          "img": "https://i.imgur.com/4jtd6cx.jpg"
+        },
+        {
+          "id": "2",
+          "username": "librosdigitales",
+          "content": "Acabo de leer *Sapiens* en formato digital. Es genial poder llevar toda la historia en el bolsillo. 🌍📱",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "lectoraelectronica",
+          "content": "*El hombre en el castillo* de Philip K. Dick es aún mejor en ebook. ¡Altamente recomendado para fans del género distópico! 🔥📖",
+          "img": "https://i.imgur.com/ksW0HlB.jpg"
+        },
+        {
+          "id": "4",
+          "username": "ebooklovers",
+          "content": "Nunca había entendido el amor por los libros digitales hasta que descargué *El poder del ahora*. Ahora no puedo parar. 💻💫",
+          "img": ""
+        }
+      ]
     },
     {
       "id": "28",
       "name": "Romance en viñetas",
       "description": "Comics y mangas románticos para llorar y suspirar.",
       "type": "mangasycomics",
-      "image": "https://i.imgur.com/HRPqrCC.jpg"
+      "image": "https://i.imgur.com/HRPqrCC.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "sakurahugs",
+          "content": "Releí *Ao Haru Ride* y sigo llorando como la primera vez. ¡Qué hermoso manga! 😭💕",
+          "img": "https://i.imgur.com/SBcnldX.jpg"
+        },
+        {
+          "id": "2",
+          "username": "mangasdeamor",
+          "content": "*Horimiya* es lo más wholesome que he leído. Necesito más mangas así. 💑✨",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "corazondemango",
+          "content": "¿Soy yo o *Kimi ni Todoke* tiene el romance más puro de todos los tiempos? 🥺💖",
+          "img": "https://i.imgur.com/y0BtvVq.jpg"
+        },
+        {
+          "id": "4",
+          "username": "otakulove",
+          "content": "No puedo superar el final de *Fruits Basket*. Lloré, reí y me enamoré. 🐭🐶🐱",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "blsoul",
+          "content": "*Given* es mi top 1 en mangas románticos con música. ¡Qué vibra más hermosa! 🎸🖤",
+          "img": "https://i.imgur.com/6cTLbZK.jpg"
+        }
+      ]
     },
     {
       "id": "29",
       "name": "Terror con linterna",
       "description": "Libros de miedo para leer a media noche.",
       "type": "ficcion",
-      "image": "https://i.imgur.com/JVtnAFt.jpg"
+      "image": "https://i.imgur.com/JVtnAFt.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "miedito",
+          "content": "Ayer leí *El Resplandor* de King y no dormí nada. Es un clásico por algo 😱📚",
+          "img": "https://i.imgur.com/WVikfO1.jpg"
+        },
+        {
+          "id": "2",
+          "username": "nocheeterna",
+          "content": "*Coraline* me sigue dando escalofríos cada vez que la releo. ¿A alguien más le pasa? 🕷️🖤",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "linternaypanico",
+          "content": "No puedo creer lo bueno que es *La casa al final de Needless Street*. Mind-blowing. 😳🕯️",
+          "img": ""
+        },
+        {
+          "id": "4",
+          "username": "cuentososcuros",
+          "content": "*Cementerio de animales* me dejó helado. ¡Qué forma de narrar el dolor y el miedo! 🐱⚰️",
+          "img": "https://i.imgur.com/swrnDW7.jpg"
+        }
+      ]
     },
     {
       "id": "30",
       "name": "Crush literario",
       "description": "Compartimos nuestro crush de libro favorito cada semana.",
       "type": "juvenil",
-      "image": "https://i.imgur.com/z58pbLV.jpg"
+      "image": "https://i.imgur.com/z58pbLV.jpg",
+      "banner": "https://i.imgur.com/a/nRU2mW3.jpg",
+      "posts": [
+        {
+          "id": "1",
+          "username": "cupidodelibros",
+          "content": "Nadie supera a Mr. Darcy. Punto final. #PrideAndPrejudice 💌👑",
+          "img": "https://i.imgur.com/N5Qe4lK.jpg"
+        },
+        {
+          "id": "2",
+          "username": "lecturainlove",
+          "content": "Aaron Blackford de *Farsa de amor a la española* es mi debilidad 🥲🔥",
+          "img": ""
+        },
+        {
+          "id": "3",
+          "username": "bookishhearts",
+          "content": "*Kaz Brekker* no es real, pero mi trauma sí. #SixOfCrows 😭🖤",
+          "img": "https://i.imgur.com/FYr0vDK.jpg"
+        },
+        {
+          "id": "4",
+          "username": "corazonliterario",
+          "content": "Crush eterno: Étienne St. Clair de *Un beso en París*. 🗼❤️",
+          "img": ""
+        },
+        {
+          "id": "5",
+          "username": "romantixx",
+          "content": "No es normal lo mucho que amo a Rhysand. #VelarisVibes 💫🌌",
+          "img": "https://i.imgur.com/xUAr33F.jpg"
+        }
+      ]
     }
   ],
   "books": [
@@ -827,121 +1756,12 @@
     }
   ],
   "cart": [],
-  "order": [
-    {
-      "id": "1",
-      "code": "L45C3N",
-      "items": [
-        {
-          "id": "1",
-          "book": {
-            "id": "18",
-            "title": "The Great Gatsby",
-            "description": "La decadencia y la esperanza en los años 20.",
-            "author": "F. Scott Fitzgerald",
-            "price": 59.9,
-            "cover": "https://i.imgur.com/4rfFsTt.jpg",
-            "genre": "ficcion",
-            "language": "en"
-          },
-          "quantity": 1
-        }
-      ],
-      "email": "alice.jabberwock.1951@gmail.com",
-      "phone": "asdasd",
-      "fullName": "sad asda",
-      "delivery": false,
-      "total": 59.9,
-      "date": "2025-05-13T05:32:50.014Z",
-      "shipping": null
-    },
-    {
-      "id": "2",
-      "code": "M163GD",
-      "items": [
-        {
-          "id": "1",
-          "book": {
-            "id": "1",
-            "title": "Cien años de soledad",
-            "description": "La épica historia de la familia Buendía en Macondo.",
-            "author": "Gabriel García Márquez",
-            "price": 45.9,
-            "cover": "https://i.imgur.com/7N0UyUJ.jpg",
-            "genre": "literatura",
-            "language": "es"
-          },
-          "quantity": 1
-        }
-      ],
-      "email": "a",
-      "phone": "a",
-      "fullName": "a a",
-      "delivery": false,
-      "total": 45.9,
-      "date": "2025-05-14T03:17:48.826Z",
-      "shipping": null
-    },
-    {
-      "id": "3",
-      "code": "A18L45",
-      "items": [
-        {
-          "id": "1",
-          "book": {
-            "id": "10",
-            "title": "La felicidad",
-            "description": "Una mirada crítica acerca de la felicidad en estos tiempos.",
-            "author": "Gabriel Rolón",
-            "price": 99,
-            "cover": "https://i.imgur.com/LmLDvBw.jpg",
-            "genre": "noficcion",
-            "language": "es"
-          },
-          "quantity": 1
-        }
-      ],
-      "email": "g",
-      "phone": "a",
-      "fullName": "a a",
-      "delivery": false,
-      "total": 99,
-      "date": "2025-05-14T03:38:50.862Z",
-      "shipping": null
-    },
-    {
-      "id": "4",
-      "code": "XQM8H6",
-      "items": [
-        {
-          "id": "1",
-          "book": {
-            "id": "23",
-            "title": "Norwegian Wood",
-            "description": "Una historia de amor y pérdida en el Japón de los 60.",
-            "author": "Haruki Murakami",
-            "price": 75.5,
-            "cover": "https://i.imgur.com/ib88EDi.jpg",
-            "genre": "literatura",
-            "language": "es"
-          },
-          "quantity": 1
-        }
-      ],
-      "email": "w",
-      "phone": "A",
-      "fullName": "A A",
-      "delivery": false,
-      "total": 75.5,
-      "date": "2025-05-14T04:23:23.573Z",
-      "shipping": null
-    }
-  ],
+  "order": [],
   "userlogin": [
     {
       "id": "1",
-      "username": "a",
-      "password": "e"
+      "username": "jabberwocky",
+      "password": "madhatter"
     }
   ]
 }

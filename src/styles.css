@@ -63,6 +63,16 @@ p {
   margin: 0;
 }
 
+.h2__title {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-accent-yellow);
+  margin: 0;
+}
+
 .h3__title {
   font-size: 1.5rem;
   font-weight: 500;
