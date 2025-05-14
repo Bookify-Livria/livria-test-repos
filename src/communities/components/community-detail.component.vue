@@ -104,7 +104,7 @@ export default {
 
         <div class="community__content-tweets">
           <article
-              v-for="post in community.posts"
+              v-for="post in community.posts.slice().reverse()"
               :key="post.id"
               class="community__tweets-post"
           >
@@ -165,10 +165,10 @@ export default {
 }
 
 .community__content {
-  margin-left: calc(15% + 90px);
+  margin: 0 0 0 calc(15% + 90px);
   padding: 2rem;
   width: calc(100% - (15% + 90px));
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
 }
 
@@ -182,12 +182,6 @@ export default {
 
 .community__content-interaction {
   padding: 2rem;
-}
-
-.title__container-btn {
-  position: absolute;
-  right: 6rem;
-  top: 16rem;
 }
 
 .community__content-post {
@@ -253,19 +247,22 @@ export default {
 
 .post-content {
   display: flex;
+  flex: 1;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .post-content p {
-  flex: 1;
-  width: 70%;
+  flex: 0 0 70%;
   margin-right: 1rem;
 }
 
 .post-content img {
-  width: 25%;
-  height: auto;
+  flex: 0 0 25%;
+  height: 200px;
+  max-width: 200px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
