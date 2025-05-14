@@ -1,5 +1,7 @@
+import { Review } from "./review.entity.js";
+
 export class Book {
-    constructor(id, title, description, author, price, cover, genre, language) {
+    constructor(id, title, description, author, price, cover, genre, language, reviews = []) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -8,5 +10,6 @@ export class Book {
         this.cover = cover;
         this.genre = genre;
         this.language = language;
+        this.reviews = reviews;
     }
 }

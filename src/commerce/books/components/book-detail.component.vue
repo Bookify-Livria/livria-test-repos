@@ -4,6 +4,9 @@ import { CartApiService} from "../../shared-services/cart-api.service.js";
 
 import bookmarkIcon from "../../../assets/images/icons/Bookmark.svg";
 import minusIcon from "../../../assets/images/icons/Minus.svg";
+import {CommunityApiService} from "../../../communities/service/community-api.service.js";
+import {getLoggedInUser} from "../../../public/shared-services/get-logged-user.js";
+import {Book} from "../model/book.entity.js";
 
 export default {
   name: 'BookDetail',
@@ -20,7 +23,10 @@ export default {
   data() {
     return {
       book: null,
-      quantity: 1
+      quantity: 1,
+      newReview: {
+        content: ''
+      }
     }
   },
   methods: {
@@ -69,6 +75,39 @@ export default {
       } catch (error) {
         console.error("Error adding item:", error)
       }
+    },
+    async makeReview() {
+      try {
+        const service = new BookApiService();
+        const currentUser = await getLoggedInUser();
+
+        if (!this.newReview.content.trim()) {
+          return;
+        }
+
+        const newId = this.book.reviews?.length
+            ? String(Math.max(...this.book.reviews.map(p => parseInt(p.id))) + 1)
+            : "1";
+
+        const newReview = {
+          id: newId,
+          username: currentUser.user,
+          content: this.newReview.content,
+        };
+
+        const updatedReviews = {
+          ...this.book,
+          reviews: [...(this.book.reviews || []), newReview]
+        };
+
+        await service.updateBook(updatedReviews);
+
+        this.book.reviews.push(newReview);
+        this.newReview.content = '';
+
+      } catch (error) {
+        console.error('Error posting!!!', error);
+      }
     }
   },
   mounted() {
@@ -113,13 +152,20 @@ export default {
 
       <div class="book-detail__opinion">
         <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-        <div class="comments">
-          <h3 class="h3__title go--orange">{{$t('comments')}}</h3>
+        <h3 class="h3__title go--orange">{{$t('comments')}}</h3>
+        <div class="book-detail__opinion-post">
+          <form @submit.prevent="makeReview">
+            <textarea v-model="newReview.content" :placeholder="$t('comm.thoughts')"></textarea>
+            <button type="submit" class="">{{ $t("comm.post")}}</button>
+          </form>
+        </div>
+        <div
+            v-for="review in book.reviews.slice().reverse()"
+            :key="review.id"
+            class="comments"
+        >
           <div class="comment">
-            <strong>@noaaa</strong> — de mis libros favoritos, 100% recomendado
-          </div>
-          <div class="comment">
-            <strong>@marcelobindap</strong> — me encantó, muy profundo
+            <strong>@{{ review.username }}</strong> — {{ review.content }}
           </div>
         </div>
       </div>
@@ -139,6 +185,7 @@ export default {
   padding: 0 2rem;
   margin: 0 2rem;
   position: relative;
+  height: auto;
 }
 
 .book-detail__left-section {
@@ -150,6 +197,7 @@ export default {
   background-color: var(--color-light);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   padding: 2rem;
+  height: 70vh;
 }
 
 .book-detail__image-container {
@@ -214,23 +262,50 @@ export default {
 }
 
 .book-detail__opinion {
-  margin-top: auto;
+  margin-top: 21rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
 }
 
-.book-detail__opinion span {
-  font-size: 1.5rem;
-  color: gold;
-  margin-right: 0.25rem;
+.book-detail__opinion-post {
+  margin-bottom: 1rem;
+}
+
+.book-detail__opinion-post form {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.book-detail__opinion-post textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(var(--color-blue-rgb), 0.15);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.book-detail__opinion-post textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-secondary);
+}
+
+.book-detail__opinion-post button {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  height: auto;
 }
 
 .comments {
-  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
 }
 
-.comment {
-  background-color: var(--color-light);
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-}
 </style>

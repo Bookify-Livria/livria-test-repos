@@ -10,4 +10,13 @@ export class BookApiService {
                 throw error;
             });
     }
+
+    updateBook(book) {
+        return axios.put(`http://localhost:3000/books/${book.id}`, book)
+            .catch(error => {
+                console.error('Error updating book:', error);
+                throw error;
+            });
+    }
+
 }
