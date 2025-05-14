@@ -17,7 +17,7 @@
   "recommendations": "Recommendations",
   "communities": "Communities",
   "genre": "Genre",
-  "plan": "PLAN COMUNIDAD",
+  "plan": "COMMUNITY PLAN",
   "plan-content-1": "Discover a new level of connection on Livria with the Community Plan and its \"Communities\" section. Immerse yourself in a space where shared interests come to life, allowing you to join communities created by other users with similar affinities.",
   "plan-content-2": "In each community, you can express your ideas through posts and enrich interactions by participating in discussions by commenting on other people's posts.",
 
@@ -113,7 +113,7 @@
     "not-status": "Allow notifications for order status",
     "not-email": "Allow email notifications",
     "visibility": "Profile visibility",
-    "current-password": "Current password",
+    "change-pass": "Change password",
     "new-password": "New password"
   },
 
@@ -159,6 +159,9 @@
   "emailerror": "Please enter a valid email address",
 
   "createacc": "Don't have an account?",
+  "subscription": "Subscription",
+  "yes-subs": "Community Plan",
+  "no-subs": "Free Plan",
   "no-phrase": "No phrase yet",
   "no-order": "No orders yet",
   "password-error": "Password error",

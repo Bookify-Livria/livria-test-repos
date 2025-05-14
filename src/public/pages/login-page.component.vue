@@ -11,11 +11,10 @@ export default {
     Login,
   }
 }
-
 </script>
 
-
 <template>
+
   <!-- Login form -->
   <div class="login__container">
     <Login/>
@@ -25,6 +24,8 @@ export default {
 
 <style scoped>
 .login__container {
-  margin-top: 200px;
+  margin: 5rem calc(-1 * ((100vw - 100%) / 2));
+  width: 100vw;
+  padding: 0 3rem;
 }
 </style>

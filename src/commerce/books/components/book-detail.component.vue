@@ -2,8 +2,15 @@
 import { BookApiService } from '../services/book-api.service.js'
 import { CartApiService} from "../../shared-services/cart-api.service.js";
 
+import bookmarkIcon from "../../../assets/images/icons/Bookmark.svg";
+import minusIcon from "../../../assets/images/icons/Minus.svg";
+
 export default {
   name: 'BookDetail',
+  components: {
+    bookmarkIcon,
+    minusIcon
+  },
   props: {
     title: {
       type: String,
@@ -100,8 +107,8 @@ export default {
           <pv-toast position="top-right" style="margin-top: 8.5rem" />
           <button @click="addToCart(book, quantity); showConfirmation()">{{ $t('add-to-cart') }}</button>
         </div>
-        <button>Interes</button>
-        <button>No Interes</button>
+        <span><bookmarkIcon /></span>
+        <span><minusIcon /></span>
       </div>
 
       <div class="book-detail__opinion">
@@ -142,6 +149,7 @@ export default {
   justify-content: space-around;
   background-color: var(--color-light);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
 }
 
 .book-detail__image-container {
@@ -150,7 +158,7 @@ export default {
 }
 
 .book-detail__image-cover {
-  width: 100%;
+  height: 100%;
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }

@@ -1,7 +1,6 @@
 <script>
 import { CommunityApiService } from "../service/community-api.service.js";
 import { getLoggedInUser } from "../../public/shared-services/get-logged-user.js";
-import {UserApiService} from "../../subscription/service/user-api.service.js";
 
 import heartIcon from "../../assets/images/icons/Favorite.svg";
 import commentIcon from "../../assets/images/icons/Chat.svg";
@@ -65,7 +64,7 @@ export default {
         this.newPost.img = '';
 
       } catch (error) {
-        console.error('Erro posting!!!', error);
+        console.error('Error posting!!!', error);
       }
     }
   },
@@ -116,7 +115,7 @@ export default {
             </div>
             <div class="post-footer">
               <span><heartIcon /></span>
-              <span><comment-icon /></span>
+              <span><commentIcon /></span>
             </div>
           </article>
         </div>

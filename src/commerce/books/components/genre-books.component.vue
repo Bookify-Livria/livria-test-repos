@@ -148,7 +148,7 @@ export default {
 }
 
 .filter-panel .p-card {
-  background: #eefafa;
+  background: rgba(var(--color-secondary-rgb), 0.3);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   border-radius: 16px;

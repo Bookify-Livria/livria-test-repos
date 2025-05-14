@@ -5,7 +5,6 @@
     "account": "Cuenta"
   },
 
-
   "cart-toolbar": "Carrito",
   "shop": "Tienda",
   "literature": "Literatura",
@@ -18,7 +17,7 @@
   "recommendations": "Recomendaciones",
   "communities": "Comunidades",
   "genre": "Género",
-  "plan": "COMMUNITY PLAN",
+  "plan": "PLAN COMUNIDAD",
   "plan-content-1": "Descubre un nuevo nivel de conexión en Livria con el Plan Comunidad y su sección de \"Comunidades\". Sumérgete en un espacio donde los intereses compartidos cobran vida, permitiéndote unirte a comunidades creadas por otros usuarios con afinidades similares.",
   "plan-content-2": "En cada comunidad, podrás expresar tus ideas a través de publicaciones y enriquecer las interacciones participando en los debates mediante comentarios en las publicaciones de los demás.",
 
@@ -114,7 +113,7 @@
     "not-status": "Notificaciones de estado de pedido",
     "not-email": "Notificaciones por correo",
     "visibility": "Visibilidad del perfil",
-    "current-password": "Contraseña actual",
+    "current-password": "Cambiar contraseña",
     "new-password": "Nueva contraseña"
   },
 
@@ -160,6 +159,9 @@
   "emailerror": "Ingrese un correo electrónico válido",
 
   "createacc": "¿No tienes una cuenta?",
+  "subscription": "Suscripción",
+  "yes-subs": "Plan Communidad",
+  "no-subs": "Plan Free",
   "no-phrase": "Ninguna frase",
   "no-order": "Ninguna orden registrada",
   "password-error": "Error de contraseña",

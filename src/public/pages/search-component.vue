@@ -17,10 +17,17 @@ export default {
 
 <template>
   <toolbarComponent />
-
   <div class="search-container">
+    <div class="search__fullwidth">
+      <div class="title__container">
+        <h1 class="h1__title">
+          {{ $t('Search') }} "<span class="highlight">{{ $route.query.q }}</span>"
+        </h1>
+      </div>
+
       <div class="booksearch__container">
-        <BookSearch />
+          <BookSearch />
+      </div>
     </div>
 
     <div class="footer__container-fullwidth">
@@ -39,7 +46,8 @@ export default {
   margin: 7.5rem calc(-1 * ((100vw - 100%) / 2)) 0;
 }
 
-.booksearch__container {
+.search__fullwidth {
+  padding: 0 2rem;
   margin-bottom: 4rem;
 }
 </style>

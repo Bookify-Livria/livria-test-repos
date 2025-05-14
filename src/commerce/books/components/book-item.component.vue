@@ -43,14 +43,15 @@ export default {
 <style scoped>
 .book-item-container {
   background-color: var(--color-light);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   height: 100%;
+  min-height: 27rem;
   width: 21rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -61,7 +62,7 @@ export default {
 
 .book-cover {
   width: 160px;
-  height: 260px;
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);

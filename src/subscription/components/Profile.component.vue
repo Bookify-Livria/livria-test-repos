@@ -257,6 +257,11 @@ export default {
             <p v-if="user.phrase !== ''">"{{ user.phrase }}"</p>
             <p v-if="user.phrase === ''">{{ $t('no-phrase') }} </p>
           </template>
+          <template #footer>
+            <h3 class="h3__title go--orange" style="margin-bottom: 0">{{ $t('subscription') }}</h3>
+            <p v-if="user.subscription !== ''">{{ $t('yes-subs') }}</p>
+            <p v-if="user.subscription === ''">{{ $t('no-subs') }}</p>
+          </template>
         </pv-card>
       </div>
 
@@ -298,12 +303,8 @@ export default {
             <p>{{ $t('setting.visibility')}}</p>
             <pv-select-button v-model="value4" :default-value="value4" :options="options4" optionLabel="name"/>
           </div>
-          <div class="same-line">
-            <p>{{ $t('setting.current-password')}}</p>
-            <p>*********</p>
-            <pv-toast ref="toast"  position="top-right" style="margin-top: 2rem" />
-            <pv-button class="buttonn" @click="changePassword(valueA, valueB, valueC)" severity="warn">{{ $t('change')}}</pv-button>
-          </div>
+
+          <h3 class="h3__title go--orange" style="margin-bottom: 0">{{ $t('setting.change-pass') }}</h3>
           <div class="same-line">
             <p>{{ $t('passinput')}}</p>
             <pv-password v-model="valueA" class="pas" :feedback="false" />
@@ -315,6 +316,11 @@ export default {
           <div class="same-line">
             <p>{{ $t('confpass')}}</p>
             <pv-password v-model="valueC" class="pas" :feedback="false" />
+          </div>
+          <div class="same-line">
+            <p></p>
+            <pv-toast ref="toast"  position="top-right" style="margin-top: 2rem" />
+            <pv-button class="buttonn" @click="changePassword(valueA, valueB, valueC)" severity="warn">{{ $t('change')}}</pv-button>
           </div>
           <div class="set-options">
             <div class="buton">

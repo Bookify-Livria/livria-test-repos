@@ -68,11 +68,6 @@ export default {
 </script>
 
 <template>
-  <div class="search-title">
-    <h1 class="h1__title">
-      {{ $t('Search') }} "<span class="highlight">{{ $route.query.q }}</span>"
-    </h1>
-  </div>
 
   <div class="book-view-container">
 
@@ -121,7 +116,7 @@ export default {
               >{{ $t('spanish') }}</span>
             </div>
 
-            <button @click="resetFilters" class="reset-button">{{ $t('delete') }}</button>
+            <button @click="resetFilters">{{ $t('delete') }}</button>
           </div>
         </template>
       </pv-card>
@@ -133,34 +128,19 @@ export default {
 
 <style scoped>
 
-.search-title{
-  margin-top: 10rem;
-  margin-right: 19rem;
-}
 .book-view-container {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   padding: 2rem;
-  flex-wrap: wrap;
 }
 
 .book-grid {
   display: flex;
   flex-wrap: wrap;
   row-gap: 3rem;
-  column-gap: 1rem;
+  column-gap: 2rem;
   flex: 3;
-}
-
-.custom-card-wrapper {
-  width: 300px;
-}
-
-.p-card {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.2s ease;
+  justify-content: flex-start;
 }
 
 .p-card:hover {
@@ -169,16 +149,16 @@ export default {
 
 .filter-panel {
   flex: 1;
-  min-width: 280px;
-  max-width: 300px;
+  min-width: 350px;
+  max-width: 370px;
   position: sticky;
   top: 2rem;
   height: fit-content;
 }
 
 .filter-panel .p-card {
-  background: #eefafa;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: rgba(var(--color-secondary-rgb), 0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   border-radius: 16px;
 }
@@ -186,7 +166,7 @@ export default {
 .filter-title {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #f2540e;
+  color: var(--color-accent-orange);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -195,7 +175,7 @@ export default {
 
 .filter-icon {
   font-size: 1.2rem;
-  color: #f2540e;
+  color: currentColor;
 }
 
 .filter-options {
@@ -203,49 +183,45 @@ export default {
   flex-direction: column;
   gap: 0.3rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .filter-options span {
   cursor: pointer;
-  color: #f2a700;
+  color: var(--color-accent-yellow);
   transition: font-weight 0.2s;
 }
 
-.filter-options .active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 .subsection {
-  margin-top: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
 }
 
 .subsection h4 {
-  color: #003b5c;
+  color: var(--color-primary);
   font-weight: bold;
   margin-bottom: 0.5rem;
+}
+
+.checkbox-group p {
+  margin: 0.3rem 0;
+  color: var(--color-primary);
 }
 
 .language-option {
   display: inline-block;
   margin-right: 1rem;
-  color: #f2a700;
+  color: var(--color-accent-yellow);
   cursor: pointer;
 }
 
-.language-option.selected {
+.language-option:hover,
+.language-option.selected,
+.filter-options span:hover,
+.filter-options .active {
   font-weight: bold;
   text-decoration: underline;
+  color: var(--color-accent-orange);
 }
 
-.reset-button {
-  margin-top: 2rem;
-  background-color: #d3f1f8;
-  border: none;
-  color: #008c9e;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-}
 </style>
