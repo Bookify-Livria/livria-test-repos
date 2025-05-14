@@ -8,7 +8,7 @@ export default {
     }
   },
   methods: {
-    closeConfirmation() {
+    closeConfirmation() { // Emite el evento "close" al hacer click sobre el overlay de la aplicación
       this.$emit('close')
     }
   }
@@ -17,12 +17,12 @@ export default {
 
 <template>
   <div>
-    <div id="overlay" @click="closeConfirmation"></div>
+    <div id="overlay" @click="closeConfirmation" aria-label="Order register confirmation"></div>
     <div class="confirmation__container">
       <h3 class="h1__title go--orange">{{ $t("confirmation.thanks-title")}}</h3>
       <div class="confirmation__content">
         <div class="confirmation__logo">
-          <img class="logo" src="../../../assets/images/logo/logo_icon.png" alt="livria_logo" />
+          <img class="logo" src="../../../assets/images/logo/logo_icon.png" alt="Livria logo" aria-hidden="true"/>
         </div>
         <div class="confirmation__message">
           <p>

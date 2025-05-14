@@ -17,10 +17,10 @@ export default {
     }
   },
   computed: {
-    searchQuery() {
+    searchQuery() { // Permite al sistema obtener un valor de búsqueda desde la URL
       return this.$route.query.q?.toLowerCase() || ''
     },
-    filteredBooks() {
+    filteredBooks() { // Permite al usuario aplicar filtros sobre los libros mostrados en pantalla, en base al valor obtenido por searchQuery
       let filtered = this.books.filter(book =>
           book.title.toLowerCase().includes(this.searchQuery) ||
           book.author.toLowerCase().includes(this.searchQuery) )
@@ -45,21 +45,21 @@ export default {
       }
     }
   },
-  mounted() {
+  mounted() { // Al iniciar el componente, se carga la información de todos los libros en la Fake API
     const service = new BookApiService()
     service.getBooks().then(data => {
       this.books = data
     })
   },
   methods: {
-    toggleLanguage(lang) {
+    toggleLanguage(lang) { // Permite al usuario alternar el filtro de idioma (inglés o español)
       if (this.selectedLanguages.includes(lang)) {
         this.selectedLanguages = this.selectedLanguages.filter(l => l !== lang)
       } else {
         this.selectedLanguages.push(lang)
       }
     },
-    resetFilters() {
+    resetFilters() { // Elimina todos los filtros de visualización
       this.sortOption = ''
       this.selectedLanguages = []
     }
@@ -96,10 +96,10 @@ export default {
 
           <div class="filter-section">
             <div class="filter-options">
-              <span @click="sortOption = 'titleAsc'" :class="{ active: sortOption === 'titleAsc' }">{{ $t('titleaz') }}</span>
-              <span @click="sortOption = 'titleDesc'" :class="{ active: sortOption === 'titleDesc' }">{{ $t('titleza') }}</span>
-              <span @click="sortOption = 'priceAsc'" :class="{ active: sortOption === 'priceAsc' }">{{ $t('pricelower') }}</span>
-              <span @click="sortOption = 'priceDesc'" :class="{ active: sortOption === 'priceDesc' }">{{ $t('pricehigher') }}</span>
+              <span @click="sortOption = 'titleAsc'" :class="{ active: sortOption === 'titleAsc' }" aria-label="Sort books by title (ascending order)">{{ $t('titleaz') }}</span>
+              <span @click="sortOption = 'titleDesc'" :class="{ active: sortOption === 'titleDesc' }" aria-label="Sort books by title (descending order)">{{ $t('titleza') }}</span>
+              <span @click="sortOption = 'priceAsc'" :class="{ active: sortOption === 'priceAsc' }" aria-label="Sort books by price (ascending order)">{{ $t('pricelower') }}</span>
+              <span @click="sortOption = 'priceDesc'" :class="{ active: sortOption === 'priceDesc' }" aria-label="Sort books by price (descending order)">{{ $t('pricehigher') }}</span>
             </div>
 
             <div class="subsection">
@@ -108,15 +108,17 @@ export default {
                   class="language-option"
                   :class="{ selected: selectedLanguages.includes('en') }"
                   @click="toggleLanguage('en')"
+                  aria-label="Filter books by language (English)"
               >{{ $t('english') }}</span>
               <span
                   class="language-option"
                   :class="{ selected: selectedLanguages.includes('es') }"
                   @click="toggleLanguage('es')"
+                  aria-label="Filter books by language (Spanish)"
               >{{ $t('spanish') }}</span>
             </div>
 
-            <button @click="resetFilters">{{ $t('delete') }}</button>
+            <button @click="resetFilters" aria-label="Reset all filters">>{{ $t('delete') }}</button>
           </div>
         </template>
       </pv-card>

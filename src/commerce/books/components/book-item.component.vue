@@ -9,7 +9,7 @@ export default {
     }
   },
   methods: {
-    goToDetail() {
+    goToDetail() { // Permite al usuario acceder directamente a la ruta que contiene los detalles de un determinado libro
       this.$router.push({ name: 'BookDetail', params: { title: this.book.title } })
     }
   }
@@ -18,7 +18,7 @@ export default {
 
 <template>
 
-  <div v-if="book" class="book-item-container" @click="goToDetail">
+  <div v-if="book" class="book-item-container" @click="goToDetail" aria-label="View book details">
     <pv-card>
       <template #header>
         <img :src="book.cover" :alt="book.title" class="book-cover" />

@@ -12,7 +12,7 @@ export default {
       books: [],
     };
   },
-  created() {
+  created() { // Al crear el componente, se obtiene la información de todos los libros almacenados en la Fake API
     const api = new BookApiService();
     api.getBooks().then((data) => {
       this.books = data.slice(0, 6);
@@ -22,14 +22,14 @@ export default {
 </script>
 
 <template>
-  <div class="recommended__container">
+  <div class="recommended__container" aria-label="Recommended books">
     <div class="recommended__cards">
       <div
           v-for="book in books"
           :key="book.id"
           class="custom-card-wrapper"
       >
-        <BookItem :book="book"/>
+        <BookItem :book="book" aria-label="Book information"/>
       </div>
     </div>
   </div>

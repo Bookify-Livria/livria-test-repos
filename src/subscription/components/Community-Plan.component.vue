@@ -18,10 +18,10 @@ export default {
   },
 
   methods: {
-    goCommunities(){
+    goCommunities(){ // Permite al usuario acceder directamente a la ruta de "communitites"
       this.$router.push('/communities');
     },
-    youveGotANoti() {
+    youveGotANoti() { // Muestra un mensaje flotante (Toast) para informar al usuario que recibió una notificación
       this.$toast.add({
         severity: 'secondary',
         summary: this.$t('noti.notice'),
@@ -29,7 +29,7 @@ export default {
         life: 3000
       });
     },
-    async updateSubs() {
+    async updateSubs() { // Permite asignar el valor de la suscripción del usuario loggeado a "verdadero"
       const service = new UserApiService();
       const freshUser = await getLoggedInUser();
       this.user = freshUser;
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-  <div class="plan-container">
+  <div class="plan-container" aria-label="Subscription info section">
     <div class="intro-content">
       <h1 class="h1__title">{{ $t("plan")}}</h1>
       <h3 class="h3__title">
@@ -96,6 +96,7 @@ export default {
                 type="button"
                 :disabled="!acceptedTerms || !acceptedPrivacy"
                 @click="updateSubs"
+                aria-label="Pay subscription"
             >
               {{ $t("purchase.pay") }}
             </button>

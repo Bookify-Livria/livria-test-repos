@@ -47,7 +47,7 @@ export default {
     }
   },
   methods: {
-    async loadCart() {
+    async loadCart() { // Obtiene la información almacenada dentro de carrito de compras
       try {
         const service = new CartApiService()
         this.cartItems = await service.getCart()
@@ -55,16 +55,16 @@ export default {
         console.error("Error fetching cart:", error)
       }
     },
-    getSubtotal() {
+    getSubtotal() { // Calcula el subtotal en base a los elementos contenidos en el carrito de compras
       return this.cartItems.reduce((total, item) => (total + item.book.price * item.quantity * 0.82), 0)
     },
-    getIGV() {
+    getIGV() { // Calcula el IGV en base al precio de los elementos contenidos en el carrito de compras
       return this.cartItems.reduce((total, item) => (total + item.book.price * item.quantity * 0.18), 0)
     },
-    getTotal() {
+    getTotal() { // Calcula el precio total en base a los elementos contenidos en el carrito de compras
       return this.cartItems.reduce((total, item) => total + item.book.price * item.quantity, 0)
     },
-    async removeItem(Id) {
+    async removeItem(Id) { // Elimina un producto de la lista de compras en base a su id
       try {
         const service = new CartApiService()
         await service.removeFromCart(Id)
@@ -73,7 +73,7 @@ export default {
         console.error("Error deleting item:", error)
       }
     },
-    async createOrder(phone, delivery) {
+    async createOrder(phone, delivery) { // Registra una nueva orden con los datos del usuario y de entrega, además genera un código de orden aleatorio
       try {
         const service = new OrderApiService();
         const orders = await service.getOrders();
@@ -107,7 +107,7 @@ export default {
         this.showFail();
       }
     },
-    async loadUserData() {
+    async loadUserData() { // Carga la información del usuario loggeado y obtiene su parámetro "email"
       try {
         const user = await getLoggedInUser();
         if (user) {
@@ -117,7 +117,7 @@ export default {
         console.error("Error fetching user:", error);
       }
     },
-    showMissingFields() {
+    showMissingFields() { // Muestra un mensaje flotante (Toast) que informa al usuario sobre un error de validación relacionado all llenado de campos del formulario
       this.$toast.add({
         severity: 'warn',
         summary: this.$t('purchase.notice'),
@@ -125,7 +125,7 @@ export default {
         life: 3000
       });
     },
-    youveGotANoti() {
+    youveGotANoti() { // Muestra un mensaje flotante (Toast) que informa al usuario de que recibió una notificación
       this.$toast.add({
         severity: 'secondary',
         summary: this.$t('noti.notice'),
@@ -133,18 +133,18 @@ export default {
         life: 3000
       });
     },
-    validateStep2() {
+    validateStep2() { // Verifica que todos los campos del formulario del paso 2 hayan sido llenados
       return this.recipient.name && this.recipient.lastname && this.recipient.phone;
     },
-    validateStep3() {
+    validateStep3() { // Verifica que, de tratarse la orden de un delivery (entrega a domicilio), se registrem correctamente los campos "address", "district" y "reference"
       if (!this.delivery) return true;
       const { address, district, reference } = this.shipping;
       return address && district && reference;
     },
-    validateStep4() {
+    validateStep4() { // Verifica que las checkboxes de "accept terms" y "accept privacy politics" estén activadas
       return this.acceptedTerms && this.acceptedPrivacy;
     },
-    goToStep2(activateCallback) {
+    goToStep2(activateCallback) { // Valida que, pàra continuar desde el paso 2 de la compra, el cliente cuente con algún producto en su carrito de compras
       if (this.cartItems.length === 0) {
         this.$toast.add({
           severity: 'warn',
@@ -156,21 +156,21 @@ export default {
         activateCallback('2');
       }
     },
-    goToStep3(activateCallback) {
+    goToStep3(activateCallback) { // Valida que, para continuar desde el paso 3 de la compra, el cliente haya completado el paso 2
       if (this.validateStep2()) {
         activateCallback('3');
       } else {
         this.showMissingFields();
       }
     },
-    goToStep4(activateCallback) {
+    goToStep4(activateCallback) { // Valida que, para continuar desde el paso 4 de la compra, el cliente haya completado el paso 3
       if (this.validateStep3()) {
         activateCallback('4');
       } else {
         this.showMissingFields();
       }
     },
-    async handleSubmit(activateCallback) {
+    async handleSubmit(activateCallback) { // Valida que se hayan completado todos los pasos correctamente para proceder con el registro de la orden
       if (!this.validateStep4()) {
         this.showMissingFields();
         return;
@@ -217,7 +217,7 @@ export default {
         console.error(err);
       }
     },
-    goHome(){
+    goHome(){ // Permite al usuario volver a la ruta de "Home" dentro de la aplicación
       this.$router.push('/home');
     }
   },
@@ -258,27 +258,27 @@ export default {
 
     <!-- Payment Stepper -->
     <div class="purchase__right">
-      <pv-stepper value="1" linear>
+      <pv-stepper value="1" linear aria-label="Payment process">
         <pv-step-list>
-          <pv-step v-slot="{ activateCallback, value }" asChild :value="1">
+          <pv-step v-slot="{ activateCallback, value }" asChild :value="1" aria-label="Step 1: Purchase summary">
             <div class="nav-title">
               <cartIcon class="nav-icon" />
               {{$t("purchase.step-summary")}}
             </div>
           </pv-step>
-          <pv-step v-slot="{ activateCallback, value }" asChild :value="2">
+          <pv-step v-slot="{ activateCallback, value }" asChild :value="2" aria-label="Step 2: Recipient information">
             <div class="nav-title">
               <userIcon class="nav-icon" />
               {{$t("purchase.step-id")}}
             </div>
           </pv-step>
-          <pv-step v-slot="{ activateCallback, value }" asChild :value="3">
+          <pv-step v-slot="{ activateCallback, value }" asChild :value="3" aria-label="Step 3: Delivery information">
             <div class="nav-title">
               <packageIcon class="nav-icon" />
               {{$t("purchase.step-delivery")}}
             </div>
           </pv-step>
-          <pv-step v-slot="{ activateCallback, value }" asChild :value="4">
+          <pv-step v-slot="{ activateCallback, value }" asChild :value="4" aria-label="Step 4: Payment">
             <div class="nav-title">
               <cardIcon class="nav-icon" />
               {{$t("purchase.step-payment")}}
@@ -288,7 +288,7 @@ export default {
 
         <pv-step-panels>
           <!-- Step 1: Summary-->
-          <pv-step-panel v-slot="{ activateCallback }" value="1">
+          <pv-step-panel v-slot="{ activateCallback }" value="1" aria-label="Step 1">
             <div class="step-content">
               <h3 class="h3__title go--orange">{{$t("purchase.summary")}}</h3>
               <div class="summary-row">
@@ -311,7 +311,7 @@ export default {
           </pv-step-panel>
 
           <!-- Step 2: Information -->
-          <pv-step-panel v-slot="{ activateCallback }" value="2">
+          <pv-step-panel v-slot="{ activateCallback }" value="2" aria-label="Step 2">
             <div class="step-content">
               <h3 class="h3__title go--orange">{{ $t("purchase.info-recipient") }}</h3>
               <div class="form-row">
@@ -345,7 +345,7 @@ export default {
           </pv-step-panel>
 
           <!-- Step 3: Delivery -->
-          <pv-step-panel v-slot="{ activateCallback }" value="3">
+          <pv-step-panel v-slot="{ activateCallback }" value="3" aria-label="Step 3">
             <div class="step-content">
               <h3 class="h3__title go--orange">{{ $t("purchase.delivery") }}</h3>
               <div class="delivery-toggle nav-buttons">
@@ -387,7 +387,7 @@ export default {
           </pv-step-panel>
 
           <!-- Step 4: Payment -->
-          <pv-step-panel v-slot="{ activateCallback }" value="4">
+          <pv-step-panel v-slot="{ activateCallback }" value="4" aria-label="Step 4">
             <div class="step-content">
               <h3 class="h3__title go--orange">{{ $t("purchase.payment") }}</h3>
               <p>{{ $t("purchase.izipay")}}</p>
@@ -400,18 +400,18 @@ export default {
               </div>
               <div class="checkbox-group">
                 <label>
-                  <input type="checkbox" v-model="acceptedTerms" />
+                  <input type="checkbox" v-model="acceptedTerms" aria-label="Accept terms and conditions"/>
                   {{ $t("purchase.terms") }}
                 </label>
                 <label>
-                  <input type="checkbox" v-model="acceptedPrivacy" />
+                  <input type="checkbox" v-model="acceptedPrivacy" aria-label="Accept privacy policy"/>
                   {{ $t("purchase.privacy") }}
                 </label>
               </div>
               <div class="nav-buttons">
                 <pv-toast position="top-right" style="margin-top: 8.5rem" />
                 <button type="button" @click="activateCallback('3')">{{$t("purchase.back")}}</button>
-                <button type="button" @click="handleSubmit(activateCallback)">
+                <button type="button" @click="handleSubmit(activateCallback)" aria-label="Confirm payment and finish purchase">
                   {{ $t("purchase.pay") }}
                 </button>
               </div>

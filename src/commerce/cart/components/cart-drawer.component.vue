@@ -14,14 +14,14 @@ export default {
     }
   },
   methods: {
-    toggleDrawer() {
+    toggleDrawer() { // Alterna la visibilidad del Drawer de carrito de compras
       this.visibleRight = !this.visibleRight
       if (this.visibleRight) this.loadCart()
     },
     closeDrawer() {
       this.visibleRight = false
     },
-    async loadCart() {
+    async loadCart() { // Carga la información almacenada dentro del carrito de compras (lista de compras)
       try {
         const service = new CartApiService()
         this.cartItems = await service.getCart()
@@ -29,10 +29,10 @@ export default {
         console.error("Error fetching cart:", error)
       }
     },
-    getSubtotal() {
+    getSubtotal() { // Calcula el sub total de los productos almacenados dentro del carrito de compras
       return this.cartItems.reduce((total, item) => total + item.book.price * item.quantity, 0)
     },
-    async removeItem(Id) {
+    async removeItem(Id) { // Elimina un único elemento de la lista de compras en base a su id
       try {
         const service = new CartApiService()
         await service.removeFromCart(Id)
@@ -41,7 +41,7 @@ export default {
         console.error("Error deleting item:", error)
       }
     },
-    async emptyCart(){
+    async emptyCart(){ // Elimina todos los elementos almacenados dentro del carrito de compras
       try {
         const service = new CartApiService();
         await service.clearCart();
@@ -51,13 +51,13 @@ export default {
       }
     }
   },
-  watch: {
+  watch: { // Detecta cambios en la variable "visibleRight" para alternar la visualización del carrito de compras
     visibleRight(val) {
       this.$emit('visibility-change', val)
     }
   },
   mounted() {
-    this.loadCart()
+    this.loadCart() // Al iniciar el componente, se carga la información almacenada en la lista de compras
   }
 }
 </script>
@@ -72,33 +72,33 @@ export default {
         @click="closeDrawer"
     ></div>
     <!-- Drawer -->
-    <pv-drawer v-model:visible="visibleRight" position="right" style="width: 600px">
+    <pv-drawer v-model:visible="visibleRight" position="right" style="width: 600px" aria-labelledby="cart-title">
       <template #header>
         <div class="title__container">
-          <h1 class="h1__title go--yellow">{{$t('cart')}}</h1>
+          <h1 id="cart-title" class="h1__title go--yellow">{{$t('cart')}}</h1>
         </div>
       </template>
 
-      <button @click="emptyCart">{{$t('empty-cart')}}</button>
+      <button @click="emptyCart" aria-label="Empty cart">{{$t('empty-cart')}}</button>
       <div v-for="item in cartItems" :key="item.book.id" class="shopping-cart__cart-item">
-        <img :src="item.book.cover" alt="portada" width="60" />
+        <img :src="item.book.cover" alt="Book cover" width="60" />
         <div class="shopping-cart__item-info">
           <strong>{{ item.book.title }}</strong><br />
           <span>{{ item.book.author }}</span><br />
           <span>S/ {{ item.book.price.toFixed(2) }}</span>
         </div>
         <div class="shopping-cart__actions">
-          <select v-model="item.quantity">
+          <select v-model="item.quantity" aria-label="Item quantity for book">
             <option v-for="n in 3" :key="n" :value="n">{{ n }}</option>
           </select>
-          <button @click="removeItem(item.id)"><trashIcon /></button>
+          <button @click="removeItem(item.id)" aria-label="Remove item from cart"><trashIcon /></button>
         </div>
       </div>
 
       <template #footer>
         <div class="shopping-cart__footer">
           <p>Subtotal: <strong>S/ {{ getSubtotal().toFixed(2) }}</strong></p>
-          <router-link to="/purchase" class="shopping-cart__purchase"><button>{{$t('buy-cart')}}</button></router-link>
+          <router-link to="/purchase" class="shopping-cart__purchase" aria-label="Proceed to purchase"><button>{{$t('buy-cart')}}</button></router-link>
         </div>
       </template>
     </pv-drawer>

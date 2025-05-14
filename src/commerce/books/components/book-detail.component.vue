@@ -30,12 +30,12 @@ export default {
     }
   },
   methods: {
-    loadBook() {
+    loadBook() { // Obtiene información del libro seleccionado y asigna su valor a una variable
       const service = new BookApiService()
       const bookTitle = this.$route.params.title
 
       service.getBooks().then(data => {
-        this.book = data.find(b => b.title.toString().toLowerCase() === bookTitle.toLowerCase())
+        this.book = data.find(b => b.title.toString().toLowerCase() === bookTitle.toLowerCase()) // Busca el título del libro dentro de la Fake API y obtiene sus datos
         if (this.book) {
           this.$emit('book-loaded', this.book.title)
         }
@@ -43,7 +43,7 @@ export default {
         console.error('Error loading book:', error)
       })
     },
-    async addToCart(book, quantity) {
+    async addToCart(book, quantity) { // Agrega al carrito de compras el libro seleccionado, con una cantidad seleccionada por el usuario
       try {
         const service = new CartApiService();
         const currentCart = await service.getCart();
@@ -64,7 +64,8 @@ export default {
         console.error("Error adding item:", error)
       }
     },
-    showConfirmation() {
+
+    showConfirmation() { // Muestra un mensaje flotante (Toast) que indica una inserción exitosa al carrito de compras
       try {
         this.$toast.add({
           severity: 'success',
@@ -76,7 +77,7 @@ export default {
         console.error("Error adding item:", error)
       }
     },
-    async makeReview() {
+    async makeReview() { // Permite al usuario registrar una reseña del libro en pantalla
       try {
         const service = new BookApiService();
         const currentUser = await getLoggedInUser();
@@ -111,14 +112,14 @@ export default {
     }
   },
   mounted() {
-    this.loadBook()
+    this.loadBook() // Carga la información del libro al iniciar el componente
   }
 }
 </script>
 
 <template>
 
-  <div class="book-detail__container" v-if="book">
+  <div class="book-detail__container" v-if="book" aria-label="Book detail section">
     <div class="book-detail__left-section">
       <div class="book-detail__image-container">
         <img :src="book.cover" :alt="book.title" class="book-detail__image-cover" />
@@ -137,17 +138,17 @@ export default {
       </div>
 
       <div class="book-detail__actions">
-        <select v-model="quantity" class="quantity">
+        <select v-model="quantity" class="quantity" aria-label="Select quantity">
           <option>1</option>
           <option>2</option>
           <option>3</option>
         </select>
         <div class="book-detail__add-cart">
           <pv-toast position="top-right" style="margin-top: 8.5rem" />
-          <button @click="addToCart(book, quantity); showConfirmation()">{{ $t('add-to-cart') }}</button>
+          <button @click="addToCart(book, quantity); showConfirmation()" aria-label="Add to cart">{{ $t('add-to-cart') }}</button>
         </div>
-        <span><bookmarkIcon /></span>
-        <span><minusIcon /></span>
+        <span aria-label="Mark as 'interesting'"><bookmarkIcon /></span>
+        <span aria-label="Mark as 'not insteresting'"><minusIcon /></span>
       </div>
 
       <div class="book-detail__opinion">
@@ -155,8 +156,8 @@ export default {
         <h3 class="h3__title go--orange">{{$t('comments')}}</h3>
         <div class="book-detail__opinion-post">
           <form @submit.prevent="makeReview">
-            <textarea v-model="newReview.content" :placeholder="$t('comm.thoughts')"></textarea>
-            <button type="submit" class="">{{ $t("comm.post")}}</button>
+            <textarea v-model="newReview.content" :placeholder="$t('comm.thoughts')" aria-label="Add comment section"></textarea>
+            <button type="submit" class="" aria-label="Publish comment">{{ $t("comm.post")}}</button>
           </form>
         </div>
         <div

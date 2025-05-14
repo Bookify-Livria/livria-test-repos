@@ -15,7 +15,7 @@ export default {
     LanguageSwitcher,
   },
   methods: {
-    async clearLogin() {
+    async clearLogin() { // Permite al sistema eliminar los datos almacenados en userlogin
       try {
         const response = await axios.get('http://localhost:3000/userlogin');
         const users = response.data;
@@ -30,7 +30,7 @@ export default {
       }
     },
 
-    async createLogin(userId, valueA, valueB) {
+    async createLogin(userId, valueA, valueB) { // Permite al sistema registrar la información de login al momento de completarse
       const newUser = {
         id: userId,
         username: valueA,
@@ -45,7 +45,7 @@ export default {
       }
     },
 
-    async validateLogin(valueA, valueB) {
+    async validateLogin(valueA, valueB) { // Permite al sistema comparar la información registrada en el login con la de los usuarios registrados en la Fake API
       try {
         const response = await axios.get('http://localhost:3000/users');
         const users = response.data;
@@ -67,13 +67,13 @@ export default {
         return null;
       }
     },
-    goToHome() {
+    goToHome() { // Permite al usuario acceder a la ruta de "Home"
       this.$router.push('/home');
     },
-    goToRegister() {
+    goToRegister() { // Permite al usuario acceder a la ruta de "Register"
       this.$router.push('/register');
     },
-    async handleLogin(valueA, valueB) {
+    async handleLogin(valueA, valueB) { // Permite validar el inicio de sesión y registar la información del usuario loggeado
       const matchedUser = await this.validateLogin(valueA, valueB);
       if (matchedUser && valueA!=='' && valueB!=='') {
         await this.createLogin(matchedUser.id, valueA, valueB);
@@ -85,7 +85,7 @@ export default {
       }
     },
 
-    showLogin() {
+    showLogin() { // Muestra un mensaje flotante (Toast) de confirmación de inicio de sesión si es exitoso
       try {
         this.$refs.toast.add({
           severity: 'success',
@@ -98,7 +98,7 @@ export default {
       }
     },
 
-    showFail() {
+    showFail() { // Muestra un mensaje flotante (Toast) de error de inicio de sesión si es fallido
       try {
         this.$refs.toast.add({
           severity: 'error',
@@ -112,7 +112,7 @@ export default {
     }
   },
 
-  mounted() {
+  mounted() { // Al iniciar el componente, elimina los datos registrados en el Login
     this.clearLogin();
   },
 }
@@ -137,13 +137,13 @@ export default {
             </div>
 
             <div class="input-class">
-              <pv-input-text v-model="value1" class="form-input" />
+              <pv-input-text v-model="value1" class="form-input" aria-label="User input"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('passinput')}}</label>
+              <label class="form-label" aria-label="Password input">{{ $t('passinput')}}</label>
             </div>
 
             <div class="input-class">
@@ -151,14 +151,14 @@ export default {
             </div>
 
             <div class="link-class">
-              <a href="" class="forgot-password">{{ $t('passforg')}}</a>
+              <a href="" class="forgot-password" aria-label="Forgot password">{{ $t('passforg')}}</a>
             </div>
           </div>
         </template>
 
         <template #footer>
           <pv-toast ref="toast"  position="top-right" style="margin-top: 2rem" />
-          <pv-button @click="handleLogin(value1, value2)" class="form-button">{{ $t('login')}}</pv-button>
+          <pv-button @click="handleLogin(value1, value2)" class="form-button" aria-label="Login button">{{ $t('login')}}</pv-button>
         </template>
       </pv-card>
       <div class="division">{{ $t('or')}}</div>
@@ -166,7 +166,7 @@ export default {
         <template #content class="ext-buttons">
           <div>
             <p style="text-align: center">{{ $t("createacc")}}</p>
-            <pv-button @click="goToRegister()" class="justify-center external"  :label="$t('register')" iconPos="left" />
+            <pv-button @click="goToRegister()" class="justify-center external"  :label="$t('register')" iconPos="left" aria-label="Register button"/>
           </div>
         </template>
       </pv-card>

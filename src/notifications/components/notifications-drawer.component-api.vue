@@ -14,14 +14,14 @@ export default {
     }
   },
   methods: {
-    toggleDrawer() {
+    toggleDrawer() { // Alterna la visibilidad del drawer de notificaciones
       this.visibleRight = !this.visibleRight
       if (this.visibleRight) this.loadCart()
     },
-    closeDrawer() {
+    closeDrawer() { // Oculta el drawer de notificaciones
       this.visibleRight = false
     },
-    async loadNotis() {
+    async loadNotis() {  // Permite cargar la información relacionada a notificaciones dentro de la Fake API
       try {
         const service = new NotificationApiService();
         this.notisItems = await service.getNotifications();
@@ -29,7 +29,7 @@ export default {
         console.error("Error fetching cart:", error)
       }
     },
-    async removeItem(id) {
+    async removeItem(id) { // Permite eliminar una notificación de la bandeja de notificaciones según su id
       try {
         const service = new NotificationApiService();
         await service.removeFromList(id)
@@ -38,7 +38,7 @@ export default {
         console.error("Error deleting item:", error)
       }
     },
-    async emptyList() {
+    async emptyList() { // Permite eliminar todos los elementos almacenados dentro de la bandjea de notificaciones
       try {
         const service = new NotificationApiService();
         await service.clearList()
@@ -61,7 +61,7 @@ export default {
 
 <template>
 
-  <div class="notis-list__container">
+  <div class="notis-list__container" aria-label="Notification list">
     <!-- Overlay  -->
     <div
         v-if="visibleRight"
@@ -76,7 +76,7 @@ export default {
         </div>
       </template>
 
-      <button @click="emptyList">{{$t('empty-list')}}</button>
+      <button @click="emptyList" aria-label="Empty notification list">{{$t('empty-list')}}</button>
       <div v-for="noti in notisItems" :key="noti.id" class="notis-list__noti">
         <div class="notis-list__noti-info">
           <strong>{{ noti.title }}</strong><br />
