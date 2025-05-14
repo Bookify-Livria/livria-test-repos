@@ -2,12 +2,10 @@
 import toolbarComponent from "../components/toolbar.component.vue";
 import footerComponent from "../components/footer-content.component.vue";
 import communityGrid from "../../communities/components/Community-Grid.component.vue";
-import bookCarousel from "../../commerce/books/components/books-carousel.component.vue";
 
 export default {
   name: "home.component",
   components: {
-    bookCarousel,
     toolbarComponent,
     footerComponent,
     communityGrid,

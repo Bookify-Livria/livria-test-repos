@@ -18,6 +18,9 @@
   "recommendations": "Recomendaciones",
   "communities": "Comunidades",
   "genre": "Género",
+  "plan": "COMMUNITY PLAN",
+  "plan-content-1": "Descubre un nuevo nivel de conexión en Livria con el Plan Comunidad y su sección de \"Comunidades\". Sumérgete en un espacio donde los intereses compartidos cobran vida, permitiéndote unirte a comunidades creadas por otros usuarios con afinidades similares.",
+  "plan-content-2": "En cada comunidad, podrás expresar tus ideas a través de publicaciones y enriquecer las interacciones participando en los debates mediante comentarios en las publicaciones de los demás.",
 
   "recommended": {
     "title": "RECOMENDACIONES PARA TI",
@@ -36,13 +39,14 @@
     },
     "worlds": {
       "title": "DESCUBRE NUEVOS MUNDOS",
-      "description": "Explora lecturas recomendadas por la comunidad y abre las puertas a historias fascinantes."
+      "description": "Explora lecturas recomendadas por la aplicación y abre las puertas a historias fascinantes."
     },
     "passion": {
       "title": "COMPARTE TU PASIÓN",
-      "description": "Recomienda libros, escribe reseñas y crea conexiones con otros amantes de la lectura."
+      "description": "Califica libros, escribe reseñas y conéctate con otros amantes de los libros."
     },
-    "button": "OBTÉNLO AQUÍ"
+    "button-1": "OBTENLO AQUÍ",
+    "button-2": "DESCUBRE AQUÍ"
   },
 
   "loading-book": "Cargando Libro...",

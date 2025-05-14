@@ -9,6 +9,7 @@ export default {
   name: "Register",
   data() {
     return {
+
       value1: '',
       value2: '',
       value3: '',
@@ -58,6 +59,35 @@ export default {
         console.error("Error adding toast:", error);
       }
     },
+    async createUserr() {
+      try {
+        const service = new UserApiService();
+        const users = await service.getUsers();
+
+        const newId = String(
+            users.length > 0
+                ? Math.max(...users.map(item => parseInt(item.id))) + 1
+                : 1
+        );
+
+        const newUser = {
+          id: newId,
+          display: this.userDisplay,
+          user: this.userUser,
+          email: this.userEmail,
+          icon: this.userIcon,
+          password: this.userPassword,
+          phrase: this.userPhrase,
+          order: this.userOrder,
+          orderStatus: this.userOrderStatus,
+          subscription: this.userSubscription
+        };
+        await service.createUser(newUser);
+
+      } catch (error) {
+        console.error("Error creating user:", error);
+      }
+    },
 
     async createUserWithAutoId() {
       if (
@@ -70,39 +100,34 @@ export default {
           this.value6
       ) {
         try {
-          const response = await axios.get('http://localhost:3000/users');
-          const users = response.data;
+          const service = new UserApiService();
+          const users = await service.getUsers();
 
-          const newId = users.length > 0
-              ? Math.max(...users.map(user => Number(user.id))) + 1
-              : 1;
+          const newId = String(
+              users.length > 0
+                  ? Math.max(...users.map(item => parseInt(item.id))) + 1
+                  : 1
+          );
 
           const newUser = {
             id: newId,
-            user: this.value1,
-            display: this.value2,
-            phrase: this.value3,
-            icon: this.value4,
+            display: this.value1,
+            user: this.value2,
             email: this.value5,
+            icon: this.value4,
             password: this.value6,
+            phrase: this.value3,
             order: '',
-            orderstatus: ''
+            orderStatus: '',
+            subscription: false
           };
 
-          const service = new UserApiService();
-          const result = await service.createUser(newUser);
-          console.log("User created:", result.data);
-          this.showSuccess();
-          this.goToLogin();
-          return result.data;
+          await service.createUser(newUser);
+          this.goToLogin()
 
         } catch (error) {
           console.error("Error creating user:", error);
-          this.showFail();
         }
-      } else {
-        console.log("Error: Fields are missing or passwords don't match");
-        this.showFail();
       }
     }
   },

@@ -10,6 +10,7 @@ import Search from "../public/pages/search-component.vue";
 import Login from "../public/pages/login-page.component.vue";
 import Register from "../public/pages/register-page.component.vue";
 import Purchase from "../public/pages/purchase.component.vue";
+import SubscriptionComponent from "../public/pages/subscription.component.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -73,6 +74,11 @@ const router = createRouter({
             path: '/search',
             name: 'BookSearch',
             component: Search
+        },
+        {
+            path: '/subscription',
+            name: 'CommunitySubscription',
+            component: SubscriptionComponent
         }
     ]
 })

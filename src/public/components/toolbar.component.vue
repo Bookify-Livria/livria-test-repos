@@ -1,14 +1,16 @@
 <script>
 import LanguageSwitcher from "./language-switcher.component.vue";
-import CartDrawer from "../../commerce/cart/components/cart-drawer.component.vue"
+import CartDrawer from "../../commerce/cart/components/cart-drawer.component.vue";
 
-//icons
+// Icons
 import cartIcon from "../../assets/images/icons/Shop_kart.svg";
 import locationIcon from "../../assets/images/icons/Location.svg";
 import bellIcon from "../../assets/images/icons/Bell.svg";
 import userIcon from "../../assets/images/icons/User_alt.svg";
 import crownIcon from "../../assets/images/icons/Crown.svg";
 import searchIcon from "../../assets/images/icons/Search_alt.svg";
+
+import { getLoggedInUser } from "../shared-services/get-logged-user.js";
 
 export default {
   name: "Toolbar.component",
@@ -25,34 +27,47 @@ export default {
   data() {
     return {
       value1: "",
-      isCartActive: false
-    }
+      isCartActive: false,
+    };
   },
   methods: {
     openCart() {
-      this.isCartActive = true
-      this.$refs.cartDrawerRef.toggleDrawer()
+      this.isCartActive = true;
+      this.$refs.cartDrawerRef.toggleDrawer();
     },
     updateCartVisibility(val) {
-      console.log('Drawer visible?', val)
-      this.isCartActive = val
+      this.isCartActive = val;
     },
     performSearch() {
       if (this.value1.trim()) {
-        this.$router.push({name: 'BookSearch', query: {q: this.value1}});
+        this.$router.push({ name: "BookSearch", query: { q: this.value1 } });
         this.value1 = "";
       }
-    }
-  }
-}
+    },
+    async goToCommunity() {
+      try {
+        const user = await getLoggedInUser();
+        if (user.subscription) {
+          this.$router.push("/communities");
+        } else {
+          this.$router.push("/subscription");
+        }
+      } catch (error) {
+        console.error("Error al obtener el usuario:", error);
+        this.$router.push("/subscription");
+      }
+    },
+  },
+};
 </script>
 
 <template>
-
   <div class="header-wrapper">
     <pv-toolbar class="header">
       <template #start>
-        <router-link to="/home"><img alt="livria_logo" class="header__logo" src="../../assets/images/logo/logo.png"/></router-link>
+        <router-link to="/home">
+          <img alt="livria_logo" class="header__logo" src="../../assets/images/logo/logo.png" />
+        </router-link>
       </template>
 
       <template #center>
@@ -72,20 +87,28 @@ export default {
         <nav class="header__nav" aria-label="Main Navigation">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <pv-button @click="openCart" :class="['header__nav-link', { active: isCartActive }]"><cartIcon class="nav-icon" />{{ $t('cart-toolbar') }}</pv-button>
+              <pv-button @click="openCart" :class="['header__nav-link', { active: isCartActive }]">
+                <cartIcon class="nav-icon" />{{ $t("cart-toolbar") }}
+              </pv-button>
               <CartDrawer ref="cartDrawerRef" @visibility-change="updateCartVisibility" />
             </li>
             <li class="header__nav-item">
-              <router-link to="/shop" class="header__nav-link" exact exact-active-class="active"><locationIcon class="nav-icon"/>{{ $t('shop') }}</router-link>
+              <router-link to="/shop" class="header__nav-link" exact exact-active-class="active">
+                <locationIcon class="nav-icon" />{{ $t("shop") }}
+              </router-link>
             </li>
             <li class="header__nav-item">
-              <router-link to="/nofuncatodav" class="header__nav-link" exact exact-active-class="active"><bellIcon class="nav-icon"/>{{ $t('toolbar.notifications') }}</router-link>
+              <router-link to="/nofuncatodav" class="header__nav-link" exact exact-active-class="active">
+                <bellIcon class="nav-icon" />{{ $t("toolbar.notifications") }}
+              </router-link>
             </li>
             <li class="header__nav-item">
-              <router-link to="/account" class="header__nav-link" exact exact-active-class="active"><userIcon class="nav-icon"/>{{ $t('toolbar.account') }}</router-link>
+              <router-link to="/account" class="header__nav-link" exact exact-active-class="active">
+                <userIcon class="nav-icon" />{{ $t("toolbar.account") }}
+              </router-link>
             </li>
             <li class="header__nav-item">
-              <language-switcher/>
+              <language-switcher />
             </li>
           </ul>
         </nav>
@@ -103,20 +126,41 @@ export default {
     </div>
 
     <div class="header">
-      <div class="header__nav-subitem"><router-link to="/recommendations" class="header__nav-link go--orange">{{ $t('recommendations') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/bookl" class="header__nav-link go--orange">{{ $t('literature') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/booknf" class="header__nav-link go--orange">{{ $t('non-fiction') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/bookf" class="header__nav-link go--yellow">{{ $t('fiction') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/bookmc" class="header__nav-link go--yellow">{{ $t('mangas-comics') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/bookj" class="header__nav-link go--yellow">{{ $t('juvenile') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/bookc" class="header__nav-link go--blue">{{ $t('children') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/bookea" class="header__nav-link go--blue">{{ $t('ebooks-audiobooks') }}</router-link></div>
-      <div class="header__nav-subitem"><router-link to="/communities" class="header__nav-link go--blue"><crownIcon class="nav-icon"/>{{ $t('communities') }}</router-link></div>
+      <div class="header__nav-subitem">
+        <router-link to="/recommendations" class="header__nav-link go--orange">
+          {{ $t("recommendations") }}
+        </router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <router-link to="/bookl" class="header__nav-link go--orange">{{ $t("literature") }}</router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <router-link to="/booknf" class="header__nav-link go--orange">{{ $t("non-fiction") }}</router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <router-link to="/bookf" class="header__nav-link go--yellow">{{ $t("fiction") }}</router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <router-link to="/bookmc" class="header__nav-link go--yellow">{{ $t("mangas-comics") }}</router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <router-link to="/bookj" class="header__nav-link go--yellow">{{ $t("juvenile") }}</router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <router-link to="/bookc" class="header__nav-link go--blue">{{ $t("children") }}</router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <router-link to="/bookea" class="header__nav-link go--blue">{{ $t("ebooks-audiobooks") }}</router-link>
+      </div>
+      <div class="header__nav-subitem">
+        <div class="header__nav-link go--blue" @click="goToCommunity" style="cursor: pointer;">
+          <crownIcon class="nav-icon" />{{ $t("communities") }}
+        </div>
+      </div>
     </div>
-
   </div>
-
 </template>
+
 
 <style scoped>
 /* Header Styles*/

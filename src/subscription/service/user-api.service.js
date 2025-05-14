@@ -10,15 +10,15 @@ export class UserApiService {
                 throw error;
             });
     }
-    createUser(user) {
-        return fetch('http://localhost:3000/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        }).then(res => res.json())
+    createUser(rawResource) {
+        const adapted = UserAssembler.toResource(rawResource);
+        return axios.post('http://localhost:3000/users', adapted)
+            .catch(error => {
+                console.error('Error creating order:', error);
+                throw error;
+            });
     }
+
 
     updateUser(user) {
         return axios.put(`http://localhost:3000/users/${user.id}`, user)
@@ -28,8 +28,18 @@ export class UserApiService {
             });
     }
 
-    deleteUser(user) {
-        return axios.delete('http://localhost:3000/users/${user.id}')
+
+    getUserById(id) {
+        return axios.get(`http://localhost:3000/users/${id}`)
+            .then(response => response.data)
+            .catch(error => {
+                console.error('Error getting user:', error);
+                throw error;
+            });
+    }
+
+    deleteUser(id) {
+        return axios.delete(`http://localhost:3000/users/${id}`)
             .catch(error => {
                 console.error('Error deleting user:', error);
                 throw error;

@@ -7,7 +7,7 @@ export class Order {
         this.email = email;
         this.phone = phone;
         this.fullName = fullName;
-        this.isDelivery = isDelivery;
+        this.delivery = isDelivery;
         this.shipping = shipping;
         this.total = total;
         this.date = date;
