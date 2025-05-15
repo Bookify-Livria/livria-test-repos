@@ -14,6 +14,12 @@ export default {
   components: {
     LanguageSwitcher,
   },
+  data() {
+    return {
+      value1: '',
+      value2: ''
+    }
+  },
   methods: {
     async clearLogin() { // Permite al sistema eliminar los datos almacenados en userlogin
       try {
@@ -77,8 +83,6 @@ export default {
       const matchedUser = await this.validateLogin(valueA, valueB);
       if (matchedUser && valueA!=='' && valueB!=='') {
         await this.createLogin(matchedUser.id, valueA, valueB);
-        this.showLogin();
-        await notifyEvent("login");
         this.goToHome();
       } else {
         this.showFail();

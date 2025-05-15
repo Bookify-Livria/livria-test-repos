@@ -42,6 +42,13 @@ export async function notifyEvent(type) {
         content
     );
 
-    await service.addNotification(newNotification);
+    const newNoti = {
+        id: String(1 + counter),
+        date: now,
+        title: title,
+        content: content
+    }
+
+    await service.addNotification(newNoti);
     counter = counter + 1;
 }
