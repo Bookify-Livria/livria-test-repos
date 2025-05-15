@@ -12,7 +12,7 @@ export async function notifyEvent(type) {
 
     switch (type) {
         case "welcome":
-            title = this.$t("noti.welcome.title");
+            title = "Welcome to Livria!";
             content = "We're thrilled to have you here.";
             break;
         case "login":

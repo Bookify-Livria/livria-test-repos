@@ -1,22 +1,6 @@
 {
   "users": [
-    {
-      "id": "1",
-      "display": "Alice",
-      "user": "jabberwock",
-      "email": "alice.jabberwock.1951@gmail.com",
-      "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuVjgb8MySnWy78K7s5vVjTyM8z3PxqXe2iRNtV8MTLGvqcDuptmtaMg4sMBzfmaT41sSqbjdgo8JpyPmexNpTp9KuUeu5K2F5Qhaoc8OMHFkxy-Cr-stKrJva0ro7pYapzeoo5OGKiwjv/s752/jabberwocky-illustration-by-john-tenniel-500x752.jpg",
-      "password": "madhatter",
-      "phrase": "We're all mad here. I'm mad. You're mad.",
-      "order": [
-        {
-          "id": "1",
-          "code": "7LZ1KL",
-          "orderstatus": "delivered"
-        }
-      ],
-      "subscription": true
-    }
+
   ],
   "communities": [
     {
@@ -2833,31 +2817,7 @@
   ],
   "cart": [],
   "order": [],
-  "userlogin": [
-    {
-      "id": "1",
-      "username": "jabberwock",
-      "password": "madhatter"
-    }
-  ],
+  "userlogin": [],
   "notificaciones": [
-    {
-      "id": "1",
-      "date": "2025-05-14T13:21:43.689Z",
-      "title": "Plan Activated",
-      "content": "You just subscribed to a community plan. Enjoy the perks!"
-    },
-    {
-      "id": "1",
-      "date": "2025-05-14T13:24:33.588Z",
-      "title": "Welcome back!",
-      "content": "Nice to see you again. Let’s continue exploring."
-    },
-    {
-      "id": "1",
-      "date": "2025-05-14T13:39:03.555Z",
-      "title": "Welcome back!",
-      "content": "Nice to see you again. Let’s continue exploring."
-    }
   ]
 }

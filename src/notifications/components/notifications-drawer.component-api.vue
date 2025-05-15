@@ -16,7 +16,7 @@ export default {
   methods: {
     toggleDrawer() { // Alterna la visibilidad del drawer de notificaciones
       this.visibleRight = !this.visibleRight
-      if (this.visibleRight) this.loadCart()
+      if (this.visibleRight) this.loadNotis()
     },
     closeDrawer() { // Oculta el drawer de notificaciones
       this.visibleRight = false

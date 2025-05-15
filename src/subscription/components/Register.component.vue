@@ -86,7 +86,7 @@ export default {
           const newUser = {
             id: newId,
             display: this.value1,
-            user: this.value2,
+            username: this.value2,
             email: this.value5,
             icon: this.value4,
             password: this.value6,
@@ -97,7 +97,7 @@ export default {
 
           await service.createUser(newUser);
           await notifyEvent("welcome");
-          this.goToHome()
+          this.goToLogin()
 
         } catch (error) {
           console.error("Error creating user:", error);
@@ -127,7 +127,7 @@ export default {
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('userinput') }}</label>
+              <label class="form-label">{{ $t('displayinput') }}</label>
             </div>
 
             <div class="input-class">
@@ -137,7 +137,7 @@ export default {
 
           <div class="form-group">
             <div class="label-class">
-              <label class="form-label">{{ $t('displayinput') }}</label>
+              <label class="form-label">{{ $t('userinput') }}</label>
             </div>
 
             <div class="input-class">
