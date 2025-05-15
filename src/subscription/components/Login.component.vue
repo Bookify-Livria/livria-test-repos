@@ -17,11 +17,11 @@ export default {
   methods: {
     async clearLogin() { // Permite al sistema eliminar los datos almacenados en userlogin
       try {
-        const response = await axios.get('http://localhost:3000/userlogin');
+        const response = await axios.get('https://livria.onrender.com//userlogin');
         const users = response.data;
 
         await Promise.all(users.map(user =>
-            axios.delete(`http://localhost:3000/userlogin/${user.id}`)
+            axios.delete(`https://livria.onrender.com//userlogin/${user.id}`)
         ));
 
         console.log("Cleared login.");
@@ -38,7 +38,7 @@ export default {
       };
 
       try {
-        const response = await axios.post('http://localhost:3000/userlogin', newUser);
+        const response = await axios.post('https://livria.onrender.com//userlogin', newUser);
         console.log("Login session created:", response.data);
       } catch (error) {
         console.error("Error creating login session:", error);
@@ -47,7 +47,7 @@ export default {
 
     async validateLogin(valueA, valueB) { // Permite al sistema comparar la información registrada en el login con la de los usuarios registrados en la Fake API
       try {
-        const response = await axios.get('http://localhost:3000/users');
+        const response = await axios.get('https://livria.onrender.com//users');
         const users = response.data;
 
         const matchedUser = users.find(

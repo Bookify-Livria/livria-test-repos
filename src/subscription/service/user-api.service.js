@@ -3,7 +3,7 @@ import { UserAssembler } from './user.assembler.js';
 
 export class UserApiService {
     getUsers() {
-        return axios.get('http://localhost:3000/users')
+        return axios.get('https://livria.onrender.com/users')
             .then(response => UserAssembler.toEntitiesFromResponse(response))
             .catch(error => {
                 console.error('Error fetching users:', error);
@@ -12,7 +12,7 @@ export class UserApiService {
     }
     createUser(rawResource) {
         const adapted = UserAssembler.toResource(rawResource);
-        return axios.post('http://localhost:3000/users', adapted)
+        return axios.post('https://livria.onrender.com/users', adapted)
             .catch(error => {
                 console.error('Error creating order:', error);
                 throw error;
@@ -21,7 +21,7 @@ export class UserApiService {
 
 
     updateUser(user) {
-        return axios.put(`http://localhost:3000/users/${user.id}`, user)
+        return axios.put(`https://livria.onrender.com/users/${user.id}`, user)
             .catch(error => {
                 console.error('Error updating users:', error);
                 throw error;
@@ -30,7 +30,7 @@ export class UserApiService {
 
 
     getUserById(id) {
-        return axios.get(`http://localhost:3000/users/${id}`)
+        return axios.get(`https://livria.onrender.com/users/${id}`)
             .then(response => response.data)
             .catch(error => {
                 console.error('Error getting user:', error);
@@ -39,7 +39,7 @@ export class UserApiService {
     }
 
     deleteUser(id) {
-        return axios.delete(`http://localhost:3000/users/${id}`)
+        return axios.delete(`https://livria.onrender.com/users/${id}`)
             .catch(error => {
                 console.error('Error deleting user:', error);
                 throw error;

@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "livria-bookify",
+    "livria": "its-livria",
+    "livriabybookify": "livria-bybookify",
+    "bookifylivria": "livria-bookify"
+  },
+  "targets": {},
+  "etags": {}
+}

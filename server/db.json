@@ -1,6 +1,49 @@
 {
   "users": [
-
+    {
+      "id": "1",
+      "display": "Alice",
+      "user": "jabberwock",
+      "email": "ailce.jabberwock.1951@gmail.com",
+      "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuVjgb8MySnWy78K7s5vVjTyM8z3PxqXe2iRNtV8MTLGvqcDuptmtaMg4sMBzfmaT41sSqbjdgo8JpyPmexNpTp9KuUeu5K2F5Qhaoc8OMHFkxy-Cr-stKrJva0ro7pYapzeoo5OGKiwjv/s752/jabberwocky-illustration-by-john-tenniel-500x752.jpg",
+      "password": "madhatter",
+      "phrase": "hi!",
+      "order": [],
+      "subscription": true
+    },
+    {
+      "id": "2",
+      "display": "lily",
+      "user": "lilianne",
+      "email": "a",
+      "icon": "a",
+      "password": "aa",
+      "phrase": "helloooo",
+      "order": [],
+      "subscription": false
+    },
+    {
+      "id": "3",
+      "display": "Alice",
+      "user": "jabberwock",
+      "email": "alice@gmail.com",
+      "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuVjgb8MySnWy78K7s5vVjTyM8z3PxqXe2iRNtV8MTLGvqcDuptmtaMg4sMBzfmaT41sSqbjdgo8JpyPmexNpTp9KuUeu5K2F5Qhaoc8OMHFkxy-Cr-stKrJva0ro7pYapzeoo5OGKiwjv/s752/jabberwocky-illustration-by-john-tenniel-500x752.jpg",
+      "password": "madhatter",
+      "phrase": "hello there",
+      "order": [],
+      "subscription": false
+    },
+    {
+      "id": "4",
+      "display": "Alice",
+      "user": "jabberwock",
+      "email": "alice.1951@gmail.com",
+      "icon": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuVjgb8MySnWy78K7s5vVjTyM8z3PxqXe2iRNtV8MTLGvqcDuptmtaMg4sMBzfmaT41sSqbjdgo8JpyPmexNpTp9KuUeu5K2F5Qhaoc8OMHFkxy-Cr-stKrJva0ro7pYapzeoo5OGKiwjv/s752/jabberwocky-illustration-by-john-tenniel-500x752.jpg",
+      "password": "aliceinwonderland",
+      "phrase": "hi there",
+      "order": [],
+      "subscription": false
+    }
   ],
   "communities": [
     {
@@ -1099,6 +1142,12 @@
           "username": "cuentososcuros",
           "content": "*Cementerio de animales* me dejó helado. ¡Qué forma de narrar el dolor y el miedo! 🐱⚰️",
           "img": "https://i.imgur.com/040PPqK.jpg"
+        },
+        {
+          "id": "5",
+          "username": "jabberwock",
+          "content": "toca maratón de Insidious creo :P",
+          "img": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/04/insidious-2666313.jpg?tf=3840x"
         }
       ]
     },
@@ -2819,5 +2868,65 @@
   "order": [],
   "userlogin": [],
   "notificaciones": [
+    {
+      "id": "1",
+      "date": "2025-05-15T00:21:34.381Z",
+      "title": "Welcome to Livria!",
+      "content": "We're thrilled to have you here."
+    },
+    {
+      "id": "2",
+      "date": "2025-05-15T00:21:47.610Z",
+      "title": "Welcome back!",
+      "content": "Nice to see you again. Let’s continue exploring."
+    },
+    {
+      "id": "3",
+      "date": "2025-05-15T00:22:35.976Z",
+      "title": "Plan Activated",
+      "content": "You just subscribed to a community plan. Enjoy the perks!"
+    },
+    {
+      "id": "1",
+      "date": "2025-05-15T00:26:42.588Z",
+      "title": "Welcome back!",
+      "content": "Nice to see you again. Let’s continue exploring."
+    },
+    {
+      "id": "1",
+      "date": "2025-05-15T00:29:11.054Z",
+      "title": "Welcome to Livria!",
+      "content": "We're thrilled to have you here."
+    },
+    {
+      "id": "2",
+      "date": "2025-05-15T00:29:32.323Z",
+      "title": "Welcome back!",
+      "content": "Nice to see you again. Let’s continue exploring."
+    },
+    {
+      "id": "1",
+      "date": "2025-05-15T01:10:37.621Z",
+      "title": "Welcome to Livria!",
+      "content": "We're thrilled to have you here."
+    },
+    {
+      "id": "2",
+      "date": "2025-05-15T01:10:57.238Z",
+      "title": "Welcome back!",
+      "content": "Nice to see you again. Let’s continue exploring."
+    },
+    {
+      "id": "1",
+      "date": "2025-05-15T01:17:50.154Z",
+      "title": "Welcome to Livria!",
+      "content": "We're thrilled to have you here."
+    },
+    {
+      "id": "2",
+      "date": "2025-05-15T01:18:02.238Z",
+      "title": "Welcome back!",
+      "content": "Nice to see you again. Let’s continue exploring."
+    }
   ]
 }

@@ -145,7 +145,7 @@ export default {
 
     async getLoggedInUserId() { // Obtiene y devuelve la id del usuario loggeado
       try {
-        const response = await axios.get('http://localhost:3000/userlogin');
+        const response = await axios.get('https://livria.onrender.com/userlogin');
         const loginEntries = response.data;
 
         if (loginEntries.length > 0) {
