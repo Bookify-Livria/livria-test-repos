@@ -3,7 +3,7 @@ import { CommunityAssembler } from './community.assembler.js';
 
 export class CommunityApiService {
     getCommunities() {
-        return axios.get('https://livria.onrender.com/communities')
+        return axios.get('https://livria-6efh.onrender.com/communities')
             .then(response => CommunityAssembler.toEntitiesFromResponse(response))
             .catch(error => {
                 console.error('Error fetching books:', error);
@@ -11,7 +11,7 @@ export class CommunityApiService {
             });
     }
     createCommunity(community) {
-        return fetch('https://livria.onrender.com/communities', {
+        return fetch('https://livria-6efh.onrender.com/communities', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ export class CommunityApiService {
         }).then(res => res.json())
     }
     updateCommunity(community) {
-        return axios.put(`https://livria.onrender.com/communities/${community.id}`, community)
+        return axios.put(`https://livria-6efh.onrender.com/communities/${community.id}`, community)
             .catch(error => {
                 console.error('Error updating users:', error);
                 throw error;
