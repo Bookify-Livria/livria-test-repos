@@ -96,7 +96,6 @@ export default {
           };
 
           await service.createUser(newUser);
-          await notifyEvent("welcome");
           this.goToLogin()
 
         } catch (error) {
