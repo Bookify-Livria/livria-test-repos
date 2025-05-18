@@ -232,5 +232,43 @@
     "thanks-title": "Thank you for your purchase!",
     "thanks-text" : "Livria thanks you for your purchase. We hope you enjoy your reading as much as we do. Delivery will be made as indicated.",
     "order": "Order Code: #"
-  }
+  },
+
+  "dashboard": {
+    "dashboard.title": "Livria Dashboard"
+  },
+
+  "sidebar.dashboard": "Home",
+  "sidebar.books": "Books",
+  "sidebar.categories": "Genres",
+  "sidebar.authors": "Authors",
+  "sidebar.orders": "Orders",
+  "sidebar.settings": "Settings",
+  "sidebar.logout": "Log out",
+
+  "dashboard.title": "Livria Management",
+  "dashboard.subtitle": "Statistics",
+  "dashboard.total-books": "Total books",
+  "dashboard.total-genres": "Total genres",
+  "dashboard.avg-price": "Average price",
+  "dashboard.books-in-stock": "Books in stock",
+  "dashboard.most-reviewed": "Most reviewed",
+  "dashboard.best-selling": "Best selling",
+  "dashboard.reviews": "Reviews",
+  "dashboard.copies": "Copies",
+
+  "dashboard.book-collection": "Book collection",
+  "dashboard.search-books": "Search by title or author",
+  "dashboard.filter-by-genre": "Filter by genre",
+  "dashboard.all-genres": "All genres",
+  "dashboard.filter-by-language": "Filter by language",
+  "dashboard.all-languages": "All languages",
+  "dashboard.sort-by": "Sort by",
+  "dashboard.sort-title": "Title (A-Z)",
+  "dashboard.sort-price-asc": "Price (Highest to Lowest)",
+  "dashboard.sort-price-desc": "Price (Lowest to Highest)",
+  "dashboard.sort-reviews": "More reviews",
+  "dashboard.edit": "Edit",
+  "dashboard.view": "View"
+
 }

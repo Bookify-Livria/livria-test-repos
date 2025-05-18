@@ -506,6 +506,10 @@ export default {
 
 .pfp {
   color: var(--color-text);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
 }
 
 .delete {

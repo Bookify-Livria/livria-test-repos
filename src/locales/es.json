@@ -231,5 +231,13 @@
     "thanks-title": "¡Gracias por tu compra",
     "thanks-text" : "Livria le agradece su compra. Esperamos que disfrute de la lectura tanto como nosotros. La entrega se realizará según lo indicado.",
     "order": "Código de Orden: #"
-  }
+  },
+
+  "sidebar.dashboard": "Inicio",
+  "sidebar.books": "Libros",
+  "sidebar.categories": "Géneros",
+  "sidebar.authors": "Autores",
+  "sidebar.orders": "Pedidos",
+  "sidebar.settings": "Ajustes",
+  "sidebar.logout": "Cerrar sesión"
 }
