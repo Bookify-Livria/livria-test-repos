@@ -14,7 +14,6 @@ import SubscriptionComponent from "../public/pages/subscription.component.vue";
 import CommunityView from '../public/pages/view-communities.component.vue';
 import Shop from '../public/pages/shop.component.vue';
 import Dashboard from '../public/pages/dashboard.component.vue';
-import GenreManager from '../public/pages/genre-management.component.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -28,7 +27,6 @@ const router = createRouter({
         {path: "/purchase", component: Purchase},
         {path: "/shop", component: Shop},
         {path: "/dashboard", component: Dashboard},
-        {path: "/genre-manager", component: GenreManager},
         {
             path: '/bookl',
             name: 'LiteratureBooks',

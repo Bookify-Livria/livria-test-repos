@@ -84,20 +84,6 @@ export default {
   width: calc(100% - 250px);
 }
 
-.dashboard-welcome-container {
-  background-color: var(--color-primary);
-  padding: 2rem 0;
-  text-align: center;
-  margin-top: 4.5rem;
-}
-
-.dashboard-welcome {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  color: white;
-}
-
 .dashboard-welcome h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;

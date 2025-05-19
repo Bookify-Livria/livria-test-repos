@@ -32,18 +32,6 @@ export default {
         route: '/books-management'
       },
       {
-        id: 'categories',
-        label: 'Categorías',
-        icon: 'pi pi-tags',
-        route: '/categories'
-      },
-      {
-        id: 'authors',
-        label: 'Autores',
-        icon: 'pi pi-user-edit',
-        route: '/authors'
-      },
-      {
         id: 'orders',
         label: 'Pedidos',
         icon: 'pi pi-shopping-cart',
