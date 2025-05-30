@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import LanguageSwitcher from "../../public/components/language-switcher.component.vue";
+import { getLoggedInUser } from "../../public/shared-services/get-logged-user.js";
 
 export default {
   name: "DashboardSidebar",
@@ -27,17 +28,26 @@ export default {
       },
       {
         id: 'books',
-        label: 'Libros',
+        label: 'Books',
         icon: 'pi pi-book',
         route: '/books-management'
       },
       {
         id: 'orders',
-        label: 'Pedidos',
+        label: 'Orders',
         icon: 'pi pi-shopping-cart',
-        route: '/orders'
+        route: '/orders-management'
       }
     ]);
+
+    // Set active item based on current route
+    const updateActiveItem = () => {
+      const currentPath = router.currentRoute.value.path;
+      const matchingItem = navItems.value.find(item => currentPath.includes(item.route));
+      if (matchingItem) {
+        activeItem.value = matchingItem.id;
+      }
+    };
 
     // Load user information
     const fetchUserInfo = async () => {
@@ -49,8 +59,9 @@ export default {
       }
     };
 
-    // Initialize user info
+    // Initialize user info and active item
     fetchUserInfo();
+    updateActiveItem();
 
     // Computed classes for the sidebar based on collapsed state
     const sidebarClasses = computed(() => {

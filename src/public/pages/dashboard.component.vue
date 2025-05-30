@@ -1,13 +1,11 @@
 <script>
 import { ref } from 'vue'
-import libraryDashboard from "../../manager/components/library-dashboard.component.vue"
 import dashboardSidebar from "../../manager/components/dashboard-sidebar.component.vue"
 import { getLoggedInUser } from "../shared-services/get-logged-user.js"
 
 export default {
   name: "dashboard.component",
   components: {
-    libraryDashboard,
     dashboardSidebar
   },
   setup() {
@@ -55,16 +53,53 @@ export default {
         <p>{{ $t('loading') || 'Loading your dashboard...' }}</p>
       </div>
 
-      <div v-else>
-        <libraryDashboard/>
-      </div>
+      <div v-else class="welcome-container">
+        <div class="welcome-card">
+          <div class="welcome-header">
+            <h1>{{ $t('dashboard.welcome') || 'Welcome to the Library Management System' }}</h1>
+            <p>{{ $t('dashboard.welcome-message') || 'Manage your book collection efficiently with our powerful tools' }}</p>
+          </div>
 
+          <div class="user-greeting">
+            <div class="user-avatar">
+              <span>{{ userInfo?.user?.charAt(0).toUpperCase() || 'U' }}</span>
+            </div>
+            <div class="greeting-text">
+              <h2>{{ $t('dashboard.hello') || 'Hello' }}, {{ userInfo?.user || 'Admin' }}!</h2>
+              <p>{{ $t('dashboard.role') || 'Role' }}: {{ userInfo?.role || 'Administrator' }}</p>
+            </div>
+          </div>
+
+          <div class="quick-actions">
+            <h3>{{ $t('dashboard.quick-actions') || 'Quick Actions' }}</h3>
+            <div class="actions-grid">
+              <div class="action-card" @click="$router.push('/books-management')">
+                <i class="pi pi-book"></i>
+                <span>{{ $t('dashboard.manage-books') || 'Manage Books' }}</span>
+              </div>
+              <div class="action-card" @click="$router.push('/orders-management')">
+                <i class="pi pi-shopping-cart"></i>
+                <span>{{ $t('dashboard.manage-orders') || 'Manage Orders' }}</span>
+              </div>
+              <div class="action-card" @click="$router.push('/settings')">
+                <i class="pi pi-cog"></i>
+                <span>{{ $t('dashboard.settings') || 'Settings' }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="system-info">
+            <h3>{{ $t('dashboard.system-info') || 'System Information' }}</h3>
+            <p>{{ $t('dashboard.version') || 'Version' }}: 1.0.0</p>
+            <p>{{ $t('dashboard.last-login') || 'Last Login' }}: {{ new Date().toLocaleString() }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
 .dashboard-page {
   display: flex;
   min-height: 100vh;
@@ -84,16 +119,6 @@ export default {
   width: calc(100% - 250px);
 }
 
-.dashboard-welcome h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.dashboard-welcome p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
 .loading-container {
   display: flex;
   justify-content: center;
@@ -102,6 +127,139 @@ export default {
   font-size: 1.2rem;
   color: var(--color-primary);
   margin-top: 4.5rem;
+}
+
+.welcome-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcome-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.welcome-header h1 {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-header p {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.user-greeting {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(var(--color-primary-rgb), 0.05);
+  border-radius: 10px;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+  margin-right: 1.5rem;
+}
+
+.greeting-text h2 {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.greeting-text p {
+  font-size: 1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.quick-actions {
+  margin-bottom: 2rem;
+}
+
+.quick-actions h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.action-card {
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  border-color: var(--color-accent-orange);
+}
+
+.action-card i {
+  font-size: 2rem;
+  color: var(--color-accent-orange);
+  margin-bottom: 1rem;
+}
+
+.action-card span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.system-info {
+  background-color: rgba(var(--color-primary-rgb), 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.system-info h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.system-info p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
 }
 
 /* For mobile devices */
@@ -114,6 +272,35 @@ export default {
   .sidebar-expanded .main-content {
     margin-left: 0;
     width: 100%;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .welcome-container {
+    padding: 1rem;
+  }
+
+  .welcome-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .user-greeting {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .actions-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>
