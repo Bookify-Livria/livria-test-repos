@@ -266,13 +266,13 @@ export default {
 
     <div class="main-content">
       <div v-if="loading && !userInfo" class="loading-container">
-        <p>{{ $t('loading') || 'Cargando configuración...' }}</p>
+        <p>{{ $t('dashboard-settings.loading') }}</p>
       </div>
 
       <div v-else class="settings-container">
         <div class="settings-header">
-          <h1>{{ $t('settings.title') || 'Configuración' }}</h1>
-          <p>{{ $t('settings.subtitle') || 'Administra tu cuenta y las preferencias del sistema' }}</p>
+          <h1>{{ $t('dashboard-settings.title') }}</h1>
+          <p>{{ $t('dashboard-settings.subtitle') }}</p>
         </div>
 
         <div class="settings-content">
@@ -284,7 +284,7 @@ export default {
                 @click="switchTab('profile')"
             >
               <i class="pi pi-user"></i>
-              <span>{{ $t('settings.profile') || 'Perfil' }}</span>
+              <span>{{ $t('dashboard-settings.profile') }}</span>
             </div>
             <div
                 class="tab-item"
@@ -292,7 +292,7 @@ export default {
                 @click="switchTab('app')"
             >
               <i class="pi pi-desktop"></i>
-              <span>{{ $t('settings.app') || 'Aplicación' }}</span>
+              <span>{{ $t('dashboard-settings.app') }}</span>
             </div>
             <div
                 class="tab-item"
@@ -301,7 +301,7 @@ export default {
                 v-if="userInfo?.role === 'Administrator'"
             >
               <i class="pi pi-cog"></i>
-              <span>{{ $t('settings.system') || 'Sistema' }}</span>
+              <span>{{ $t('dashboard-settings.system') }}</span>
             </div>
           </div>
 
@@ -310,26 +310,26 @@ export default {
             <!-- Success/Error Messages -->
             <div v-if="saveStatus" class="status-message" :class="saveStatus">
               <i :class="saveStatus === 'success' ? 'pi pi-check-circle' : 'pi pi-times-circle'"></i>
-              <span v-if="saveStatus === 'success'">{{ $t('settings.save-success') || 'Cambios guardados correctamente' }}</span>
-              <span v-else>{{ $t('settings.save-error') || 'Error al guardar los cambios' }}</span>
+              <span v-if="saveStatus === 'success'">{{ $t('dashboard-settings.save-success') }}</span>
+              <span v-else>{{ $t('dashboard-settings.save-error') }}</span>
             </div>
 
             <!-- Profile Settings -->
             <div v-if="activeTab === 'profile'" class="form-section">
-              <h2>{{ $t('settings.profile-info') || 'Información del perfil' }}</h2>
+              <h2>{{ $t('dashboard-settings.profile-info') }}</h2>
 
               <div class="profile-header">
                 <div class="profile-avatar">
                   <span>{{ userProfile.name?.charAt(0).toUpperCase() || 'U' }}</span>
                 </div>
                 <div class="profile-info">
-                  <h3>{{ userProfile.name || 'Usuario' }}</h3>
-                  <p>{{ userProfile.role || 'Administrador' }}</p>
+                  <h3>{{ userProfile.name || $t('dashboard-settings.user') }}</h3>
+                  <p>{{ userProfile.role || $t('dashboard-settings.admin') }}</p>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="name">{{ $t('settings.name') || 'Nombre' }}:</label>
+                <label for="name">{{ $t('dashboard-settings.name') }}:</label>
                 <input
                     type="text"
                     id="name"
@@ -341,7 +341,7 @@ export default {
               </div>
 
               <div class="form-group">
-                <label for="email">{{ $t('settings.email') || 'Correo electrónico' }}:</label>
+                <label for="email">{{ $t('dashboard-settings.email') }}:</label>
                 <input
                     type="email"
                     id="email"
@@ -353,7 +353,7 @@ export default {
               </div>
 
               <div class="form-group">
-                <label for="role">{{ $t('settings.role') || 'Rol' }}:</label>
+                <label for="role">{{ $t('dashboard-settings.role') }}:</label>
                 <input
                     type="text"
                     id="role"
@@ -364,27 +364,27 @@ export default {
               </div>
 
               <div class="form-group">
-                <label>{{ $t('settings.language') || 'Idioma' }}:</label>
+                <label>{{ $t('dashboard-settings.language') }}:</label>
                 <LanguageSwitcher v-model="userProfile.language" />
               </div>
 
               <div class="form-actions">
                 <button class="btn-password" @click="showChangePassword = !showChangePassword">
-                  {{ $t('settings.change-password') || 'Cambiar contraseña' }}
+                  {{ $t('dashboard-settings.change-password') }}
                 </button>
                 <button class="btn-save" @click="saveProfile" :disabled="loading">
                   <i class="pi pi-save" v-if="!loading"></i>
                   <i class="pi pi-spin pi-spinner" v-else></i>
-                  {{ $t('settings.save') || 'Guardar cambios' }}
+                  {{ $t('dashboard-settings.save') }}
                 </button>
               </div>
 
               <!-- Change Password Form -->
               <div v-if="showChangePassword" class="password-form">
-                <h3>{{ $t('settings.change-password') || 'Cambiar contraseña' }}</h3>
+                <h3>{{ $t('dashboard-settings.change-password') }}</h3>
 
                 <div class="form-group">
-                  <label for="current-password">{{ $t('settings.current-password') || 'Contraseña actual' }}:</label>
+                  <label for="current-password">{{ $t('dashboard-settings.current-password') }}:</label>
                   <input
                       type="password"
                       id="current-password"
@@ -396,7 +396,7 @@ export default {
                 </div>
 
                 <div class="form-group">
-                  <label for="new-password">{{ $t('settings.new-password') || 'Nueva contraseña' }}:</label>
+                  <label for="new-password">{{ $t('dashboard-settings.new-password') }}:</label>
                   <input
                       type="password"
                       id="new-password"
@@ -408,7 +408,7 @@ export default {
                 </div>
 
                 <div class="form-group">
-                  <label for="confirm-password">{{ $t('settings.confirm-password') || 'Confirmar contraseña' }}:</label>
+                  <label for="confirm-password">{{ $t('dashboard-settings.confirm-password') }}:</label>
                   <input
                       type="password"
                       id="confirm-password"
@@ -421,12 +421,12 @@ export default {
 
                 <div class="form-actions">
                   <button class="btn-cancel" @click="showChangePassword = false">
-                    {{ $t('settings.cancel') || 'Cancelar' }}
+                    {{ $t('dashboard-settings.cancel') }}
                   </button>
                   <button class="btn-save" @click="changePassword" :disabled="loading">
                     <i class="pi pi-check" v-if="!loading"></i>
                     <i class="pi pi-spin pi-spinner" v-else></i>
-                    {{ $t('settings.update-password') || 'Actualizar contraseña' }}
+                    {{ $t('dashboard-settings.update-password') }}
                   </button>
                 </div>
               </div>
@@ -434,12 +434,12 @@ export default {
 
             <!-- App Settings -->
             <div v-if="activeTab === 'app'" class="form-section">
-              <h2>{{ $t('settings.app-settings') || 'Configuración de la aplicación' }}</h2>
+              <h2>{{ $t('dashboard-settings.app-settings') }}</h2>
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.notifications') || 'Notificaciones' }}</h3>
-                  <p>{{ $t('settings.notifications-desc') || 'Recibir notificaciones en la aplicación' }}</p>
+                  <h3>{{ $t('dashboard-settings.notifications') }}</h3>
+                  <p>{{ $t('dashboard-settings.notifications-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <div class="toggle-switch">
@@ -451,8 +451,8 @@ export default {
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.email-alerts') || 'Alertas por correo' }}</h3>
-                  <p>{{ $t('settings.email-alerts-desc') || 'Recibir alertas por correo electrónico' }}</p>
+                  <h3>{{ $t('dashboard-settings.email-alerts') }}</h3>
+                  <p>{{ $t('dashboard-settings.email-alerts-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <div class="toggle-switch">
@@ -464,8 +464,8 @@ export default {
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.dark-mode') || 'Modo oscuro' }}</h3>
-                  <p>{{ $t('settings.dark-mode-desc') || 'Cambiar a tema oscuro' }}</p>
+                  <h3>{{ $t('dashboard-settings.dark-mode') }}</h3>
+                  <p>{{ $t('dashboard-settings.dark-mode-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <div class="toggle-switch">
@@ -477,8 +477,8 @@ export default {
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.auto-save') || 'Autoguardado' }}</h3>
-                  <p>{{ $t('settings.auto-save-desc') || 'Guardar cambios automáticamente' }}</p>
+                  <h3>{{ $t('dashboard-settings.auto-save') }}</h3>
+                  <p>{{ $t('dashboard-settings.auto-save-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <div class="toggle-switch">
@@ -490,8 +490,8 @@ export default {
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.page-size') || 'Tamaño de página' }}</h3>
-                  <p>{{ $t('settings.page-size-desc') || 'Número de elementos por página' }}</p>
+                  <h3>{{ $t('dashboard-settings.page-size') }}</h3>
+                  <p>{{ $t('dashboard-settings.page-size-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <select v-model="appSettings.pageSize" class="form-control">
@@ -508,24 +508,24 @@ export default {
                 <button class="btn-save" @click="saveAppSettings" :disabled="loading">
                   <i class="pi pi-save" v-if="!loading"></i>
                   <i class="pi pi-spin pi-spinner" v-else></i>
-                  {{ $t('settings.save') || 'Guardar cambios' }}
+                  {{ $t('dashboard-settings.save') || 'Guardar cambios' }}
                 </button>
               </div>
             </div>
 
             <!-- System Settings -->
             <div v-if="activeTab === 'system'" class="form-section">
-              <h2>{{ $t('settings.system-settings') || 'Configuración del sistema' }}</h2>
+              <h2>{{ $t('dashboard-settings.system-settings') }}</h2>
 
               <div class="admin-warning">
                 <i class="pi pi-exclamation-triangle"></i>
-                <span>{{ $t('settings.admin-warning') || 'Estas configuraciones son solo para administradores y pueden afectar a todo el sistema.' }}</span>
+                <span>{{ $t('dashboard-settings.admin-warning') }}</span>
               </div>
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.maintenance-mode') || 'Modo mantenimiento' }}</h3>
-                  <p>{{ $t('settings.maintenance-mode-desc') || 'Activar modo de mantenimiento del sitio' }}</p>
+                  <h3>{{ $t('dashboard-settings.maintenance-mode') }}</h3>
+                  <p>{{ $t('dashboard-settings.maintenance-mode-desc')  }}</p>
                 </div>
                 <div class="setting-control">
                   <div class="toggle-switch">
@@ -537,8 +537,8 @@ export default {
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.debug-mode') || 'Modo debug' }}</h3>
-                  <p>{{ $t('settings.debug-mode-desc') || 'Activar modo de depuración' }}</p>
+                  <h3>{{ $t('dashboard-settings.debug-mode')  }}</h3>
+                  <p>{{ $t('dashboard-settings.debug-mode-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <div class="toggle-switch">
@@ -550,8 +550,8 @@ export default {
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.cache-enabled') || 'Caché activado' }}</h3>
-                  <p>{{ $t('settings.cache-enabled-desc') || 'Activar el sistema de caché' }}</p>
+                  <h3>{{ $t('dashboard-settings.cache-enabled') }}</h3>
+                  <p>{{ $t('dashboard-settings.cache-enabled-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <div class="toggle-switch">
@@ -563,8 +563,8 @@ export default {
 
               <div class="setting-item">
                 <div class="setting-info">
-                  <h3>{{ $t('settings.session-timeout') || 'Tiempo de sesión' }}</h3>
-                  <p>{{ $t('settings.session-timeout-desc') || 'Tiempo de inactividad antes de cerrar sesión (minutos)' }}</p>
+                  <h3>{{ $t('dashboard-settings.session-timeout') }}</h3>
+                  <p>{{ $t('dashboard-settings.session-timeout-desc') }}</p>
                 </div>
                 <div class="setting-control">
                   <input
@@ -581,7 +581,7 @@ export default {
                 <button class="btn-save" @click="saveSystemSettings" :disabled="loading">
                   <i class="pi pi-save" v-if="!loading"></i>
                   <i class="pi pi-spin pi-spinner" v-else></i>
-                  {{ $t('settings.save') || 'Guardar cambios' }}
+                  {{ $t('dashboard-settings.save') }}
                 </button>
               </div>
             </div>

@@ -216,77 +216,77 @@ export default {
 <template>
   <div class="dashboard-container">
     <div class="dashboard-header">
-      <h1 class="dashboard-title">{{ $t('dashboard.title') || 'Gestión de Biblioteca' }}</h1>
-      <p class="dashboard-subtitle">{{ $t('dashboard.subtitle') || 'Administra y analiza tu colección de libros' }}</p>
+      <h1 class="dashboard-title">{{ $t('dashboard.title') }}</h1>
+      <p class="dashboard-subtitle">{{ $t('dashboard.subtitle') }}</p>
     </div>
 
     <div v-if="loading" class="dashboard-loading">
-      <p>{{ $t('loading') || 'Cargando datos...' }}</p>
+      <p>{{ $t('dashboard.loading') }}</p>
     </div>
 
     <div v-else class="dashboard-content">
       <!-- Stats Cards -->
       <div class="stats-container">
         <div class="stat-card">
-          <h3>{{ $t('dashboard.total-books') || 'Total Libros' }}</h3>
+          <h3>{{ $t('dashboard.total-books') }}</h3>
           <p class="stat-value">{{ stats.totalBooks }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('dashboard.total-genres') || 'Géneros' }}</h3>
+          <h3>{{ $t('dashboard.total-genres') }}</h3>
           <p class="stat-value">{{ stats.totalGenres }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('dashboard.avg-price') || 'Precio Promedio' }}</h3>
+          <h3>{{ $t('dashboard.avg-price')  }}</h3>
           <p class="stat-value">S/ {{ stats.averagePrice.toFixed(2) }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('dashboard.books-in-stock') || 'Libros en Stock' }}</h3>
+          <h3>{{ $t('dashboard.books-in-stock') }}</h3>
           <p class="stat-value">{{ stats.booksInStock }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('dashboard.most-reviewed') || 'Más Reseñado' }}</h3>
+          <h3>{{ $t('dashboard.most-reviewed') }}</h3>
           <p class="stat-value">{{ stats.mostReviewedBook?.title || 'N/A' }}</p>
           <p class="stat-detail" v-if="stats.mostReviewedBook">
-            {{ stats.mostReviewedBook.reviews?.length || 0 }} {{ $t('dashboard.reviews') || 'reseñas' }}
+            {{ stats.mostReviewedBook.reviews?.length || 0 }} {{ $t('dashboard.reviews')  }}
           </p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('dashboard.best-selling') || 'Más Vendido' }}</h3>
+          <h3>{{ $t('dashboard.best-selling')  }}</h3>
           <p class="stat-value">{{ stats.bestSellingBook?.title || 'N/A' }}</p>
           <p class="stat-detail" v-if="stats.bestSellingBook">
-            {{ stats.bestSellingBook.sales || 0 }} {{ $t('dashboard.copies') || 'copias' }}
+            {{ stats.bestSellingBook.sales || 0 }} {{ $t('dashboard.copies') }}
           </p>
         </div>
       </div>
 
       <!-- Filter and Search Options -->
       <div class="filter-section">
-        <h2 class="section-title">{{ $t('dashboard.book-collection') || 'Colección de Libros' }}</h2>
+        <h2 class="section-title">{{ $t('dashboard.book-collection') }}</h2>
 
         <div class="search-bar">
           <input
               type="text"
               v-model="searchQuery"
-              :placeholder="$t('dashboard.search-books') || 'Buscar por título o autor...'"
+              :placeholder="$t('dashboard.search-books')"
               class="search-input"
           />
         </div>
 
         <div class="filter-controls">
           <div class="filter-group">
-            <label for="genre-filter">{{ $t('dashboard.filter-by-genre') || 'Filtrar por Género:' }}</label>
+            <label for="genre-filter">{{ $t('dashboard.filter-by-genre') }}</label>
             <select id="genre-filter" v-model="selectedGenre" class="filter-select">
-              <option value="all">{{ $t('dashboard.all-genres') || 'Todos los Géneros' }}</option>
+              <option value="all">{{ $t('dashboard.all-genres') }}</option>
               <option v-for="genre in genres" :key="genre" :value="genre">
-                {{ $t(`genres.${genre}`) || genre }}
+                {{ $t(`genres.${genre}`) }}
               </option>
             </select>
           </div>
 
           <div class="filter-group">
-            <label for="language-filter">{{ $t('dashboard.filter-by-language') || 'Filtrar por Idioma:' }}</label>
+            <label for="language-filter">{{ $t('dashboard.filter-by-language') }}</label>
             <select id="language-filter" v-model="selectedLanguage" class="filter-select">
-              <option value="all">{{ $t('dashboard.all-languages') || 'Todos los Idiomas' }}</option>
+              <option value="all">{{ $t('dashboard.all-languages') }}</option>
               <option v-for="lang in languages" :key="lang.code" :value="lang.code">
                 {{ lang.name }}
               </option>
@@ -294,12 +294,12 @@ export default {
           </div>
 
           <div class="filter-group">
-            <label for="sort-by">{{ $t('dashboard.sort-by') || 'Ordenar por:' }}</label>
+            <label for="sort-by">{{ $t('dashboard.sort-by') }}</label>
             <select id="sort-by" v-model="sortOption" class="filter-select">
-              <option value="title">{{ $t('dashboard.sort-title') || 'Título (A-Z)' }}</option>
-              <option value="price_asc">{{ $t('dashboard.sort-price-asc') || 'Precio (Menor a Mayor)' }}</option>
-              <option value="price_desc">{{ $t('dashboard.sort-price-desc') || 'Precio (Mayor a Menor)' }}</option>
-              <option value="reviews">{{ $t('dashboard.sort-reviews') || 'Más Reseñas' }}</option>
+              <option value="title">{{ $t('dashboard.sort-title') }}</option>
+              <option value="price_asc">{{ $t('dashboard.sort-price-asc') }}</option>
+              <option value="price_desc">{{ $t('dashboard.sort-price-desc') }}</option>
+              <option value="reviews">{{ $t('dashboard.sort-reviews') }}</option>
             </select>
           </div>
         </div>
@@ -324,21 +324,21 @@ export default {
               <span class="book-stock">Stock: {{ book.stock || 0 }}</span>
             </div>
             <div class="book-reviews">
-              <span>{{ book.reviews?.length || 0 }} {{ $t('dashboard.reviews') || 'reseñas' }}</span>
+              <span>{{ book.reviews?.length || 0 }} {{ $t('dashboard.reviews') }}</span>
             </div>
             <div class="book-actions">
               <button class="btn-edit" @click="editBook(book)">
-                {{ $t('dashboard.edit') || 'Editar' }}
+                {{ $t('dashboard.edit') }}
               </button>
               <button class="btn-view" @click="navigateToBook(book)">
-                {{ $t('dashboard.view') || 'Ver' }}
+                {{ $t('dashboard.view') }}
               </button>
             </div>
           </div>
         </div>
 
         <div v-if="filteredBooks.length === 0" class="no-results">
-          <p>{{ $t('dashboard.no-books-found') || 'No se encontraron libros con los filtros seleccionados.' }}</p>
+          <p>{{ $t('dashboard.no-books-found') }}</p>
         </div>
       </div>
     </div>
@@ -347,38 +347,38 @@ export default {
     <div v-if="showEditModal" class="modal-backdrop">
       <div class="modal-content">
         <div class="modal-header">
-          <h2>{{ $t('dashboard.edit-book') || 'Editar Libro' }}</h2>
+          <h2>{{ $t('dashboard.book.edit-book') }}</h2>
           <button class="close-btn" @click="closeModal">&times;</button>
         </div>
         <div class="modal-body" v-if="currentBook">
           <div class="form-group">
-            <label for="book-title">{{ $t('dashboard.book-title') || 'Título' }}:</label>
+            <label for="book-title">{{ $t('dashboard.book.title') }}:</label>
             <input type="text" id="book-title" v-model="currentBook.title" class="form-control" />
             <span class="error-message" v-if="formErrors.title">{{ formErrors.title }}</span>
           </div>
 
           <div class="form-group">
-            <label for="book-author">{{ $t('dashboard.book-author') || 'Autor' }}:</label>
+            <label for="book-author">{{ $t('dashboard.book.author') }}:</label>
             <input type="text" id="book-author" v-model="currentBook.author" class="form-control" />
             <span class="error-message" v-if="formErrors.author">{{ formErrors.author }}</span>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="book-price">{{ $t('dashboard.book-price') || 'Precio' }}:</label>
+              <label for="book-price">{{ $t('dashboard.book.price') }}:</label>
               <input type="number" id="book-price" v-model.number="currentBook.price" class="form-control" step="0.01" />
               <span class="error-message" v-if="formErrors.price">{{ formErrors.price }}</span>
             </div>
 
             <div class="form-group">
-              <label for="book-stock">{{ $t('dashboard.book-stock') || 'Stock' }}:</label>
+              <label for="book-stock">{{ $t('dashboard.book.stock') }}:</label>
               <input type="number" id="book-stock" v-model.number="currentBook.stock" class="form-control" />
               <span class="error-message" v-if="formErrors.stock">{{ formErrors.stock }}</span>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="book-genre">{{ $t('dashboard.book-genre') || 'Género' }}:</label>
+            <label for="book-genre">{{ $t('dashboard.book.genre') }}:</label>
             <select id="book-genre" v-model="currentBook.genre" class="form-control">
               <option v-for="genre in genres" :key="genre" :value="genre">
                 {{ $t(`genres.${genre}`) || genre }}
@@ -387,7 +387,7 @@ export default {
           </div>
 
           <div class="form-group">
-            <label for="book-language">{{ $t('dashboard.book-language') || 'Idioma' }}:</label>
+            <label for="book-language">{{ $t('dashboard.book.language') }}:</label>
             <select id="book-language" v-model="currentBook.language" class="form-control">
               <option v-for="lang in languages" :key="lang.code" :value="lang.code">
                 {{ lang.name }}
@@ -396,18 +396,18 @@ export default {
           </div>
 
           <div class="form-group">
-            <label for="book-description">{{ $t('dashboard.book-description') || 'Descripción' }}:</label>
+            <label for="book-description">{{ $t('dashboard.book.description') }}:</label>
             <textarea id="book-description" v-model="currentBook.description" class="form-control" rows="4"></textarea>
           </div>
 
           <div class="form-group">
-            <label for="book-cover">{{ $t('dashboard.book-cover') || 'URL de Portada' }}:</label>
+            <label for="book-cover">{{ $t('dashboard.book.cover') }}:</label>
             <input type="text" id="book-cover" v-model="currentBook.cover" class="form-control" />
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn-cancel" @click="closeModal">{{ $t('dashboard.cancel') || 'Cancelar' }}</button>
-          <button class="btn-save" @click="saveBook">{{ $t('dashboard.save') || 'Guardar Cambios' }}</button>
+          <button class="btn-cancel" @click="closeModal">{{ $t('dashboard.book.cancel')  }}</button>
+          <button class="btn-save" @click="saveBook">{{ $t('dashboard.book.submit')  }}</button>
         </div>
       </div>
     </div>

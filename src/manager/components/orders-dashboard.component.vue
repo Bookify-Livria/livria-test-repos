@@ -31,7 +31,7 @@ export default {
       { value: 'processing', label: 'Procesando' },
       { value: 'shipped', label: 'Enviado' },
       { value: 'delivered', label: 'Entregado' },
-      { value: 'cancelled', label: 'Cancelado' }
+      { value: 'canceled', label: 'Cancelado' }
     ]);
 
     // Date range options
@@ -202,8 +202,8 @@ export default {
           return 'status-shipped';
         case 'delivered':
           return 'status-delivered';
-        case 'cancelled':
-          return 'status-cancelled';
+        case 'canceled':
+          return 'status-canceled';
         default:
           return '';
       }
@@ -281,83 +281,83 @@ export default {
 <template>
   <div class="dashboard-container">
     <div class="dashboard-header">
-      <h1 class="dashboard-title">{{ $t('orders.title') || 'Gestión de Pedidos' }}</h1>
-      <p class="dashboard-subtitle">{{ $t('orders.subtitle') || 'Administra y analiza todos los pedidos de la librería' }}</p>
+      <h1 class="dashboard-title">{{ $t('dashboard-orders.title') }}</h1>
+      <p class="dashboard-subtitle">{{ $t('dashboard-orders.subtitle') }}</p>
     </div>
 
     <div v-if="loading" class="dashboard-loading">
-      <p>{{ $t('loading') || 'Cargando datos...' }}</p>
+      <p>{{ $t('dashboard-orders.loading') }}</p>
     </div>
 
     <div v-else class="dashboard-content">
       <!-- Stats Cards -->
       <div class="stats-container">
         <div class="stat-card">
-          <h3>{{ $t('orders.total-orders') || 'Total Pedidos' }}</h3>
+          <h3>{{ $t('dashboard-orders.total-orders') }}</h3>
           <p class="stat-value">{{ stats.totalOrders }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('orders.total-revenue') || 'Ingresos Totales' }}</h3>
+          <h3>{{ $t('dashboard-orders.total-revenue') }}</h3>
           <p class="stat-value">{{ formatCurrency(stats.totalRevenue) }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('orders.pending-orders') || 'Pedidos Pendientes' }}</h3>
+          <h3>{{ $t('dashboard-orders.pending-orders') }}</h3>
           <p class="stat-value">{{ stats.pendingOrders }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('orders.completed-orders') || 'Pedidos Completados' }}</h3>
+          <h3>{{ $t('dashboard-orders.completed-orders') }}</h3>
           <p class="stat-value">{{ stats.completedOrders }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('orders.avg-order-value') || 'Valor Promedio' }}</h3>
+          <h3>{{ $t('dashboard-orders.avg-order-value') }}</h3>
           <p class="stat-value">{{ formatCurrency(stats.averageOrderValue) }}</p>
         </div>
         <div class="stat-card">
-          <h3>{{ $t('orders.most-popular-book') || 'Libro Más Popular' }}</h3>
+          <h3>{{ $t('dashboard-orders.most-popular-book') }}</h3>
           <p class="stat-value">{{ stats.mostPopularBook }}</p>
         </div>
       </div>
 
       <!-- Filter and Search Options -->
       <div class="filter-section">
-        <h2 class="section-title">{{ $t('orders.order-list') || 'Lista de Pedidos' }}</h2>
+        <h2 class="section-title">{{ $t('dashboard-orders.order-list') }}</h2>
 
         <div class="search-bar">
           <input
               type="text"
               v-model="searchQuery"
-              :placeholder="$t('orders.search-orders') || 'Buscar por número de pedido o cliente...'"
+              :placeholder="$t('dashboard-orders.search-orders')"
               class="search-input"
           />
         </div>
 
         <div class="filter-controls">
           <div class="filter-group">
-            <label for="status-filter">{{ $t('orders.filter-by-status') || 'Filtrar por Estado:' }}</label>
+            <label for="status-filter">{{ $t('dashboard-orders.filter-by-status') }}</label>
             <select id="status-filter" v-model="selectedStatus" class="filter-select">
-              <option value="all">{{ $t('orders.all-status') || 'Todos los Estados' }}</option>
+              <option value="all">{{ $t('dashboard-orders.all-status') }}</option>
               <option v-for="option in statusOptions" :key="option.value" :value="option.value">
-                {{ $t(`orders.status.${option.value}`) || option.label }}
+                {{ $t(`dashboard-orders.status.${option.value}`) || option.label }}
               </option>
             </select>
           </div>
 
           <div class="filter-group">
-            <label for="date-filter">{{ $t('orders.filter-by-date') || 'Filtrar por Fecha:' }}</label>
+            <label for="date-filter">{{ $t('dashboard-orders.filter-by-date') }}</label>
             <select id="date-filter" v-model="dateRange" class="filter-select">
               <option v-for="option in dateRangeOptions" :key="option.value" :value="option.value">
-                {{ $t(`orders.date-range.${option.value}`) || option.label }}
+                {{ $t(`dashboard-orders.date-range.${option.value}`) || option.label }}
               </option>
             </select>
           </div>
 
           <div class="filter-group">
-            <label for="sort-by">{{ $t('orders.sort-by') || 'Ordenar por:' }}</label>
+            <label for="sort-by">{{ $t('dashboard-orders.sort-by') }}</label>
             <select id="sort-by" v-model="sortOption" class="filter-select">
-              <option value="date_desc">{{ $t('orders.sort-date-desc') || 'Fecha (Reciente primero)' }}</option>
-              <option value="date_asc">{{ $t('orders.sort-date-asc') || 'Fecha (Antiguo primero)' }}</option>
-              <option value="total_desc">{{ $t('orders.sort-total-desc') || 'Total (Mayor a Menor)' }}</option>
-              <option value="total_asc">{{ $t('orders.sort-total-asc') || 'Total (Menor a Mayor)' }}</option>
+              <option value="date_desc">{{ $t('dashboard-orders.sort-date-desc') }}</option>
+              <option value="date_asc">{{ $t('dashboard-orders.sort-date-asc') }}</option>
+              <option value="total_desc">{{ $t('dashboard-orders.sort-total-desc') }}</option>
+              <option value="total_asc">{{ $t('dashboard-orders.sort-total-asc') }}</option>
             </select>
           </div>
         </div>
@@ -368,13 +368,13 @@ export default {
         <table class="orders-table">
           <thead>
           <tr>
-            <th>{{ $t('orders.order-number') || 'N° Pedido' }}</th>
-            <th>{{ $t('orders.customer') || 'Cliente' }}</th>
-            <th>{{ $t('orders.date') || 'Fecha' }}</th>
-            <th>{{ $t('orders.total') || 'Total' }}</th>
-            <th>{{ $t('orders.status') || 'Estado' }}</th>
-            <th>{{ $t('orders.items') || 'Artículos' }}</th>
-            <th>{{ $t('orders.actions') || 'Acciones' }}</th>
+            <th>{{ $t('dashboard-orders.order-number') }}</th>
+            <th>{{ $t('dashboard-orders.customer') }}</th>
+            <th>{{ $t('dashboard-orders.date') }}</th>
+            <th>{{ $t('dashboard-orders.total') }}</th>
+            <th>{{ $t('dashboard-orders.status_t') }}</th>
+            <th>{{ $t('dashboard-orders.items') }}</th>
+            <th>{{ $t('dashboard-orders.actions') }}</th>
           </tr>
           </thead>
           <tbody>
@@ -396,7 +396,7 @@ export default {
             <td class="items-count">{{ order.items?.length || 0 }}</td>
             <td>
               <button class="btn-view" @click="viewOrderDetails(order)">
-                {{ $t('orders.view-details') || 'Ver Detalles' }}
+                {{ $t('dashboard-orders.view-details') }}
               </button>
             </td>
           </tr>
@@ -404,7 +404,7 @@ export default {
         </table>
 
         <div v-if="filteredOrders.length === 0" class="no-results">
-          <p>{{ $t('orders.no-orders-found') || 'No se encontraron pedidos con los filtros seleccionados.' }}</p>
+          <p>{{ $t('dashboard-orders.no-orders-found') }}</p>
         </div>
       </div>
     </div>
@@ -413,80 +413,80 @@ export default {
     <div v-if="showOrderModal" class="modal-backdrop">
       <div class="modal-content order-details-modal">
         <div class="modal-header">
-          <h2>{{ $t('orders.order-details') || 'Detalles del Pedido' }} #{{ currentOrder.orderNumber }}</h2>
+          <h2>{{ $t('dashboard-orders.order-details') }} #{{ currentOrder.orderNumber }}</h2>
           <button class="close-btn" @click="closeModal">&times;</button>
         </div>
         <div class="modal-body" v-if="currentOrder">
           <div class="order-details-grid">
             <div class="order-info-section">
-              <h3>{{ $t('orders.info') || 'Información del Pedido' }}</h3>
+              <h3>{{ $t('dashboard-orders.info') || 'Información del Pedido' }}</h3>
               <div class="order-info-grid">
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.order-number') || 'N° Pedido' }}:</span>
+                  <span class="info-label">{{ $t('dashboard-orders.order-number') || 'N° Pedido' }}:</span>
                   <span class="info-value"># {{ currentOrder.orderNumber }}</span>
                 </div>
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.date') || 'Fecha' }}:</span>
+                  <span class="info-label">{{ $t('dashboard-orders.date') || 'Fecha' }}:</span>
                   <span class="info-value">{{ formatDate(currentOrder.orderDate) }}</span>
                 </div>
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.status') || 'Estado' }}:</span>
+                  <span class="info-label">{{ $t('dashboard-orders.status_t') || 'Estado' }}:</span>
                   <span class="info-value status-badge" :class="getStatusColor(currentOrder.status)">
                     {{ getStatusLabel(currentOrder.status) }}
                   </span>
                 </div>
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.payment-method') || 'Método de Pago' }}:</span>
-                  <span class="info-value">{{ currentOrder.paymentMethod || 'N/A' }}</span>
+                  <span class="info-label">{{ $t('dashboard-orders.payment-method') }}:</span>
+                  <span class="info-value">{{ currentOrder.paymentMethod || $t('dashboard-orders.none') }}</span> <!--N/A-->
                 </div>
               </div>
             </div>
 
             <div class="customer-info-section">
-              <h3>{{ $t('orders.customer-info') || 'Información del Cliente' }}</h3>
+              <h3>{{ $t('dashboard-orders.customer-info') }}</h3>
               <div class="customer-info-grid">
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.customer-name') || 'Nombre' }}:</span>
+                  <span class="info-label">{{ $t('dashboard-orders.customer-name') }}:</span>
                   <span class="info-value">{{ currentOrder.customerName }}</span>
                 </div>
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.customer-email') || 'Email' }}:</span>
+                  <span class="info-label">{{ $t('dashboard-orders.customer-email') }}:</span>
                   <span class="info-value">{{ currentOrder.customerEmail }}</span>
                 </div>
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.customer-phone') || 'Teléfono' }}:</span>
-                  <span class="info-value">{{ currentOrder.customerPhone || 'N/A' }}</span>
+                  <span class="info-label">{{ $t('dashboard-orders.customer-phone') }}:</span>
+                  <span class="info-value">{{ currentOrder.customerPhone || $t('dashboard-orders.none') }}</span>
                 </div>
               </div>
             </div>
 
             <div class="shipping-info-section">
-              <h3>{{ $t('orders.shipping-info') || 'Información de Envío' }}</h3>
+              <h3>{{ $t('dashboard-orders.shipping-info') }}</h3>
               <div class="shipping-info-grid">
                 <div class="info-group full-width">
-                  <span class="info-label">{{ $t('orders.shipping-address') || 'Dirección' }}:</span>
-                  <span class="info-value">{{ currentOrder.shippingAddress || 'N/A' }}</span>
+                  <span class="info-label">{{ $t('dashboard-orders.shipping-address') }}:</span>
+                  <span class="info-value">{{ currentOrder.shippingAddress || $t('dashboard-orders.none') }}</span>
                 </div>
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.shipping-city') || 'Ciudad' }}:</span>
-                  <span class="info-value">{{ currentOrder.shippingCity || 'N/A' }}</span>
+                  <span class="info-label">{{ $t('dashboard-orders.shipping-city') }}:</span>
+                  <span class="info-value">{{ currentOrder.shippingCity || $t('dashboard-orders.none') }}</span>
                 </div>
                 <div class="info-group">
-                  <span class="info-label">{{ $t('orders.shipping-postal') || 'Código Postal' }}:</span>
-                  <span class="info-value">{{ currentOrder.shippingPostal || 'N/A' }}</span>
+                  <span class="info-label">{{ $t('dashboard-orders.shipping-postal') }}:</span>
+                  <span class="info-value">{{ currentOrder.shippingPostal || $t('dashboard-orders.none') }}</span>
                 </div>
               </div>
             </div>
 
             <div class="order-items-section">
-              <h3>{{ $t('orders.items') || 'Artículos del Pedido' }}</h3>
+              <h3>{{ $t('dashboard-orders.items') }}</h3>
               <table class="order-items-table">
                 <thead>
                 <tr>
-                  <th>{{ $t('orders.item') || 'Artículo' }}</th>
-                  <th>{{ $t('orders.quantity') || 'Cantidad' }}</th>
-                  <th>{{ $t('orders.unit-price') || 'Precio Unitario' }}</th>
-                  <th>{{ $t('orders.subtotal') || 'Subtotal' }}</th>
+                  <th>{{ $t('dashboard-orders.item') }}</th>
+                  <th>{{ $t('dashboard-orders.quantity') }}</th>
+                  <th>{{ $t('dashboard-orders.unit-price') }}</th>
+                  <th>{{ $t('dashboard-orders.subtotal') }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -508,19 +508,19 @@ export default {
             <div class="order-summary-section">
               <div class="order-totals">
                 <div class="total-row">
-                  <span>{{ $t('orders.subtotal') || 'Subtotal' }}:</span>
+                  <span>{{ $t('dashboard-orders.subtotal') }}:</span>
                   <span>{{ formatCurrency(currentOrder.subtotal || currentOrder.total) }}</span>
                 </div>
                 <div class="total-row" v-if="currentOrder.tax">
-                  <span>{{ $t('orders.tax') || 'Impuestos' }}:</span>
+                  <span>{{ $t('dashboard-orders.tax') }}:</span>
                   <span>{{ formatCurrency(currentOrder.tax) }}</span>
                 </div>
                 <div class="total-row" v-if="currentOrder.shippingCost">
-                  <span>{{ $t('orders.shipping-cost') || 'Costo de Envío' }}:</span>
+                  <span>{{ $t('dashboard-orders.shipping-cost') }}:</span>
                   <span>{{ formatCurrency(currentOrder.shippingCost) }}</span>
                 </div>
                 <div class="total-row grand-total">
-                  <span>{{ $t('orders.total') || 'Total' }}:</span>
+                  <span>{{ $t('dashboard-orders.total') }}:</span>
                   <span>{{ formatCurrency(currentOrder.total) }}</span>
                 </div>
               </div>
@@ -528,12 +528,12 @@ export default {
           </div>
 
           <div class="order-notes" v-if="currentOrder.notes">
-            <h3>{{ $t('orders.notes') || 'Notas' }}</h3>
+            <h3>{{ $t('dashboard-orders.notes') }}</h3>
             <p>{{ currentOrder.notes }}</p>
           </div>
 
           <div class="update-status-section">
-            <h3>{{ $t('orders.update-status') || 'Actualizar Estado' }}</h3>
+            <h3>{{ $t('dashboard-orders.update-status') }}</h3>
             <div class="status-buttons">
               <button
                   v-for="option in statusOptions"
@@ -541,16 +541,16 @@ export default {
                   :class="['status-button', getStatusColor(option.value), { active: currentOrder.status === option.value }]"
                   @click="updateOrderStatus(option.value)"
               >
-                {{ $t(`orders.status.${option.value}`) || option.label }}
+                {{ $t(`dashboard-orders.status.${option.value}`) || option.label }}
               </button>
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <button class="btn-print" @click="window.print">
-            <i class="pi pi-print"></i> {{ $t('orders.print') || 'Imprimir' }}
+            <i class="pi pi-print"></i> {{ $t('dashboard-orders.print') }}
           </button>
-          <button class="btn-close" @click="closeModal">{{ $t('orders.close') || 'Cerrar' }}</button>
+          <button class="btn-close" @click="closeModal">{{ $t('dashboard-orders.close')  }}</button>
         </div>
       </div>
     </div>

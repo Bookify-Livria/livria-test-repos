@@ -16,7 +16,7 @@ export default defineComponent({
   <toolbarComponent/>
   <div class="shop-container">
     <div class="shop-left">
-      <h2>LIVRIA STORE</h2>
+      <h2>{{$t("livriaStore")}}</h2>
       <img src="../../assets/images/store/shopLivria.png" alt="Store_img" class="shop-photo" />
     </div>
     <div class="shop-right">

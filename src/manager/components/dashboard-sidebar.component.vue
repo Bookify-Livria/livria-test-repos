@@ -6,6 +6,9 @@ import { getLoggedInUser } from "../../public/shared-services/get-logged-user.js
 
 export default {
   name: "DashboardSidebar",
+  components:{
+    LanguageSwitcher
+  },
   emits: ['toggle-sidebar'],
   props: {
     collapsed: {
@@ -87,8 +90,7 @@ export default {
       userInfo,
       sidebarClasses,
       navigateTo,
-      toggleSidebar,
-      LanguageSwitcher
+      toggleSidebar
     };
   }
 };
@@ -101,14 +103,18 @@ export default {
       <i :class="collapsed ? 'pi pi-angle-right' : 'pi pi-angle-left'"></i>
     </div>
 
+    <div class="lang-btn">
+      <LanguageSwitcher></LanguageSwitcher>
+    </div>
+
     <!-- User Profile Section -->
     <div class="sidebar-user-profile">
       <div class="user-avatar">
         <span>{{ userInfo?.user?.charAt(0).toUpperCase() || 'U' }}</span>
       </div>
       <div class="user-info" v-if="!collapsed">
-        <h3>{{ userInfo?.user || 'Usuario' }}</h3>
-        <p>{{ userInfo?.role || 'Administrador' }}</p>
+        <h3>{{ userInfo?.user || $t('sidebar.user') }}</h3>
+        <p>{{ userInfo?.role || $t('sidebar.role') }}</p>
       </div>
     </div>
 
@@ -122,7 +128,7 @@ export default {
             @click="navigateTo(item)"
         >
           <i :class="item.icon"></i>
-          <span v-if="!collapsed">{{ $t(`sidebar.${item.id}`) || item.label }}</span>
+          <span v-if="!collapsed">{{ $t(`sidebar.${item.id}`) }}</span>
         </li>
       </ul>
     </div>
@@ -131,11 +137,11 @@ export default {
     <div class="sidebar-actions">
       <div class="action-item" @click="navigateTo({id: 'settings', route: '/settings'})">
         <i class="pi pi-cog"></i>
-        <span v-if="!collapsed">{{ $t('sidebar.settings') || 'Configuración' }}</span>
+        <span v-if="!collapsed">{{ $t('sidebar.settings') }}</span>
       </div>
       <div class="action-item" @click="navigateTo({id: 'logout', route: '/login'})">
         <i class="pi pi-sign-out"></i>
-        <span v-if="!collapsed">{{ $t('sidebar.logout') || 'Cerrar Sesión' }}</span>
+        <span v-if="!collapsed">{{ $t('sidebar.logout') }}</span>
       </div>
     </div>
   </div>
@@ -187,7 +193,6 @@ export default {
   align-items: center;
   padding: 2rem 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 1rem;
 }
 
 .user-avatar {
@@ -287,6 +292,21 @@ export default {
   margin-right: 1rem;
   min-width: 20px;
   text-align: center;
+}
+
+.lang-btn{
+  border-radius: 4px;            /* bordes más pequeños y uniformes */
+  background-color: #a0c4ff;
+  padding: 3px 8px;              /* menos padding para hacerlo compacto */
+  font-size: 13px;               /* texto un poco más pequeño */
+  display: inline-flex;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+  justify-content: center;       /* centra contenido horizontal */
+  align-items: center;           /* centra contenido vertical */
+  width: fit-content;            /* tamaño ajustado al contenido */
+  margin: 1.8rem auto 0;
 }
 
 .sidebar-collapsed .sidebar-actions .action-item {

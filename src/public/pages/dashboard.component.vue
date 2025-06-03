@@ -50,14 +50,14 @@ export default {
 
     <div class="main-content">
       <div v-if="loading" class="loading-container">
-        <p>{{ $t('loading') || 'Loading your dashboard...' }}</p>
+        <p>{{ $t('dashboard-home.loading') }}</p>
       </div>
 
       <div v-else class="welcome-container">
         <div class="welcome-card">
           <div class="welcome-header">
-            <h1>{{ $t('dashboard.welcome') || 'Welcome to the Library Management System' }}</h1>
-            <p>{{ $t('dashboard.welcome-message') || 'Manage your book collection efficiently with our powerful tools' }}</p>
+            <h1>{{ $t('dashboard-home.welcome') }}</h1>
+            <p>{{ $t('dashboard-home.welcome-message') }}</p>
           </div>
 
           <div class="user-greeting">
@@ -65,33 +65,33 @@ export default {
               <span>{{ userInfo?.user?.charAt(0).toUpperCase() || 'U' }}</span>
             </div>
             <div class="greeting-text">
-              <h2>{{ $t('dashboard.hello') || 'Hello' }}, {{ userInfo?.user || 'Admin' }}!</h2>
-              <p>{{ $t('dashboard.role') || 'Role' }}: {{ userInfo?.role || 'Administrator' }}</p>
+              <h2>{{ $t('dashboard-home.hello') }}, {{ userInfo?.user || $t('dashboard-home.user') }}!</h2>
+              <p>{{ $t('dashboard-home.role') }}: {{ userInfo?.role || $t('dashboard-home.admin') }}</p>
             </div>
           </div>
 
           <div class="quick-actions">
-            <h3>{{ $t('dashboard.quick-actions') || 'Quick Actions' }}</h3>
+            <h3>{{ $t('dashboard-home.quick-actions') }}</h3>
             <div class="actions-grid">
               <div class="action-card" @click="$router.push('/books-management')">
                 <i class="pi pi-book"></i>
-                <span>{{ $t('dashboard.manage-books') || 'Manage Books' }}</span>
+                <span>{{ $t('dashboard-home.manage-books') }}</span>
               </div>
               <div class="action-card" @click="$router.push('/orders-management')">
                 <i class="pi pi-shopping-cart"></i>
-                <span>{{ $t('dashboard.manage-orders') || 'Manage Orders' }}</span>
+                <span>{{ $t('dashboard-home.manage-orders') }}</span>
               </div>
               <div class="action-card" @click="$router.push('/settings')">
                 <i class="pi pi-cog"></i>
-                <span>{{ $t('dashboard.settings') || 'Settings' }}</span>
+                <span>{{ $t('dashboard-home.settings') }}</span>
               </div>
             </div>
           </div>
 
           <div class="system-info">
-            <h3>{{ $t('dashboard.system-info') || 'System Information' }}</h3>
-            <p>{{ $t('dashboard.version') || 'Version' }}: 1.0.0</p>
-            <p>{{ $t('dashboard.last-login') || 'Last Login' }}: {{ new Date().toLocaleString() }}</p>
+            <h3>{{ $t('dashboard-home.system-info') }}</h3>
+            <p>{{ $t('dashboard-home.version') }}: 1.0.0</p>
+            <p>{{ $t('dashboard-home.last-login') }}: {{ new Date().toLocaleString() }}</p>
           </div>
         </div>
       </div>
