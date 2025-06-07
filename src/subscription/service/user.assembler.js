@@ -4,40 +4,64 @@ export class UserAssembler {
     static toEntityFromResource(resource) {
         return new User(
             resource.id,
-            resource.display,
-            resource.user,
+            resource.nickname,
+            resource.username,
             resource.email,
-            resource.icon,
-            resource.password,
             resource.phrase,
-            (resource.order || []).map(o => ({
-                id: o.id,
-                code: o.code,
-                orderstatus: o.orderstatus
-            })),
-            resource.subscription
+            resource.avatarUrl,
+            resource.planType,
+            resource.createdAt ? new Date(resource.createdAt) : null,
+            resource.isActive,
+            resource.clients || []
         );
     }
 
     static toEntitiesFromResponse(response) {
-        return response.data.map(this.toEntityFromResource);
+        // El backend devuelve { success: true, data: [...] }
+        const users = response.data.data || response.data;
+        if (Array.isArray(users)) {
+            return users.map(this.toEntityFromResource);
+        }
+        return [this.toEntityFromResource(users)];
+    }
+
+    static toEntityFromSingleResponse(response) {
+        // Para respuestas de un solo usuario
+        const userData = response.data.data || response.data;
+        return this.toEntityFromResource(userData);
     }
 
     static toResource(user) {
         return {
-            id: user.id,
-            display: user.display,
-            user: user.username,
+            nickname: user.nickname,
+            username: user.username,
             email: user.email,
-            icon: user.icon,
-            password: user.password,
             phrase: user.phrase,
-            order: (user.order || []).map(o => ({
-                id: o.id,
-                code: o.code,
-                orderstatus: o.orderstatus
-            })),
-            subscription: user.subscription
+            avatarUrl: user.avatarUrl,
+            planType: user.planType
+        };
+    }
+
+    static toUpdateResource(user) {
+        return {
+            nickname: user.nickname,
+            username: user.username,
+            email: user.email,
+            phrase: user.phrase,
+            avatarUrl: user.avatarUrl,
+            planType: user.planType
+        };
+    }
+
+    static toRegisterResource(userData) {
+        return {
+            nickname: userData.nickname,
+            username: userData.username,
+            email: userData.email,
+            password: userData.password,
+            phrase: userData.phrase || null,
+            avatarUrl: userData.avatarUrl || null,
+            planType: userData.planType || 'basic'
         };
     }
 }

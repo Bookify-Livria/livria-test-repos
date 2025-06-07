@@ -14,9 +14,12 @@ import SubscriptionComponent from "../public/pages/subscription.component.vue";
 import CommunityView from '../public/pages/view-communities.component.vue';
 import Shop from '../public/pages/shop.component.vue';
 import Dashboard from '../public/pages/dashboard.component.vue';
-import BooksManagement from '../public/pages/books-management.component.vue'
-import OrdersManagement from '../public/pages/orders-management.component.vue'
-import Settings from '../public/pages/settings.component.vue'
+import BooksManagement from '../public/pages/books-management.component.vue';
+import OrdersManagement from '../public/pages/orders-management.component.vue';
+import Settings from '../public/pages/settings.component.vue';
+
+import FormLoginTest from '../components/LoginForm.vue';
+import FormRegisterTest from '../components/RegisterForm.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -33,6 +36,8 @@ const router = createRouter({
         {path: "/books-management", component: BooksManagement},
         {path: "/orders-management", component: OrdersManagement},
         {path: "/settings", component: Settings},
+        {path: "/testLogin", component: FormLoginTest},
+        {path: "/testRegister", component: FormRegisterTest},
         {
             path: '/bookl',
             name: 'LiteratureBooks',

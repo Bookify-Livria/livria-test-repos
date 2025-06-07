@@ -1,13 +1,38 @@
 export class User {
-    constructor(id, display, username, email, icon, password, phrase, order  = [], subscription) {
+    constructor(
+        id = 0,
+        nickname = '',
+        username = '',
+        email = '',
+        phrase = '',
+        avatarUrl = '',
+        planType = 'basic',
+        createdAt = null,
+        isActive = true,
+        clients = []
+    ) {
         this.id = id;
-        this.display = display;
+        this.nickname = nickname;
         this.username = username;
         this.email = email;
-        this.icon = icon;
-        this.password = password;
         this.phrase = phrase;
-        this.order = order;
-        this.subscription = subscription;
+        this.avatarUrl = avatarUrl;
+        this.planType = planType;
+        this.createdAt = createdAt;
+        this.isActive = isActive;
+        this.clients = clients || [];
+    }
+
+    // Métodos helper
+    get displayName() {
+        return this.nickname || this.username;
+    }
+
+    get isPremium() {
+        return this.planType === 'premium';
+    }
+
+    get isBasic() {
+        return this.planType === 'basic';
     }
 }
