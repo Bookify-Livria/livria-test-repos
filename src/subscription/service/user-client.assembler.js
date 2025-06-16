@@ -1,14 +1,14 @@
-import { User } from '../model/user.entity.js';
+import { UserClient } from '../model/user-client.entity.js';
 
-export class UserAssembler {
+export class UserClientAssembler {
     static toEntityFromResource(resource) {
-        return new User(
+        return new UserClient(
             resource.id,
             resource.display,
             resource.user,
             resource.email,
-            resource.icon,
             resource.password,
+            resource.icon,
             resource.phrase,
             (resource.order || []).map(o => ({
                 id: o.id,
@@ -29,15 +29,16 @@ export class UserAssembler {
             display: user.display,
             user: user.username,
             email: user.email,
-            icon: user.icon,
             password: user.password,
+            icon: user.icon,
             phrase: user.phrase,
             order: (user.order || []).map(o => ({
                 id: o.id,
                 code: o.code,
                 orderstatus: o.orderstatus
             })),
-            subscription: user.subscription
+            subscription: user.subscription,
+            role: 'client'
         };
     }
 }

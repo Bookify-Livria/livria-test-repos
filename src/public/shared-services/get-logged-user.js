@@ -8,7 +8,7 @@ export function getLoggedInUser() {
             if (loginEntries.length > 0) {
                 const loggedInUserId = loginEntries[0].id;
 
-                return axios.get("https://livria-6efh.onrender.com/users")
+                return axios.get("https://livria-6efh.onrender.com/clientUsers")
                     .then(usersResponse => {
                         const users = usersResponse.data;
                         const user = users.find(u => String(u.id) === String(loggedInUserId));

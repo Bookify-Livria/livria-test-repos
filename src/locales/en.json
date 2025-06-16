@@ -157,6 +157,10 @@
   "emailinput": "Email",
   "register": "Register",
   "emailerror": "Please enter a valid email address",
+  "admin-access": "Administrator Access",
+  "security-pin": "Security Pin",
+  "phone-input": "Phone Number",
+  "send-again": "Send Security Pin Again",
 
   "createacc": "Don't have an account?",
   "subscription": "Subscription",
