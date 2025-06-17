@@ -157,6 +157,9 @@
   "emailinput": "Correo electrónico",
   "register": "Registrarse",
   "emailerror": "Ingrese un correo electrónico válido",
+  "admin-access": "Acceso de Administrator",
+  "security-pin": "Pin de Seguridad",
+  "go-back": "Atrás",
 
   "createacc": "¿No tienes una cuenta?",
   "subscription": "Suscripción",
@@ -177,6 +180,7 @@
   "register-fail-details": "Algunos campos están vacíos o las contraseñas no son iguales",
   "register-success": "Registro exitoso",
   "register-success-details": "¡Bienvenido a Livria!",
+
   "update-success": "Contraseña actualizada exitosamente",
   "update-success-details": "La contraseña ha sido actualizada.",
   "update-fill-fail": "Debe llenar todos los campos",

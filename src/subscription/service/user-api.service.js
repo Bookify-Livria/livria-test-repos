@@ -64,4 +64,29 @@ export class UserApiService {
             });
     }
 
+    //logged-in user
+    getLoggedInUser() {
+        return axios.get('https://livria-6efh.onrender.com/userLogin')
+            .then(response => response.data)
+            .catch(error => {
+                console.error('Error fetching logged-in users:', error);
+                throw error;
+            });
+    }
+    createLoggedInUser(userData) {
+        return axios.post('https://livria-6efh.onrender.com/userLogin', userData)
+            .then(response => response.data)
+            .catch(error => {
+                console.error('Error creating logged-in user:', error);
+                throw error;
+            });
+    }
+    deleteLoggedInUser(id) {
+        return axios.delete(`https://livria-6efh.onrender.com/userLogin/${id}`)
+            .catch(error => {
+                console.error('Error deleting logged-in user:', error);
+                throw error;
+            });
+    }
+
 }

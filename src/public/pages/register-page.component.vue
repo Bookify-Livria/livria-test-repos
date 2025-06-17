@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 .register__container {
-  margin: 2rem calc(-1 * ((100vw - 100%) / 2));
+  margin: 0 calc(-1 * ((100vw - 100%) / 2));
   width: 100vw;
   padding: 0 3rem;
 }

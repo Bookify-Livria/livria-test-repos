@@ -25,6 +25,7 @@ import StepList from "primevue/steplist";
 import StepPanel from "primevue/steppanel";
 import StepPanels from "primevue/steppanels";
 import Step from "primevue/step";
+import InputOtp from "primevue/inputotp";
 
 import router from "./router/index.js";
 
@@ -52,7 +53,8 @@ app
     .component("pv-step-list", StepList)
     .component("pv-step-panel", StepPanel)
     .component("pv-step-panels", StepPanels)
-    .component("pv-step", Step);
+    .component("pv-step", Step)
+    .component("pv-otp", InputOtp);
 
 
 app.mount("#app");

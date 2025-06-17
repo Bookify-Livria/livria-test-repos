@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .login__container {
-  margin: 3rem calc(-1 * ((100vw - 100%) / 2));
+  margin: 2rem calc(-1 * ((100vw - 100%) / 2));
   width: 100vw;
   padding: 0 3rem;
 }

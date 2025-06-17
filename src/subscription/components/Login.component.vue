@@ -1,7 +1,5 @@
 <script>
-import axios from 'axios';
 
-import { ref } from 'vue';
 import 'primeicons/primeicons.css';
 import LanguageSwitcher from "../../public/components/language-switcher.component.vue";
 import {notifyEvent} from "../../public/shared-services/to-notify.js";
@@ -24,11 +22,11 @@ export default {
   methods: {
     async clearLogin() { // Permite al sistema eliminar los datos almacenados en userlogin
       try {
-        const response = await axios.get('https://livria-6efh.onrender.com/userlogin');
-        const users = response.data;
+        const response = new UserApiService();
+        const users = await response.getLoggedInUser();
 
         await Promise.all(users.map(user =>
-            axios.delete(`https://livria-6efh.onrender.com/userlogin/${user.id}`)
+            response.deleteLoggedInUser(user.id)
         ));
 
         console.log("Cleared login.");
@@ -45,8 +43,9 @@ export default {
       };
 
       try {
-        const response = await axios.post('https://livria-6efh.onrender.com/userlogin', newUser);
-        console.log("Login session created:", response.data);
+        const response = new UserApiService();
+        const user = await response.createLoggedInUser(newUser);
+        console.log("Login session created:", user.data);
       } catch (error) {
         console.error("Error creating login session:", error);
       }
@@ -352,7 +351,7 @@ export default {
 
 .p-card {
   border: 2px solid transparent;
-  padding: 3rem 2rem;
+  padding: 2.5rem;
   border-radius: 10px;
   margin-bottom: 1rem;
   color: var(--color-text);
