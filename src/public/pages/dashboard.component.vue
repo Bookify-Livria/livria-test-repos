@@ -1,44 +1,55 @@
 <script>
-import { ref } from 'vue'
-import dashboardSidebar from "../../manager/components/dashboard-sidebar.component.vue"
-import { getLoggedInUser } from "../shared-services/get-logged-user.js"
+import dashboardSidebar from "../../manager/components/dashboard-sidebar.component.vue";
+// import { getLoggedInUser } from "../shared-services/get-logged-user.js"; // No longer needed
+import { UserApiService } from "@/subscription/service/user-api.service.js"; // Import your UserApiService
 
 export default {
   name: "dashboard.component",
   components: {
     dashboardSidebar
   },
-  setup() {
-    const userInfo = ref(null);
-    const loading = ref(true);
-    const sidebarCollapsed = ref(false);
-
-    const fetchUserInfo = async () => {
+  data() {
+    return {
+      // Reactive data properties
+      admin: null,
+      loading: true,
+      sidebarCollapsed: false,
+    };
+  },
+  computed: {
+    // Computed property for main content class, if needed
+    mainContentClasses() {
+      return {
+        'sidebar-expanded': !this.sidebarCollapsed
+      };
+    }
+  },
+  methods: {
+    // Method to fetch user information using UserApiService
+    async fetchUserInfo() {
       try {
-        loading.value = true;
-        const user = await getLoggedInUser();
-        userInfo.value = user;
+        this.loading = true;
+        // Call the getLoggedInUser method from your UserApiService
+        const userApiService = new UserApiService();
+        this.admin = await userApiService.getAdminUser(); // Update reactive data
+
       } catch (error) {
         console.error("Error getting user info:", error);
+        // Optionally handle error, e.g., show an error message
       } finally {
-        loading.value = false;
+        this.loading = false;
       }
-    };
-
-    const toggleSidebar = () => {
-      sidebarCollapsed.value = !sidebarCollapsed.value;
-    };
-
-    fetchUserInfo();
-
-    return {
-      userInfo,
-      loading,
-      sidebarCollapsed,
-      toggleSidebar
-    };
+    },
+    // Method to toggle the sidebar's collapsed state
+    toggleSidebar() {
+      this.sidebarCollapsed = !this.sidebarCollapsed;
+    }
+  },
+  mounted() {
+    // Call fetchUserInfo when the component is mounted to the DOM
+    this.fetchUserInfo();
   }
-}
+};
 </script>
 
 <template>
@@ -62,11 +73,11 @@ export default {
 
           <div class="user-greeting">
             <div class="user-avatar">
-              <span>{{ userInfo?.user?.charAt(0).toUpperCase() || 'U' }}</span>
+              <span>{{ admin?.username?.charAt(0).toUpperCase() || 'U' }}</span>
             </div>
             <div class="greeting-text">
-              <h2>{{ $t('dashboard-home.hello') }}, {{ userInfo?.user || $t('dashboard-home.user') }}!</h2>
-              <p>{{ $t('dashboard-home.role') }}: {{ userInfo?.role || $t('dashboard-home.admin') }}</p>
+              <h2>{{ $t('dashboard-home.hello') }}, {{ admin?.display || $t('dashboard-home.user') }}!</h2>
+              <p>{{ $t('dashboard-home.role') }}: {{ $t('dashboard-home.admin') }}</p>
             </div>
           </div>
 
@@ -102,7 +113,8 @@ export default {
 <style scoped>
 .dashboard-page {
   display: flex;
-  min-height: 100vh;
+  max-height: 100vh;
+  margin-bottom: 0;
 }
 
 .main-content {
@@ -130,7 +142,6 @@ export default {
 }
 
 .welcome-container {
-  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -146,19 +157,20 @@ export default {
 .welcome-header {
   text-align: center;
   margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #f0f0f0;
 }
 
 .welcome-header h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: var(--color-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .welcome-header p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-text);
+  text-align: center;
   opacity: 0.8;
 }
 
@@ -167,7 +179,7 @@ export default {
   align-items: center;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: rgba(var(--color-primary-rgb), 0.05);
+  background-color: rgba(var(--color-blue-rgb), 0.05);
   border-radius: 10px;
 }
 
@@ -186,9 +198,8 @@ export default {
 }
 
 .greeting-text h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--color-primary);
-  margin-bottom: 0.3rem;
 }
 
 .greeting-text p {
@@ -202,9 +213,9 @@ export default {
 }
 
 .quick-actions h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--color-primary);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .actions-grid {
@@ -245,7 +256,7 @@ export default {
 }
 
 .system-info {
-  background-color: rgba(var(--color-primary-rgb), 0.05);
+  background-color: rgba(var(--color-accent-yellow-rgb), 0.05);
   border-radius: 10px;
   padding: 1.5rem;
 }

@@ -724,7 +724,7 @@ export default {
   align-items: center;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: rgba(var(--color-primary-rgb), 0.05);
+  background-color: rgba(var(--color-blue-rgb), 0.05);
   border-radius: 10px;
 }
 
@@ -778,7 +778,7 @@ export default {
 .form-control:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.1);
+  box-shadow: 0 0 0 2px rgba(var(--color-accent-yellow-rgb), 0.1);
 }
 
 .form-control.error {
@@ -846,7 +846,7 @@ export default {
 }
 
 .btn-password:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.05);
+  background-color: rgba(var(--color-blue-rgb), 0.05);
 }
 
 .btn-cancel {
